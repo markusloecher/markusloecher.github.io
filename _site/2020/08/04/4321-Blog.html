@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>LDA: 4321 | Code and Stats</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="LDA: 4321" />
+<meta name="author" content="Nikolaj Bewer, Markus Loecher" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Table of Contents" />
+<meta property="og:description" content="Table of Contents" />
+<link rel="canonical" href="http://localhost:4000/2020/08/04/4321-Blog.html" />
+<meta property="og:url" content="http://localhost:4000/2020/08/04/4321-Blog.html" />
+<meta property="og:site_name" content="Code and Stats" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-08-04T00:00:00+02:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Nikolaj Bewer, Markus Loecher"},"headline":"LDA: 4321","dateModified":"2020-08-04T00:00:00+02:00","datePublished":"2020-08-04T00:00:00+02:00","description":"Table of Contents","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020/08/04/4321-Blog.html"},"@type":"BlogPosting","url":"http://localhost:4000/2020/08/04/4321-Blog.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Code and Stats" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Code and Stats</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">LDA: 4321</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2020-08-04T00:00:00+02:00" itemprop="datePublished">
+        Aug 4, 2020
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Nikolaj Bewer, Markus Loecher</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="table-of-contents">Table of Contents</h1>
+
+<ol>
+  <li><a href="#libraries">Libraries</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#data">Data</a></li>
+  <li><a href="#lda-on-chapters">LDA on Chapters</a></li>
+  <li><a href="#references">References</a></li>
+</ol>
+
+<h1 id="libraries">Libraries</h1>
+
+<p>These libraries will be needed to conduct the research.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">topicmodels</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">plyr</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">tidytext</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span><span class="w"> 
+</span><span class="n">library</span><span class="p">(</span><span class="n">stringr</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">scales</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Note: The idea (and some of the code) originates from Silge and
+Robinson’s book on <a href="https://www.tidytextmining.com">Text Mining with R</a>.
+Following this blog post, there may emerge some <code class="highlighter-rouge">Error</code>’s, most notably
+with the creation of the LDA model (<code class="highlighter-rouge">LDA_VEM</code>). Solutions have been
+addressed
+<a href="https://stackoverflow.com/questions/53728532/error-no-tidy-method-for-objects-of-class-lda-vem">here</a>
+and
+<a href="https://stackoverflow.com/questions/48765936/using-tidytext-and-broom-but-not-finding-tidier-for-lda-vem">here</a>.</p>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>In this blog post, we review the Latent Dirichlet Allocation (LDA) model
+for its ability to identify different storylines in a single book. LDA
+is a Topic Model in the field of Natural Language Processing (NLP),
+Machine Learning (ML). LDA is a generative process that is often used to
+find structures (topics) in an unlabelled text corpus.</p>
+
+<p>For example, Blei (2012) identified topics from 17,000 science articles,
+using an LDA model. Silge and Robinson (2020) used the LDA model to
+assign unlabelled chapters from four well-known books to their
+respective storyline. Our experiment is based on the same idea. We test
+if unlabelled chapters can be assigned to their respective plot lines.
+However, instead of using different books, we applied the idea to the
+novel <em>4 3 2 1</em> by the American writer Paul Auster.</p>
+
+<p>The defining characteristic of the novel is its distinct narrative
+style. The protagonist Archie Ferguson is at the center of the plot.
+However, instead of a linear narrative style, the author created four
+versions of the main character. Over the course of the book, the four
+storylines evolve and diverge in parallel. The storylines vary in the
+protagonist’s choices and the strokes of fate he suffers. Yet, there are
+consistent elements and recurring characters that exist across all
+storylines. Thus, the four storylines are fundamentally different, but
+in many details, they are one.</p>
+
+<h1 id="data">Data</h1>
+
+<p>The data set is the text corpus of the novel, written in the English
+language. It contains over 350,000 words across four storylines, divided
+into multiple chapters. In total, we consider 22 chapters, which are
+unequally distributed among the four storylines. The first and the last
+storyline both stretch over seven chapters, while the other stories are
+cut short. The number of chapters per storyline is a result of the main
+character’s decisions.</p>
+
+<p>The data set is available as a text corpus in a txt-file. First, we
+import the text.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">auster</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readLines</span><span class="p">(</span><span class="s2">"4 3 2 1_ A Novel - Paul Auster.txt"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Then we need to find the beginning of a chapter, for instance of the
+first.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">which</span><span class="p">(</span><span class="n">auster</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"1.1"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## [1]  167 6710
+</code></pre></div></div>
+
+<p>The first number is the <em>chapter number</em> position (the chapter
+beginning) in the data in R. The second number is the position in the
+Appendix, therefore not relevant. Adapting the code we can automatically
+find each chapter’s beginning throughout the book.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">part1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">()</span><span class="w">
+</span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1.1</span><span class="o">:</span><span class="m">7.1</span><span class="p">){</span><span class="n">part1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">part1</span><span class="p">,</span><span class="n">which</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">auster</span><span class="p">)[</span><span class="m">1</span><span class="p">])}</span><span class="w">
+
+</span><span class="n">part2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">()</span><span class="w">
+</span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1.2</span><span class="o">:</span><span class="m">7.2</span><span class="p">){</span><span class="n">part2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">part2</span><span class="p">,</span><span class="n">which</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">auster</span><span class="p">)[</span><span class="m">1</span><span class="p">])}</span><span class="w">
+
+</span><span class="n">part3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">()</span><span class="w">
+</span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1.3</span><span class="o">:</span><span class="m">7.3</span><span class="p">){</span><span class="n">part3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">part3</span><span class="p">,</span><span class="n">which</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">auster</span><span class="p">)[</span><span class="m">1</span><span class="p">])}</span><span class="w">
+
+</span><span class="n">part4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">()</span><span class="w">
+</span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1.4</span><span class="o">:</span><span class="m">7.4</span><span class="p">){</span><span class="n">part4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">part4</span><span class="p">,</span><span class="n">which</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">auster</span><span class="p">)[</span><span class="m">1</span><span class="p">])}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>We connect all index positions into one vector.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">part1</span><span class="p">,</span><span class="w"> </span><span class="n">part2</span><span class="p">,</span><span class="w"> </span><span class="n">part3</span><span class="p">,</span><span class="w"> </span><span class="n">part4</span><span class="p">)</span><span class="w">
+</span><span class="n">parts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="n">seq</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="nf">length</span><span class="p">(</span><span class="n">parts</span><span class="p">),</span><span class="m">7</span><span class="p">)],</span><span class="w"> 
+          </span><span class="n">parts</span><span class="p">[</span><span class="n">seq</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="nf">length</span><span class="p">(</span><span class="n">parts</span><span class="p">),</span><span class="m">7</span><span class="p">)],</span><span class="w"> 
+          </span><span class="n">parts</span><span class="p">[</span><span class="n">seq</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="nf">length</span><span class="p">(</span><span class="n">parts</span><span class="p">),</span><span class="m">7</span><span class="p">)],</span><span class="w"> 
+          </span><span class="n">parts</span><span class="p">[</span><span class="n">seq</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="nf">length</span><span class="p">(</span><span class="n">parts</span><span class="p">),</span><span class="m">7</span><span class="p">)],</span><span class="w">
+          </span><span class="n">parts</span><span class="p">[</span><span class="n">seq</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="nf">length</span><span class="p">(</span><span class="n">parts</span><span class="p">),</span><span class="m">7</span><span class="p">)],</span><span class="w">
+          </span><span class="n">parts</span><span class="p">[</span><span class="n">seq</span><span class="p">(</span><span class="m">6</span><span class="p">,</span><span class="nf">length</span><span class="p">(</span><span class="n">parts</span><span class="p">),</span><span class="m">7</span><span class="p">)],</span><span class="w">
+          </span><span class="n">parts</span><span class="p">[</span><span class="n">seq</span><span class="p">(</span><span class="m">7</span><span class="p">,</span><span class="nf">length</span><span class="p">(</span><span class="n">parts</span><span class="p">),</span><span class="m">7</span><span class="p">)],</span><span class="w">
+          </span><span class="n">which</span><span class="p">(</span><span class="n">auster</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"ALSO BY PAUL AUSTER"</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Then we divide it into its chapters and prepare the text for further
+analysis. The first of several data pre-processing steps is
+tokenization. Here, each chapter is divided into individual words. The
+words are converted to lower case and the punctuation is removed. Other
+common pre-processing steps in NLP are lemmatization and stemming, where
+words are reduced to their word stem. We decided against these
+algorithmic processes, as information gets lost and the differences
+between the topics are subtle.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tibble</span><span class="p">(</span><span class="n">document</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="c1"># Initialize</span><span class="w">
+</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">){</span><span class="w">
+  </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">part1</span><span class="p">)){</span><span class="w">
+    </span><span class="n">story1_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">auster</span><span class="p">[</span><span class="n">parts</span><span class="p">[</span><span class="n">seq</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">parts</span><span class="p">),</span><span class="m">4</span><span class="p">)][</span><span class="n">i</span><span class="p">]</span><span class="o">:</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="n">seq</span><span class="p">(</span><span class="n">j</span><span class="m">+1</span><span class="p">,</span><span class="nf">length</span><span class="p">(</span><span class="n">parts</span><span class="p">),</span><span class="m">4</span><span class="p">)][</span><span class="n">i</span><span class="p">]</span><span class="m">-1</span><span class="p">)]</span><span class="w">
+    </span><span class="n">story1_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sapply</span><span class="p">(</span><span class="n">story1_1</span><span class="p">,</span><span class="w"> </span><span class="n">paste0</span><span class="p">,</span><span class="w"> </span><span class="n">collapse</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span><span class="w">
+    </span><span class="n">story1_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste</span><span class="p">(</span><span class="n">story1_1</span><span class="p">,</span><span class="w"> </span><span class="n">collapse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">" "</span><span class="p">)</span><span class="w">
+    </span><span class="n">story1_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gsub</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="s2">"["</span><span class="p">,</span><span class="w"> </span><span class="nf">as.character</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="s1">'.'</span><span class="p">,</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="s2">"."</span><span class="p">,</span><span class="s2">","</span><span class="p">,</span><span class="w"> </span><span class="s2">"("</span><span class="p">,</span><span class="w"> </span><span class="s2">")"</span><span class="p">,</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w"> </span><span class="s2">":"</span><span class="p">,</span><span class="w"> </span><span class="s2">"]"</span><span class="p">),</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">story1_1</span><span class="p">)</span><span class="w">
+    </span><span class="n">story1_1_words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strsplit</span><span class="p">(</span><span class="n">story1_1</span><span class="p">,</span><span class="w"> </span><span class="n">split</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">" "</span><span class="p">)</span><span class="w">
+    </span><span class="n">df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">add_row</span><span class="p">(</span><span class="n">document</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="s2">"Storyline-"</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="s2">"_Chapter-"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">),</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unlist</span><span class="p">(</span><span class="n">story1_1_words</span><span class="p">))</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span><span class="n">df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df</span><span class="p">[</span><span class="m">-1</span><span class="p">,]</span><span class="w">
+</span><span class="n">df</span><span class="o">$</span><span class="n">word</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tolower</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">word</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Additionally we change “ferguson’s” to “ferguson” and remove empty
+strings.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">$</span><span class="n">word</span><span class="o">==</span><span class="s2">"ferguson’s"</span><span class="p">,]</span><span class="o">$</span><span class="n">word</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ferguson"</span><span class="w">
+</span><span class="n">df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df</span><span class="p">[</span><span class="o">-</span><span class="n">which</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">word</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">""</span><span class="p">),]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>In the following step, so-called stop words are removed. In the English
+language exemplary stop words are “and”, “the”, “a”, “in”. They generate
+noise in statistical models, as they carry hardly any information. Also,
+they inflate the text corpus and thus reduce the speed with which the
+model is calculated.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">word_counts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">anti_join</span><span class="p">(</span><span class="n">stop_words</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">count</span><span class="p">(</span><span class="n">document</span><span class="p">,</span><span class="w"> </span><span class="n">word</span><span class="p">,</span><span class="w"> </span><span class="n">sort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Eventually we may proof-check whether the chapters are correctly
+ordered.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">7</span><span class="p">){</span><span class="n">print</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">word</span><span class="p">[</span><span class="n">head</span><span class="p">(</span><span class="n">which</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">document</span><span class="o">==</span><span class="n">paste0</span><span class="p">(</span><span class="s2">"Storyline-1_Chapter-"</span><span class="p">,</span><span class="n">i</span><span class="p">)))])}</span><span class="w">
+</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">7</span><span class="p">){</span><span class="n">print</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">word</span><span class="p">[</span><span class="n">head</span><span class="p">(</span><span class="n">which</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">document</span><span class="o">==</span><span class="n">paste0</span><span class="p">(</span><span class="s2">"Storyline-2_Chapter-"</span><span class="p">,</span><span class="n">i</span><span class="p">)))])}</span><span class="w">
+</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">7</span><span class="p">){</span><span class="n">print</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">word</span><span class="p">[</span><span class="n">head</span><span class="p">(</span><span class="n">which</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">document</span><span class="o">==</span><span class="n">paste0</span><span class="p">(</span><span class="s2">"Storyline-3_Chapter-"</span><span class="p">,</span><span class="n">i</span><span class="p">)))])}</span><span class="w">
+</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">7</span><span class="p">){</span><span class="n">print</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">word</span><span class="p">[</span><span class="n">head</span><span class="p">(</span><span class="n">which</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">document</span><span class="o">==</span><span class="n">paste0</span><span class="p">(</span><span class="s2">"Storyline-4_Chapter-"</span><span class="p">,</span><span class="n">i</span><span class="p">)))])}</span><span class="w">
+</span></code></pre></div></div>
+
+<h1 id="lda-on-chapters">LDA on Chapters</h1>
+
+<p>LDA is one of the best-known methods of Topic Modeling. Topic Modeling
+describes a model that detects structures (“topics”) in a finite set of
+documents. Typically, documents are a set of words, while topics are a
+“distribution over a fixed vocabulary” (Blei, 2012). Theoretically, LDA
+and Topic Models can also be applied in areas outside of Natural
+Language Processing.</p>
+
+<p>According to Silge and Robinson (2020), there are two basic ideas behind
+LDA. First, several topics can refer to the same document. Thus, a
+document can theoretically consist of k topics, where k is the set of
+all topics. These topics describe the document to a varying degree.
+Second, a set of specific words form a topic. These words can be unique
+and belong to only one topic. At the same time, there may be words that
+describe several topics. Thus, we have two probabilities that our model
+estimates. A term-topic probability, which indicates the probability
+that a word can be assigned to a certain topic. As well as a
+topic-document probability, which indicates which topic best describes a
+document.</p>
+
+<p>In our example, k is the number of storylines, as well as the number of
+topics. Applying the two ideas described above to our experiment, we can
+identify two challenges. First, creating a unique, specific mixture of
+topics per document, in a way that the document is best described by the
+prevailing topic. Second, identifying terms in unique topics, that
+highlight the subtle differences between the storylines.</p>
+
+<p>Using the package <code class="highlighter-rouge">topicmodels</code> in R, we create a four topic LDA model.
+Additionally the data <code class="highlighter-rouge">word_counts</code> is in a tidy form, but has to be
+changed into a <code class="highlighter-rouge">DocumentTermMatrix</code>, in order to be used in the
+<code class="highlighter-rouge">topicmodels</code> package.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">chapters_dtm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">word_counts</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+    </span><span class="n">cast_dtm</span><span class="p">(</span><span class="n">document</span><span class="p">,</span><span class="w"> </span><span class="n">word</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Now we create a four-topic model using <code class="highlighter-rouge">LDA()</code>. We are using <em>four</em>
+topics, as there are <em>four</em> different stories told.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">chapters_lda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LDA</span><span class="p">(</span><span class="n">chapters_dtm</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">seed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1234</span><span class="p">))</span><span class="w">
+</span><span class="n">print</span><span class="p">(</span><span class="n">chapters_lda</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## A LDA_VEM topic model with 4 topics.
+</code></pre></div></div>
+
+<p>We can take a look at the per-topic-per-word probabilities. These are
+the probabilities that a certain term (word) will occur in each of the
+four topics.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">chapter_topics</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tidy</span><span class="p">(</span><span class="n">chapters_lda</span><span class="p">,</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"beta"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>This code examines the betas for the most prevailing term “ferguson”.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">chapter_topics</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">chapter_topics</span><span class="o">$</span><span class="n">term</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"ferguson"</span><span class="p">),]</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## # A tibble: 4 x 3
+##   topic term       beta
+##   &lt;int&gt; &lt;chr&gt;     &lt;dbl&gt;
+## 1     1 ferguson 0.0265
+## 2     2 ferguson 0.0276
+## 3     3 ferguson 0.0265
+## 4     4 ferguson 0.0229
+</code></pre></div></div>
+
+<p>We see that the probability is high and evenly distributed over the
+topics. This is in alignment with our expectations, since Ferguson is
+the main character across all plot lines. However, if we look for other
+characters, such as Vivian, we can see that she cannot be of equal
+importance.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">chapter_topics</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">chapter_topics</span><span class="o">$</span><span class="n">term</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"vivian"</span><span class="p">),]</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## # A tibble: 4 x 3
+##   topic term        beta
+##   &lt;int&gt; &lt;chr&gt;      &lt;dbl&gt;
+## 1     1 vivian 1.76e-152
+## 2     2 vivian 3.24e-  3
+## 3     3 vivian 7.87e-111
+## 4     4 vivian 1.30e- 20
+</code></pre></div></div>
+
+<p>It can be assumed that she is only relevant in one storyline. It should
+be noted that the second topic does not necessarily refer to the second
+storyline.</p>
+
+<p>Now we can use <code class="highlighter-rouge">dplyr</code>’s <code class="highlighter-rouge">top_n()</code> function, to find the <em>top n</em> terms
+within each topic.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">top_terms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chapter_topics</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">group_by</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">top_n</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">beta</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">ungroup</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">arrange</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">beta</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>We can easily visualize the <em>top n</em> words using <code class="highlighter-rouge">ggplot</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
+
+</span><span class="n">top_terms</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">term</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reorder_within</span><span class="p">(</span><span class="n">term</span><span class="p">,</span><span class="w"> </span><span class="n">beta</span><span class="p">,</span><span class="w"> </span><span class="n">topic</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">ggplot</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">term</span><span class="p">,</span><span class="w"> </span><span class="n">beta</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">topic</span><span class="p">)))</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_col</span><span class="p">(</span><span class="n">show.legend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">facet_wrap</span><span class="p">(</span><span class="o">~</span><span class="w"> </span><span class="n">topic</span><span class="p">,</span><span class="w"> </span><span class="n">scales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"free"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">coord_flip</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">scale_x_reordered</span><span class="p">()</span><span class="w"> 
+</span></code></pre></div></div>
+
+<p><img src="/assets/unnamed-chunk-16-1.png" alt="" /></p>
+
+<p>The figure shows that Ferguson is the defining character across all
+topics and the most prominent term. Further coherences can be drawn,
+such as the parents (“mother” and “father”) are among the most important
+terms across most topics. At the same time, however, we can also work
+out differences. For example, it can be seen that “columbia” (may be the
+university) plays a greater role in topic four. Furthermore, we can
+identify characters that occur exclusively in individual topics or are
+overrepresented, such as Vivian, Gil, Celia, and Noah.</p>
+
+<p>We can systematically work out these topical differences, by taking the
+ratio of the corresponding betas. The following code programms in
+<code class="highlighter-rouge">dplyr</code>, which can be learned more about
+<a href="https://dplyr.tidyverse.org/articles/programming.html">here</a>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">log2ratio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">first_topic</span><span class="p">,</span><span class="w"> </span><span class="n">second_topic</span><span class="p">,</span><span class="w"> </span><span class="n">topics_chapter</span><span class="p">){</span><span class="w">
+  
+  </span><span class="c1"># Create the Beta Spread Table</span><span class="w">
+  </span><span class="n">beta_spread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">topics_chapter</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+    </span><span class="n">mutate</span><span class="p">(</span><span class="n">topic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="s2">"topic"</span><span class="p">,</span><span class="w"> </span><span class="n">topic</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+    </span><span class="n">spread</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span><span class="w"> </span><span class="n">beta</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+    </span><span class="n">filter</span><span class="p">(</span><span class="o">!!</span><span class="n">sym</span><span class="p">(</span><span class="n">first_topic</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">.001</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">!!</span><span class="n">sym</span><span class="p">(</span><span class="n">second_topic</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">.001</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+    </span><span class="n">mutate</span><span class="p">(</span><span class="n">log_ratio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">log2</span><span class="p">(</span><span class="o">!!</span><span class="n">sym</span><span class="p">(</span><span class="n">first_topic</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="o">!!</span><span class="n">sym</span><span class="p">(</span><span class="n">second_topic</span><span class="p">)))</span><span class="w">
+  
+  </span><span class="c1"># Modify the Data</span><span class="w">
+  </span><span class="n">top_n_beta_spreads</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head</span><span class="p">(</span><span class="n">beta_spread</span><span class="p">[</span><span class="nf">c</span><span class="p">(</span><span class="s1">'term'</span><span class="p">,</span><span class="s1">'log_ratio'</span><span class="p">)][</span><span class="n">order</span><span class="p">(</span><span class="o">-</span><span class="n">beta_spread</span><span class="p">[</span><span class="nf">c</span><span class="p">(</span><span class="s1">'term'</span><span class="p">,</span><span class="w"> </span><span class="s1">'log_ratio'</span><span class="p">)]</span><span class="o">$</span><span class="n">log_ratio</span><span class="p">),],</span><span class="n">n</span><span class="o">=</span><span class="m">5</span><span class="p">)</span><span class="w">
+
+  </span><span class="n">tail_n_beta_spreads</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tail</span><span class="p">(</span><span class="n">beta_spread</span><span class="p">[</span><span class="nf">c</span><span class="p">(</span><span class="s1">'term'</span><span class="p">,</span><span class="w"> </span><span class="s1">'log_ratio'</span><span class="p">)][</span><span class="n">order</span><span class="p">(</span><span class="o">-</span><span class="n">beta_spread</span><span class="p">[</span><span class="nf">c</span><span class="p">(</span><span class="s1">'term'</span><span class="p">,</span><span class="w"> </span><span class="s1">'log_ratio'</span><span class="p">)]</span><span class="o">$</span><span class="n">log_ratio</span><span class="p">),],</span><span class="n">n</span><span class="o">=</span><span class="m">5</span><span class="p">)</span><span class="w">
+  
+  </span><span class="n">top_beta_spread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">top_n_beta_spreads</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+    </span><span class="n">add_row</span><span class="p">(</span><span class="n">term</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tail_n_beta_spreads</span><span class="o">$</span><span class="n">term</span><span class="p">,</span><span class="w"> </span><span class="n">log_ratio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tail_n_beta_spreads</span><span class="o">$</span><span class="n">log_ratio</span><span class="p">)</span><span class="w">
+  </span><span class="n">top_beta_spread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">top_beta_spread</span><span class="p">[</span><span class="n">order</span><span class="p">(</span><span class="n">top_beta_spread</span><span class="o">$</span><span class="n">log_ratio</span><span class="p">),]</span><span class="w">
+  
+  </span><span class="c1"># Create the Plot</span><span class="w">
+  </span><span class="n">par</span><span class="p">(</span><span class="n">mar</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">2</span><span class="p">)</span><span class="m">+.1</span><span class="p">)</span><span class="w">
+  </span><span class="n">barplot</span><span class="p">(</span><span class="n">pull</span><span class="p">(</span><span class="n">top_beta_spread</span><span class="p">),</span><span class="w"> </span><span class="n">horiz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">names.arg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">top_beta_spread</span><span class="o">$</span><span class="n">term</span><span class="p">,</span><span class="n">las</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">axes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w">
+        </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">first_topic</span><span class="p">),</span><span class="w"> </span><span class="s2">"/"</span><span class="p">,</span><span class="w"> </span><span class="nf">as.character</span><span class="p">(</span><span class="n">second_topic</span><span class="p">)))</span><span class="w">
+  </span><span class="n">axis</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="n">at</span><span class="o">=</span><span class="n">seq</span><span class="p">(</span><span class="nf">round</span><span class="p">(</span><span class="nf">min</span><span class="p">(</span><span class="n">top_beta_spread</span><span class="o">$</span><span class="n">log_ratio</span><span class="p">)),</span><span class="nf">round</span><span class="p">(</span><span class="nf">max</span><span class="p">(</span><span class="n">top_beta_spread</span><span class="o">$</span><span class="n">log_ratio</span><span class="p">)),</span><span class="m">50</span><span class="p">))</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">cex</span><span class="o">=</span><span class="m">1.5</span><span class="p">)</span><span class="w">
+</span><span class="n">log2ratio</span><span class="p">(</span><span class="s2">"topic1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"topic2"</span><span class="p">,</span><span class="w"> </span><span class="n">chapter_topics</span><span class="p">)</span><span class="w">
+</span><span class="n">log2ratio</span><span class="p">(</span><span class="s2">"topic1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"topic3"</span><span class="p">,</span><span class="w"> </span><span class="n">chapter_topics</span><span class="p">)</span><span class="w">
+</span><span class="n">log2ratio</span><span class="p">(</span><span class="s2">"topic1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"topic4"</span><span class="p">,</span><span class="w"> </span><span class="n">chapter_topics</span><span class="p">)</span><span class="w">
+</span><span class="n">log2ratio</span><span class="p">(</span><span class="s2">"topic2"</span><span class="p">,</span><span class="w"> </span><span class="s2">"topic3"</span><span class="p">,</span><span class="w"> </span><span class="n">chapter_topics</span><span class="p">)</span><span class="w">
+</span><span class="n">log2ratio</span><span class="p">(</span><span class="s2">"topic2"</span><span class="p">,</span><span class="w"> </span><span class="s2">"topic4"</span><span class="p">,</span><span class="w"> </span><span class="n">chapter_topics</span><span class="p">)</span><span class="w">
+</span><span class="n">log2ratio</span><span class="p">(</span><span class="s2">"topic3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"topic4"</span><span class="p">,</span><span class="w"> </span><span class="n">chapter_topics</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="/assets/unnamed-chunk-18-1.png" alt="" /></p>
+
+<p>We can see clear differences between the topics. For instance, <em>topic2</em>
+appears to have a character <code class="highlighter-rouge">aubrey</code> that only plays a role in that
+particular storyline. Additionally, there are many more characters and
+distinctions we can make out due to the <code class="highlighter-rouge">beta_spread</code>. These differences
+help us as a reader, but also the model, to distinguish between
+different storylines.</p>
+
+<p>So far we have considered each topic individually, trying to see the
+bigger picture by comparing all topics simultaneously. However, we may
+also take a look at one topic and its difference to all others. We do so
+by calculating the logarithmic ratio of one topic and the mean of the
+three others.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">beta_spreads</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">first_topic</span><span class="p">,</span><span class="w"> </span><span class="n">second_topic</span><span class="p">,</span><span class="w"> 
+                        </span><span class="n">third_topic</span><span class="p">,</span><span class="w"> </span><span class="n">fourth_topic</span><span class="p">,</span><span class="w"> </span><span class="n">topics_chapter</span><span class="p">){</span><span class="w">
+  </span><span class="n">topics_chapter</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">topic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="s2">"topic"</span><span class="p">,</span><span class="w"> </span><span class="n">topic</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">spread</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span><span class="w"> </span><span class="n">beta</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">filter</span><span class="p">(</span><span class="o">!!</span><span class="n">sym</span><span class="p">(</span><span class="n">first_topic</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">.001</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">!!</span><span class="n">sym</span><span class="p">(</span><span class="n">second_topic</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">.001</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">!!</span><span class="n">sym</span><span class="p">(</span><span class="n">third_topic</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">.001</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">!!</span><span class="n">sym</span><span class="p">(</span><span class="n">fourth_topic</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">.001</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="n">beta_spread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">beta_spreads</span><span class="p">(</span><span class="s2">"topic1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"topic2"</span><span class="p">,</span><span class="w"> </span><span class="s2">"topic3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"topic4"</span><span class="p">,</span><span class="w"> </span><span class="n">chapter_topics</span><span class="p">)</span><span class="w">
+</span><span class="n">beta_spread</span><span class="o">$</span><span class="n">log_avg1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">log2</span><span class="p">(</span><span class="n">beta_spread</span><span class="o">$</span><span class="n">topic1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">rowMeans</span><span class="p">(</span><span class="n">beta_spread</span><span class="p">[,</span><span class="m">3</span><span class="o">:</span><span class="m">5</span><span class="p">]))</span><span class="w">
+</span><span class="n">beta_spread</span><span class="o">$</span><span class="n">log_avg2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">log2</span><span class="p">(</span><span class="n">beta_spread</span><span class="o">$</span><span class="n">topic2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">rowMeans</span><span class="p">(</span><span class="n">beta_spread</span><span class="p">[,</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">)]))</span><span class="w">
+</span><span class="n">beta_spread</span><span class="o">$</span><span class="n">log_avg3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">log2</span><span class="p">(</span><span class="n">beta_spread</span><span class="o">$</span><span class="n">topic3</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">rowMeans</span><span class="p">(</span><span class="n">beta_spread</span><span class="p">[,</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">5</span><span class="p">)]))</span><span class="w">
+</span><span class="n">beta_spread</span><span class="o">$</span><span class="n">log_avg4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">log2</span><span class="p">(</span><span class="n">beta_spread</span><span class="o">$</span><span class="n">topic4</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">rowMeans</span><span class="p">(</span><span class="n">beta_spread</span><span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">4</span><span class="p">]))</span><span class="w">
+
+</span><span class="n">plot_avg_spreads</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">df_spreads</span><span class="p">,</span><span class="w"> </span><span class="n">topic</span><span class="p">){</span><span class="w">
+  </span><span class="n">head_spreads</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head</span><span class="p">(</span><span class="n">df_spreads</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="o">+</span><span class="n">topic</span><span class="p">)][</span><span class="n">order</span><span class="p">(</span><span class="o">-</span><span class="n">df_spreads</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="o">+</span><span class="n">topic</span><span class="p">)][,</span><span class="m">2</span><span class="p">]),],</span><span class="n">n</span><span class="o">=</span><span class="m">5</span><span class="p">)</span><span class="w">
+  </span><span class="n">tail_spreads</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tail</span><span class="p">(</span><span class="n">df_spreads</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="o">+</span><span class="n">topic</span><span class="p">)][</span><span class="n">order</span><span class="p">(</span><span class="o">-</span><span class="n">df_spreads</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="o">+</span><span class="n">topic</span><span class="p">)][,</span><span class="m">2</span><span class="p">]),],</span><span class="n">n</span><span class="o">=</span><span class="m">5</span><span class="p">)</span><span class="w">
+  </span><span class="n">top_beta_spread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rbind</span><span class="p">(</span><span class="n">head_spreads</span><span class="p">,</span><span class="w"> </span><span class="n">tail_spreads</span><span class="p">)</span><span class="w">
+  </span><span class="n">top_beta_spread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">top_beta_spread</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">map_df</span><span class="p">(</span><span class="n">rev</span><span class="p">)</span><span class="w">
+  
+  </span><span class="c1">#par(mar=c(4,8,3,2)+.1)</span><span class="w">
+  </span><span class="n">barplot</span><span class="p">(</span><span class="n">pull</span><span class="p">(</span><span class="n">top_beta_spread</span><span class="p">),</span><span class="w"> </span><span class="n">horiz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">names.arg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">top_beta_spread</span><span class="o">$</span><span class="n">term</span><span class="p">,</span><span class="n">las</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">axes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w">
+          </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste</span><span class="p">(</span><span class="s2">"Topic"</span><span class="p">,</span><span class="w"> </span><span class="n">topic</span><span class="p">,</span><span class="w"> </span><span class="s2">"/ Mean of Topic"</span><span class="p">,</span><span class="w"> </span><span class="n">toString</span><span class="p">(</span><span class="n">setdiff</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">),</span><span class="n">topic</span><span class="p">))))</span><span class="w">
+  </span><span class="n">axis</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="n">at</span><span class="o">=</span><span class="n">seq</span><span class="p">(</span><span class="nf">round</span><span class="p">(</span><span class="nf">min</span><span class="p">(</span><span class="n">top_beta_spread</span><span class="p">[,</span><span class="m">2</span><span class="p">])),</span><span class="nf">round</span><span class="p">(</span><span class="nf">max</span><span class="p">(</span><span class="n">top_beta_spread</span><span class="p">[,</span><span class="m">2</span><span class="p">])),</span><span class="m">50</span><span class="p">))</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">par</span><span class="p">(</span><span class="n">mfrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">oma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="n">mar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="n">cex</span><span class="o">=</span><span class="m">1.5</span><span class="p">)</span><span class="w"> 
+</span><span class="n">plot_avg_spreads</span><span class="p">(</span><span class="n">beta_spread</span><span class="p">,</span><span class="w"> </span><span class="n">topic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">plot_avg_spreads</span><span class="p">(</span><span class="n">beta_spread</span><span class="p">,</span><span class="w"> </span><span class="n">topic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w">
+</span><span class="n">plot_avg_spreads</span><span class="p">(</span><span class="n">beta_spread</span><span class="p">,</span><span class="w"> </span><span class="n">topic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w">
+</span><span class="n">plot_avg_spreads</span><span class="p">(</span><span class="n">beta_spread</span><span class="p">,</span><span class="w"> </span><span class="n">topic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="/assets/unnamed-chunk-20-1.png" alt="" /></p>
+
+<p>Using this graphic we can clearly see which terms make up a topic. For
+example, we see that Evie and Celia are characters from topic 1, while
+Aubrey and Vivian seem to be characters from topic 2. By comparing one
+topic with all the others simultaneously (and direclty), we can draw
+conclusions about the uniqueness of individual terms (words) in topics.</p>
+
+<p>After examining the varying terms and their betas in depth, we may take
+a closer look at the per-document classification. How well does the
+<code class="highlighter-rouge">LDA</code> model assign the chapters to their respective storyline?</p>
+
+<h2 id="per-document-classification">Per-document classification</h2>
+
+<p>To each chapter there are <em>four</em> per-document-per-topic probabilities
+(topic 1, 2, 3 and 4).</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">chapters_gamma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tidy</span><span class="p">(</span><span class="n">chapters_lda</span><span class="p">,</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"gamma"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Thus, we can see the probabilities with which the model assigns each
+chapter to a topic.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">chapters_gamma</span><span class="p">[</span><span class="n">chapters_gamma</span><span class="o">$</span><span class="n">document</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"Storyline-1_Chapter-1"</span><span class="p">,]</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## # A tibble: 4 x 3
+##   document              topic      gamma
+##   &lt;chr&gt;                 &lt;int&gt;      &lt;dbl&gt;
+## 1 Storyline-1_Chapter-1     1 0.00000651
+## 2 Storyline-1_Chapter-1     2 0.854     
+## 3 Storyline-1_Chapter-1     3 0.146     
+## 4 Storyline-1_Chapter-1     4 0.00000651
+</code></pre></div></div>
+
+<p>The model believes the first chapter of the first storyline belongs to
+the second topic. We may seperate the chapters from the storylines.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">chapters_gamma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chapters_gamma</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">separate</span><span class="p">(</span><span class="n">document</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"title"</span><span class="p">,</span><span class="w"> </span><span class="s2">"chapter"</span><span class="p">),</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"_"</span><span class="p">,</span><span class="w"> </span><span class="n">convert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>And then illustrate the per-document-per-topic probability for all
+chapters.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">chapters_gamma</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reorder</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">gamma</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">topic</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">ggplot</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">factor</span><span class="p">(</span><span class="n">topic</span><span class="p">),</span><span class="w"> </span><span class="n">gamma</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_boxplot</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">facet_wrap</span><span class="p">(</span><span class="o">~</span><span class="w"> </span><span class="n">title</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="/assets/unnamed-chunk-24-1.png" alt="" /></p>
+
+<p>From the plot we can see that Storyline-2, Storyline-3 and Storyline-4
+are classified well, Storyline-1, however, is ambiguous. To get a better
+understanding why the first storyline is harder to be classified, we may
+take a closer look at the classified chapters. <code class="highlighter-rouge">chapter_classifications</code>
+gives away the probabilities with which the model assigns each chapter
+to a topic.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">chapter_classifications</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chapters_gamma</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">group_by</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">chapter</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">top_n</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">gamma</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">ungroup</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">arrange</span><span class="p">(</span><span class="n">gamma</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">book_topics</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chapter_classifications</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">count</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">topic</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">group_by</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">top_n</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">ungroup</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">transmute</span><span class="p">(</span><span class="n">consensus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">topic</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>After examining the chapters and their classification, we may also take
+a look at the terms (words) and their classification. This may be done
+using <code class="highlighter-rouge">augment</code> from the package <code class="highlighter-rouge">broom</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">assignments</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">augment</span><span class="p">(</span><span class="n">chapters_lda</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chapters_dtm</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">assignments</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">assignments</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">separate</span><span class="p">(</span><span class="n">document</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"title"</span><span class="p">,</span><span class="w"> </span><span class="s2">"chapter"</span><span class="p">),</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"_"</span><span class="p">,</span><span class="w"> </span><span class="n">convert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">inner_join</span><span class="p">(</span><span class="n">book_topics</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">".topic"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"topic"</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Adding the consensus (books assigned to) to the <code class="highlighter-rouge">assignments</code> <code class="highlighter-rouge">tibble</code>
+lets us examine the relationship between words and their
+misclassification to other chapters. It may be visualized for
+clarification using <code class="highlighter-rouge">ggplot</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">assignments</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">count</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">consensus</span><span class="p">,</span><span class="w"> </span><span class="n">wt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">count</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">group_by</span><span class="p">(</span><span class="n">title</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">percent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">n</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">ggplot</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">consensus</span><span class="p">,</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">percent</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_tile</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">scale_fill_gradient2</span><span class="p">(</span><span class="n">high</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">percent_format</span><span class="p">())</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">theme_minimal</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">theme</span><span class="p">(</span><span class="n">axis.text.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element_text</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">90</span><span class="p">,</span><span class="w"> </span><span class="n">hjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">),</span><span class="w">
+        </span><span class="n">panel.grid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element_blank</span><span class="p">())</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Book words were assigned to"</span><span class="p">,</span><span class="w">
+       </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Book words came from"</span><span class="p">,</span><span class="w">
+       </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"% of assignments"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="/assets/unnamed-chunk-29-1.png" alt="" /></p>
+
+<p>We can see that all words that came from Storyline-3 were also correctly
+classified to that storyline. Words from Storyline-1 and Storyline-4
+were mainly correctly classified, but carried some minsinterpretation as
+well. Storyline-2 was equally split between the first and second
+storyline.</p>
+
+<h1 id="references">References</h1>
+
+<p>David M. Blei. Probabilistic topic models. <em>Communications of the ACM</em>,
+Vol. 55 No. 4, Pages 77-84, 2012.</p>
+
+<p>Julia Silge and David Robinson. Text Mining with R, <em>O’Reilly</em>, 2020.</p>
+
+  </div><a class="u-url" href="/2020/08/04/4321-Blog.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <!--
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+        -->
+        <ul class="contact-list">
+          <li class="p-name">Code And Stats</li>
+          <li><a class="u-email" href="mailto:codeandstats@hwr-berlin.de">codeandstats@hwr-berlin.de</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
