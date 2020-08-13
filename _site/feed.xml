@@ -1,4 +1,241 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-04T14:54:40+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Code and Stats</title><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><entry><title type="html">LDA: 4321</title><link href="http://localhost:4000/2020/08/04/4321-Blog.html" rel="alternate" type="text/html" title="LDA: 4321" /><published>2020-08-04T00:00:00+02:00</published><updated>2020-08-04T00:00:00+02:00</updated><id>http://localhost:4000/2020/08/04/4321-Blog</id><content type="html" xml:base="http://localhost:4000/2020/08/04/4321-Blog.html">&lt;h1 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-13T12:02:18+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Code and Stats</title><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><entry><title type="html">R Classes</title><link href="http://localhost:4000/2020/08/13/R-Classes.html" rel="alternate" type="text/html" title="R Classes" /><published>2020-08-13T00:00:00+02:00</published><updated>2020-08-13T00:00:00+02:00</updated><id>http://localhost:4000/2020/08/13/R-Classes</id><content type="html" xml:base="http://localhost:4000/2020/08/13/R-Classes.html">&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+&lt;head&gt;
+
+&lt;meta charset=&quot;utf-8&quot; /&gt;
+&lt;meta name=&quot;generator&quot; content=&quot;pandoc&quot; /&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=EDGE&quot; /&gt;
+
+
+&lt;meta name=&quot;author&quot; content=&quot;Nikolaj&quot; /&gt;
+
+
+&lt;title&gt;Example Document&lt;/title&gt;
+
+&lt;script src=&quot;R-Classes_files/jquery-1.11.3/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
+&lt;link href=&quot;R-Classes_files/bootstrap-3.3.5/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+&lt;script src=&quot;R-Classes_files/bootstrap-3.3.5/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;R-Classes_files/bootstrap-3.3.5/shim/html5shiv.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;R-Classes_files/bootstrap-3.3.5/shim/respond.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;R-Classes_files/navigation-1.1/tabsets.js&quot;&gt;&lt;/script&gt;
+&lt;link href=&quot;R-Classes_files/highlightjs-9.12.0/default.css&quot; rel=&quot;stylesheet&quot; /&gt;
+&lt;script src=&quot;R-Classes_files/highlightjs-9.12.0/highlight.js&quot;&gt;&lt;/script&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;code{white-space: pre;}&lt;/style&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+  pre:not([class]) {
+    background-color: white;
+  }
+&lt;/style&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState &amp;&amp; document.readyState === &quot;complete&quot;) {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+&lt;/script&gt;
+
+
+
+&lt;style type=&quot;text/css&quot;&gt;
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+&lt;/style&gt;
+
+
+
+
+&lt;style type = &quot;text/css&quot;&gt;
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+&lt;/style&gt;
+
+
+
+&lt;!-- tabsets --&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+.tabset-dropdown &gt; .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown &gt; .nav-tabs &gt; li.active:before {
+  content: &quot;&quot;;
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown &gt; .nav-tabs.nav-tabs-open &gt; li.active:before {
+  content: &quot;&amp;#xe258;&quot;;
+  border: none;
+}
+
+.tabset-dropdown &gt; .nav-tabs.nav-tabs-open:before {
+  content: &quot;&quot;;
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown &gt; .nav-tabs &gt; li.active {
+  display: block;
+}
+
+.tabset-dropdown &gt; .nav-tabs &gt; li &gt; a,
+.tabset-dropdown &gt; .nav-tabs &gt; li &gt; a:focus,
+.tabset-dropdown &gt; .nav-tabs &gt; li &gt; a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown &gt; .nav-tabs.nav-tabs-open &gt; li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown &gt; .nav-tabs &gt; li {
+  display: none;
+}
+&lt;/style&gt;
+
+&lt;!-- code folding --&gt;
+
+
+
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+
+&lt;div class=&quot;container-fluid main-container&quot;&gt;
+
+
+
+
+&lt;div class=&quot;fluid-row&quot; id=&quot;header&quot;&gt;
+
+
+
+&lt;h1 class=&quot;title toc-ignore&quot;&gt;Example Document&lt;/h1&gt;
+&lt;h4 class=&quot;author&quot;&gt;Nikolaj&lt;/h4&gt;
+
+&lt;/div&gt;
+
+
+&lt;script src=&quot;https://cdn.datacamp.com/datacamp-light-latest.min.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;By default, &lt;code&gt;tutorial&lt;/code&gt; will convert all R chunks.&lt;/p&gt;
+&lt;div data-datacamp-exercise=&quot;&quot; data-height=&quot;300&quot; data-encoded=&quot;true&quot;&gt;
+eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJhIDwtIDJcbmIgPC0gM1xuXG5hICsgYiJ9
+&lt;/div&gt;
+
+
+
+
+&lt;/div&gt;
+
+&lt;script&gt;
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+&lt;/script&gt;
+
+&lt;!-- tabsets --&gt;
+
+&lt;script&gt;
+$(document).ready(function () {
+  window.buildTabsets(&quot;TOC&quot;);
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown &gt; .nav-tabs &gt; li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+&lt;/script&gt;
+
+&lt;!-- code folding --&gt;
+
+
+&lt;!-- dynamically load mathjax for compatibility with self-contained --&gt;
+&lt;script&gt;
+  (function () {
+    var script = document.createElement(&quot;script&quot;);
+    script.type = &quot;text/javascript&quot;;
+    script.src  = &quot;https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;;
+    document.getElementsByTagName(&quot;head&quot;)[0].appendChild(script);
+  })();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</content><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><summary type="html"></summary></entry><entry><title type="html">LDA: 4321</title><link href="http://localhost:4000/2020/08/04/4321-Blog.html" rel="alternate" type="text/html" title="LDA: 4321" /><published>2020-08-04T00:00:00+02:00</published><updated>2020-08-04T00:00:00+02:00</updated><id>http://localhost:4000/2020/08/04/4321-Blog</id><content type="html" xml:base="http://localhost:4000/2020/08/04/4321-Blog.html">&lt;h1 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h1&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;#libraries&quot;&gt;Libraries&lt;/a&gt;&lt;/li&gt;
