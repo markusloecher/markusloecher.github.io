@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-13T16:28:54+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Code and Stats</title><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><entry><title type="html">R Classes</title><link href="http://localhost:4000/2020/08/13/R-Classes.html" rel="alternate" type="text/html" title="R Classes" /><published>2020-08-13T00:00:00+02:00</published><updated>2020-08-13T00:00:00+02:00</updated><id>http://localhost:4000/2020/08/13/R-Classes</id><content type="html" xml:base="http://localhost:4000/2020/08/13/R-Classes.html">&lt;!DOCTYPE html&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-13T16:35:11+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Code and Stats</title><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><entry><title type="html">R Classes</title><link href="http://localhost:4000/2020/08/13/R-Classes.html" rel="alternate" type="text/html" title="R Classes" /><published>2020-08-13T00:00:00+02:00</published><updated>2020-08-13T00:00:00+02:00</updated><id>http://localhost:4000/2020/08/13/R-Classes</id><content type="html" xml:base="http://localhost:4000/2020/08/13/R-Classes.html">&lt;!DOCTYPE html&gt;
 
 &lt;html&gt;
 
@@ -188,19 +188,7 @@ summary {
 &lt;div id=&quot;assigning-variables&quot; class=&quot;section level1&quot;&gt;
 &lt;h1&gt;Assigning variables&lt;/h1&gt;
 &lt;div data-datacamp-exercise=&quot;&quot; data-height=&quot;300&quot; data-encoded=&quot;true&quot;&gt;
-eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIENyZWF0ZSB0aGUgdmFyaWFibGUgYiwgZXF1YWwgdG8gMTBcblxuXG4jIFByaW50IG91dCBiIiwic29sdXRpb24iOiIjIENyZWF0ZSB0aGUgdmFyaWFibGUgYiwgZXF1YWwgdG8gMTBcbmIgPC0gMTBcblxuIyBQcmludCBvdXQgYlxuYiIsInNjdCI6InRlc3Rfb2JqZWN0KFwiYlwiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJiXCIsIGluY29ycmVjdF9tc2cgPSBcIk1ha2Ugc3VyZSB0byBwcmludCBgYmAuXCIpXG5zdWNjZXNzX21zZyhcIkdyZWF0IVwiKSJ9
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;math-in-r&quot; class=&quot;section level1&quot;&gt;
-&lt;h1&gt;Math in R&lt;/h1&gt;
-&lt;div data-datacamp-exercise=&quot;&quot; data-height=&quot;300&quot; data-encoded=&quot;true&quot;&gt;
-eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIEFkZCAxMCArIDIwXG5cblxuIyBEaXZpZGUgMTAwIGJ5IDEwXG5cblxuIyBNdWx0aXBseSA1MCBieSAzIFxuXG5cbiMgVGFrZSAyIHRvIHRoZSBwb3dlciBvZiAxMCBcblxuXG4jIFRha2UgMTAgbW9kIDMgKG1vZHVsbykiLCJzb2x1dGlvbiI6IiMgQWRkIDEwICsgMjBcbjEwICsgMjBcblxuIyBEaXZpZGUgMTAwIGJ5IDEwXG4xMDAvMTBcblxuIyBNdWx0aXBseSA1MCBieSAzIFxuNTAqM1xuXG4jIFRha2UgMiB0byB0aGUgcG93ZXIgb2YgMTAgXG4yKioxMFxuXG4jIFRha2UgMTAgbW9kIDMgKG1vZHVsbylcbjEwICUlIDMiLCJzY3QiOiJzdWNjZXNzX21zZyhcIk5vdyB5b3UgZG9uJ3QgbmVlZCBhIGNhbGN1bGF0b3IgYW55bW9yZSFcIikifQ==
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;variables-and-math&quot; class=&quot;section level1&quot;&gt;
-&lt;h1&gt;Variables and Math&lt;/h1&gt;
-&lt;div data-datacamp-exercise=&quot;&quot; data-height=&quot;300&quot; data-encoded=&quot;true&quot;&gt;
-eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIENyZWF0ZSB0aGUgdmFyaWFibGUgYSwgZXF1YWwgNSBcblxuXG4jIE11bHRpcGx5IGEgd2l0aCAxMCAiLCJzb2x1dGlvbiI6IiMgQ3JlYXRlIHRoZSB2YXJpYWJsZSBhLCBlcXVhbCA1IFxuYSA8LSA1XG5cbiMgTXVsdGlwbHkgYSB3aXRoIDEwIFxuYSAqIDEwXG5cbiMgQXNzaWduIHRoYXQgY2FsY3VsYXRpb24gdG8gdGhlIG5ldyB2YXJpYWJsZSBiXG5iID0gYSAqIDEwXG5cbiMgQ2FsbCBiXG5iIiwic2N0Ijoic3VjY2Vzc19tc2coXCJUaGlzIHdvcmtlZCBncmVhdCFcIikifQ==
+eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIENyZWF0ZSBhIHZhcmlhYmxlIGEsIGVxdWFsIHRvIDVcblxuXG4jIFByaW50IG91dCBhIiwic29sdXRpb24iOiIjIENyZWF0ZSBhIHZhcmlhYmxlIGEsIGVxdWFsIHRvIDVcbmEgPC0gNVxuXG4jIFByaW50IG91dCBhXG5hIiwic2N0IjoidGVzdF9vYmplY3QoXCJhXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcImFcIiwgaW5jb3JyZWN0X21zZyA9IFwiTWFrZSBzdXJlIHRvIHByaW50IGBhYC5cIilcbnN1Y2Nlc3NfbXNnKFwiR3JlYXQhXCIpIn0=
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -250,11 +238,7 @@ $(document).ready(function () {
 &lt;/script&gt;
 
 &lt;/body&gt;
-&lt;/html&gt;</content><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><summary type="html"></summary></entry><entry><title type="html">R Classes</title><link href="http://localhost:4000/2020/08/12/R-Classes.html" rel="alternate" type="text/html" title="R Classes" /><published>2020-08-12T00:00:00+02:00</published><updated>2020-08-12T00:00:00+02:00</updated><id>http://localhost:4000/2020/08/12/R-Classes</id><content type="html" xml:base="http://localhost:4000/2020/08/12/R-Classes.html">&lt;script src=&quot;https://cdn.datacamp.com/datacamp-light-latest.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;By default, &lt;code class=&quot;highlighter-rouge&quot;&gt;tutorial&lt;/code&gt; will convert all R chunks.&lt;/p&gt;
-
-&lt;p&gt;eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJhIDwtIDJcbmIgPC0gM1xuXG5hICsgYiJ9&lt;/p&gt;</content><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><summary type="html">By default, tutorial will convert all R chunks.</summary></entry><entry><title type="html">LDA: 4321</title><link href="http://localhost:4000/2020/08/04/4321-Blog.html" rel="alternate" type="text/html" title="LDA: 4321" /><published>2020-08-04T00:00:00+02:00</published><updated>2020-08-04T00:00:00+02:00</updated><id>http://localhost:4000/2020/08/04/4321-Blog</id><content type="html" xml:base="http://localhost:4000/2020/08/04/4321-Blog.html">&lt;h1 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h1&gt;
+&lt;/html&gt;</content><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><summary type="html"></summary></entry><entry><title type="html">LDA: 4321</title><link href="http://localhost:4000/2020/08/04/4321-Blog.html" rel="alternate" type="text/html" title="LDA: 4321" /><published>2020-08-04T00:00:00+02:00</published><updated>2020-08-04T00:00:00+02:00</updated><id>http://localhost:4000/2020/08/04/4321-Blog</id><content type="html" xml:base="http://localhost:4000/2020/08/04/4321-Blog.html">&lt;h1 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h1&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;#libraries&quot;&gt;Libraries&lt;/a&gt;&lt;/li&gt;
