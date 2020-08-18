@@ -8,15 +8,13 @@
 <meta property="og:title" content="LDA: 4321" />
 <meta name="author" content="Nikolaj Bewer, Markus Loecher" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Table of Contents" />
-<meta property="og:description" content="Table of Contents" />
 <link rel="canonical" href="http://localhost:4000/2020/08/04/4321-Blog.html" />
 <meta property="og:url" content="http://localhost:4000/2020/08/04/4321-Blog.html" />
 <meta property="og:site_name" content="Code and Stats" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-08-04T00:00:00+02:00" />
 <script type="application/ld+json">
-{"headline":"LDA: 4321","dateModified":"2020-08-04T00:00:00+02:00","datePublished":"2020-08-04T00:00:00+02:00","author":{"@type":"Person","name":"Nikolaj Bewer, Markus Loecher"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020/08/04/4321-Blog.html"},"description":"Table of Contents","@type":"BlogPosting","url":"http://localhost:4000/2020/08/04/4321-Blog.html","@context":"https://schema.org"}</script>
+{"headline":"LDA: 4321","dateModified":"2020-08-04T00:00:00+02:00","datePublished":"2020-08-04T00:00:00+02:00","author":{"@type":"Person","name":"Nikolaj Bewer, Markus Loecher"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020/08/04/4321-Blog.html"},"@type":"BlogPosting","url":"http://localhost:4000/2020/08/04/4321-Blog.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Code and Stats" />
 </head>
@@ -49,13 +47,16 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h1 id="table-of-contents">Table of Contents</h1>
+    <p><img src="https://github.com/markusloecher/markusloecher.github.io/blob/master/assets/auster3.jpg" alt="Auster4321" /></p>
+
+<h1 id="table-of-contents">Table of Contents</h1>
 
 <ol>
   <li><a href="#libraries">Libraries</a></li>
   <li><a href="#introduction">Introduction</a></li>
   <li><a href="#data">Data</a></li>
   <li><a href="#lda-on-chapters">LDA on Chapters</a></li>
+  <li><a href="#mistaken-words">Mistaken words</a></li>
   <li><a href="#references">References</a></li>
 </ol>
 
@@ -71,6 +72,7 @@
 </span><span class="n">library</span><span class="p">(</span><span class="n">stringr</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">scales</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">tibble</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
 <p>Note: The idea (and some of the code) originates from Silge and
@@ -173,17 +175,22 @@ words are reduced to their word stem. We decided against these
 algorithmic processes, as information gets lost and the differences
 between the topics are subtle.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tibble</span><span class="p">(</span><span class="n">document</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="c1"># Initialize</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tibble</span><span class="p">(</span><span class="n">document</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.character</span><span class="p">(</span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.character</span><span class="p">(</span><span class="m">0</span><span class="p">))</span><span class="w"> </span><span class="c1"># Initialize</span><span class="w">
+</span><span class="c1">#df1 = tibble(document = as.character("First"))</span><span class="w">
+</span><span class="c1">#df2 = tibble(word = as.character("First"))</span><span class="w">
 </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">){</span><span class="w">
   </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">part1</span><span class="p">)){</span><span class="w">
     </span><span class="n">story1_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">auster</span><span class="p">[</span><span class="n">parts</span><span class="p">[</span><span class="n">seq</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">parts</span><span class="p">),</span><span class="m">4</span><span class="p">)][</span><span class="n">i</span><span class="p">]</span><span class="o">:</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="n">seq</span><span class="p">(</span><span class="n">j</span><span class="m">+1</span><span class="p">,</span><span class="nf">length</span><span class="p">(</span><span class="n">parts</span><span class="p">),</span><span class="m">4</span><span class="p">)][</span><span class="n">i</span><span class="p">]</span><span class="m">-1</span><span class="p">)]</span><span class="w">
     </span><span class="n">story1_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sapply</span><span class="p">(</span><span class="n">story1_1</span><span class="p">,</span><span class="w"> </span><span class="n">paste0</span><span class="p">,</span><span class="w"> </span><span class="n">collapse</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span><span class="w">
     </span><span class="n">story1_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste</span><span class="p">(</span><span class="n">story1_1</span><span class="p">,</span><span class="w"> </span><span class="n">collapse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">" "</span><span class="p">)</span><span class="w">
-    </span><span class="n">story1_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gsub</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="s2">"["</span><span class="p">,</span><span class="w"> </span><span class="nf">as.character</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="s1">'.'</span><span class="p">,</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="s2">"."</span><span class="p">,</span><span class="s2">","</span><span class="p">,</span><span class="w"> </span><span class="s2">"("</span><span class="p">,</span><span class="w"> </span><span class="s2">")"</span><span class="p">,</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w"> </span><span class="s2">":"</span><span class="p">,</span><span class="w"> </span><span class="s2">"]"</span><span class="p">),</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">story1_1</span><span class="p">)</span><span class="w">
+    </span><span class="n">story1_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gsub</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="s2">"["</span><span class="p">,</span><span class="w"> </span><span class="nf">as.character</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="s1">'.'</span><span class="p">,</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="s2">","</span><span class="p">,</span><span class="w"> </span><span class="s2">"("</span><span class="p">,</span><span class="w"> </span><span class="s2">")"</span><span class="p">,</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w"> </span><span class="s2">":"</span><span class="p">,</span><span class="w"> </span><span class="s2">"]"</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">story1_1</span><span class="p">)</span><span class="w">
     </span><span class="n">story1_1_words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strsplit</span><span class="p">(</span><span class="n">story1_1</span><span class="p">,</span><span class="w"> </span><span class="n">split</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">" "</span><span class="p">)</span><span class="w">
     </span><span class="n">df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">add_row</span><span class="p">(</span><span class="n">document</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="s2">"Storyline-"</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="s2">"_Chapter-"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">),</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unlist</span><span class="p">(</span><span class="n">story1_1_words</span><span class="p">))</span><span class="w">
+    </span><span class="c1">#df1 = df1 %&gt;% add_row(document = paste0("Storyline-", j, "_Chapter-", i))</span><span class="w">
+    </span><span class="c1">#df2 = df2 %&gt;% add_row(word = unlist(story1_1_words))</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
+</span><span class="c1">#df = bind_rows(df1, df2)</span><span class="w">
 </span><span class="n">df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df</span><span class="p">[</span><span class="m">-1</span><span class="p">,]</span><span class="w">
 </span><span class="n">df</span><span class="o">$</span><span class="n">word</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tolower</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">word</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
@@ -496,7 +503,7 @@ to a topic.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">book_topics</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chapter_classifications</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
   </span><span class="n">count</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">topic</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
-  </span><span class="n">group_by</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">group_by</span><span class="p">(</span><span class="n">title</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
   </span><span class="n">top_n</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
   </span><span class="n">ungroup</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
   </span><span class="n">transmute</span><span class="p">(</span><span class="n">consensus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">topic</span><span class="p">)</span><span class="w">
@@ -536,11 +543,49 @@ clarification using <code class="highlighter-rouge">ggplot</code>.</p>
 
 <p><img src="/assets/unnamed-chunk-29-1.png" alt="" /></p>
 
-<p>We can see that all words that came from Storyline-3 were also correctly
-classified to that storyline. Words from Storyline-1 and Storyline-4
-were mainly correctly classified, but carried some minsinterpretation as
-well. Storyline-2 was equally split between the first and second
-storyline.</p>
+<p>We can see that all words that came from Storyline-3 and Storyline-2
+were correctly classified to their storyline. Words from Storyline-1 and
+Storyline-4 were mainly correctly classified, but carried some
+minsinterpretation as well. Thus, we may ask what the misinterpretations
+were.</p>
+
+<h2 id="mistaken-words">Mistaken words</h2>
+
+<p>We only expect to see misinterpretations in Storyline-1 and Storyline-4.
+By comparing the title (true chapter) with the consensus (classified
+chapter) we can spot differences.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mistakes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">assignments</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">filter</span><span class="p">(</span><span class="n">title</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">consensus</span><span class="p">)</span><span class="w">
+
+</span><span class="n">mistakes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mistakes</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+    </span><span class="n">count</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">consensus</span><span class="p">,</span><span class="w"> </span><span class="n">term</span><span class="p">,</span><span class="w"> </span><span class="n">wt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">count</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+    </span><span class="n">ungroup</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+    </span><span class="n">arrange</span><span class="p">(</span><span class="n">desc</span><span class="p">(</span><span class="n">n</span><span class="p">))</span><span class="w">
+
+</span><span class="n">mistakes</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## # A tibble: 14,714 x 4
+##    title       consensus   term         n
+##    &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt;    &lt;dbl&gt;
+##  1 Storyline-1 Storyline-2 ferguson   278
+##  2 Storyline-4 Storyline-1 ferguson   221
+##  3 Storyline-1 Storyline-3 ferguson   190
+##  4 Storyline-4 Storyline-2 ferguson   164
+##  5 Storyline-1 Storyline-2 amy         95
+##  6 Storyline-1 Storyline-3 mother      80
+##  7 Storyline-1 Storyline-2 mother      71
+##  8 Storyline-4 Storyline-2 mother      66
+##  9 Storyline-1 Storyline-2 father      64
+## 10 Storyline-4 Storyline-1 father      62
+## # … with 14,704 more rows
+</code></pre></div></div>
+
+<p>The main character <em>ferguson</em> was the character most often
+misclassified, which does not come as a surprise, as he spans across all
+storylines. Other often wrongly classified characters are the <em>mother</em>
+and <em>father</em>, as well as <em>amy</em>.</p>
 
 <h1 id="references">References</h1>
 
