@@ -1,4 +1,5 @@
 title: Code and Stats
+permalink: /:title/
 author:
   name: Code And Stats
   email: codeandstats@hwr-berlin.de
