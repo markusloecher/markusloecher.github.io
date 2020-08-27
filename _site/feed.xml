@@ -1,4 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-18T18:20:13+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Code and Stats</title><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><entry><title type="html">R Classes</title><link href="http://localhost:4000/2020/08/13/R-Classes.html" rel="alternate" type="text/html" title="R Classes" /><published>2020-08-13T00:00:00+02:00</published><updated>2020-08-13T00:00:00+02:00</updated><id>http://localhost:4000/2020/08/13/R-Classes</id><content type="html" xml:base="http://localhost:4000/2020/08/13/R-Classes.html">&lt;!DOCTYPE html&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-27T17:37:56+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Code and Stats</title><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><entry><title type="html">R Classes: Markdown</title><link href="http://localhost:4000/DCL/" rel="alternate" type="text/html" title="R Classes: Markdown" /><published>2020-08-24T00:00:00+02:00</published><updated>2020-08-24T00:00:00+02:00</updated><id>http://localhost:4000/DCL</id><content type="html" xml:base="http://localhost:4000/DCL/">&lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.datacamp.com/dcl-react.js.gz&quot;&gt;&lt;/script&gt;
+
+&lt;div data-datacamp-exercise=&quot;&quot; data-lang=&quot;r&quot; data-show-run-button=&quot;&quot;&gt;
+	&lt;code data-type=&quot;pre-exercise-code&quot;&gt;
+		# This will get executed each time the exercise gets initialized
+		b = 6
+	&lt;/code&gt;
+	&lt;code data-type=&quot;sample-code&quot; data-show-run-button=&quot;&quot;&gt;
+		# Create a variable a, equal to 5
+
+
+		# Print out a
+
+
+	&lt;/code&gt;
+	&lt;code data-type=&quot;solution&quot; data-show-run-button=&quot;&quot;&gt;
+		# Create a variable a, equal to 5
+		a &amp;lt;- 5
+
+		# Print out a
+		print(a)
+	&lt;/code&gt;
+	&lt;code data-type=&quot;sct&quot; data-show-run-button=&quot;&quot;&gt;
+		test_object(&quot;a&quot;)
+		test_function(&quot;print&quot;)
+		success_msg(&quot;Great job!&quot;)
+	&lt;/code&gt;
+	&lt;div data-type=&quot;hint&quot;&gt;Use the assignment operator (&lt;code&gt;&amp;lt;-&lt;/code&gt;) to create the variable &lt;code&gt;a&lt;/code&gt;.&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div data-datacamp-exercise=&quot;&quot; data-lang=&quot;r&quot; data-show-run-button=&quot;&quot;&gt;
+	&lt;code data-type=&quot;pre-exercise-code&quot;&gt;
+		# This will get executed each time the exercise gets initialized
+		b = 6
+	&lt;/code&gt;
+	&lt;code data-type=&quot;sample-code&quot; data-show-run-button=&quot;&quot;&gt;
+		# Create a variable a, equal to 5
+
+
+		# Print out a
+
+
+	&lt;/code&gt;
+	&lt;code data-type=&quot;solution&quot; data-show-run-button=&quot;&quot;&gt;
+		# Create a variable a, equal to 5
+		a &amp;lt;- 5
+
+		# Print out a
+		print(a)
+	&lt;/code&gt;
+	&lt;code data-type=&quot;sct&quot; data-show-run-button=&quot;&quot;&gt;
+		test_object(&quot;a&quot;)
+		test_function(&quot;print&quot;)
+		success_msg(&quot;Great job!&quot;)
+	&lt;/code&gt;
+	&lt;div data-type=&quot;hint&quot;&gt;Use the assignment operator (&lt;code&gt;&amp;lt;-&lt;/code&gt;) to create the variable &lt;code&gt;a&lt;/code&gt;.&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div data-datacamp-exercise=&quot;&quot; data-lang=&quot;r&quot; data-show-run-button=&quot;&quot;&gt;
+	&lt;code data-type=&quot;pre-exercise-code&quot;&gt;
+		# This will get executed each time the exercise gets initialized
+		b = 6
+	&lt;/code&gt;
+	&lt;code data-type=&quot;sample-code&quot; data-show-run-button=&quot;&quot;&gt;
+		# Create a variable a, equal to 5
+
+
+		# Print out a
+
+
+	&lt;/code&gt;
+	&lt;code data-type=&quot;solution&quot; data-show-run-button=&quot;&quot;&gt;
+		# Create a variable a, equal to 5
+		a &amp;lt;- 5
+
+		# Print out a
+		print(a)
+	&lt;/code&gt;
+	&lt;code data-type=&quot;sct&quot; data-show-run-button=&quot;&quot;&gt;
+		test_object(&quot;a&quot;)
+		test_function(&quot;print&quot;)
+		success_msg(&quot;Great job!&quot;)
+	&lt;/code&gt;
+	&lt;div data-type=&quot;hint&quot;&gt;Use the assignment operator (&lt;code&gt;&amp;lt;-&lt;/code&gt;) to create the variable &lt;code&gt;a&lt;/code&gt;.&lt;/div&gt;
+&lt;/div&gt;</content><author><name>Nikolaj Bewer, Markus Loecher</name></author><summary type="html"></summary></entry><entry><title type="html">R Classes</title><link href="http://localhost:4000/R-Classes/" rel="alternate" type="text/html" title="R Classes" /><published>2020-08-13T00:00:00+02:00</published><updated>2020-08-13T00:00:00+02:00</updated><id>http://localhost:4000/R-Classes</id><content type="html" xml:base="http://localhost:4000/R-Classes/">&lt;!DOCTYPE html&gt;
 
 &lt;html&gt;
 
@@ -12,7 +96,7 @@
 &lt;meta name=&quot;author&quot; content=&quot;Nikolaj Bewer, Markus Loecher&quot; /&gt;
 
 
-&lt;title&gt;Class 1&lt;/title&gt;
+&lt;title&gt;R Classes: HTML&lt;/title&gt;
 
 &lt;script src=&quot;2020-08-13-R-Classes_files/jquery-1.11.3/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
@@ -177,18 +261,19 @@ summary {
 
 
 
-&lt;h1 class=&quot;title toc-ignore&quot;&gt;Class 1&lt;/h1&gt;
+&lt;h1 class=&quot;title toc-ignore&quot;&gt;R Classes: HTML&lt;/h1&gt;
 &lt;h4 class=&quot;author&quot;&gt;Nikolaj Bewer, Markus Loecher&lt;/h4&gt;
 
 &lt;/div&gt;
 
 
 &lt;script src=&quot;https://cdn.datacamp.com/datacamp-light-latest.min.js&quot;&gt;&lt;/script&gt;
-&lt;p&gt;This is the R live-coding part of the &lt;em&gt;Data Analytics: Methoden und Programmierung&lt;/em&gt; first session. Below you find a R-script and a console on which you can run R commands.&lt;/p&gt;
+&lt;p&gt;This is the R live-coding part of the &lt;em&gt;Data Analytics: Methoden und Programmierung&lt;/em&gt; first session. Below you find an R-script and a console on which you can run R commands.&lt;/p&gt;
 &lt;div id=&quot;assigning-variables&quot; class=&quot;section level1&quot;&gt;
 &lt;h1&gt;Assigning variables&lt;/h1&gt;
+Your first task is to create a variable called &lt;code&gt;a&lt;/code&gt;, equal to 5.
 &lt;div data-datacamp-exercise=&quot;&quot; data-height=&quot;300&quot; data-encoded=&quot;true&quot;&gt;
-eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIENyZWF0ZSBhIHZhcmlhYmxlIGEsIGVxdWFsIHRvIDVcblxuXG4jIFByaW50IG91dCBhIiwic29sdXRpb24iOiIjIENyZWF0ZSBhIHZhcmlhYmxlIGEsIGVxdWFsIHRvIDVcbmEgPC0gNVxuXG4jIFByaW50IG91dCBhXG5hIiwic2N0IjoidGVzdF9vYmplY3QoXCJhXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcImFcIiwgaW5jb3JyZWN0X21zZyA9IFwiTWFrZSBzdXJlIHRvIHByaW50IGBhYC5cIilcbnN1Y2Nlc3NfbXNnKFwiR3JlYXQhXCIpIn0=
+eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6IiNsaWJyYXJ5KHRvcGljbW9kZWxzKVxubGlicmFyeShicm9vbSkiLCJzYW1wbGUiOiIjIENyZWF0ZSBhIHZhcmlhYmxlIGEsIGVxdWFsIHRvIDVcblxuXG4jIFByaW50IG91dCBhIiwic29sdXRpb24iOiIjIENyZWF0ZSBhIHZhcmlhYmxlIGEsIGVxdWFsIHRvIDVcbmEgPC0gNVxuXG4jIFByaW50IG91dCBhXG5hIiwic2N0IjoiZXgoKSAlPiUgY2hlY2tfb2JqZWN0KFwiYVwiKSAlPiUgY2hlY2tfZXF1YWwoKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJhXCIsIGluY29ycmVjdF9tc2cgPSBcIk1ha2Ugc3VyZSB0byBwcmludCBgYWAuXCIpXG5zdWNjZXNzX21zZyhcIldlbGwgZG9uZSFcIikiLCJoaW50IjoiVXNlIHRoZSBhc3NpZ25tZW50IG9wZXJhdG9yIDxjb2RlPiZsdDstPC9jb2RlPi4ifQ==
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -238,7 +323,7 @@ $(document).ready(function () {
 &lt;/script&gt;
 
 &lt;/body&gt;
-&lt;/html&gt;</content><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><summary type="html"></summary></entry><entry><title type="html">LDA: 4321</title><link href="http://localhost:4000/2020/08/04/4321-Blog.html" rel="alternate" type="text/html" title="LDA: 4321" /><published>2020-08-04T00:00:00+02:00</published><updated>2020-08-04T00:00:00+02:00</updated><id>http://localhost:4000/2020/08/04/4321-Blog</id><content type="html" xml:base="http://localhost:4000/2020/08/04/4321-Blog.html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/auster1.jpg&quot; alt=&quot;Auster4321&quot; /&gt;&lt;/p&gt;
+&lt;/html&gt;</content><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><summary type="html"></summary></entry><entry><title type="html">LDA: 4321</title><link href="http://localhost:4000/4321-Blog" rel="alternate" type="text/html" title="LDA: 4321" /><published>2020-08-04T00:00:00+02:00</published><updated>2020-08-04T00:00:00+02:00</updated><id>http://localhost:4000/4321-Blog</id><content type="html" xml:base="http://localhost:4000/4321-Blog">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/auster1.jpg&quot; alt=&quot;Auster4321&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h1&gt;
 
