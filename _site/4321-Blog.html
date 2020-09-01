@@ -546,13 +546,114 @@ clarification using <code class="highlighter-rouge">ggplot</code>.</p>
 <p>We can see that all words that came from Storyline-3 and Storyline-2
 were correctly classified to their storyline. Words from Storyline-1 and
 Storyline-4 were mainly correctly classified, but carried some
-minsinterpretation as well. Thus, we may ask what the misinterpretations
-were.</p>
+minsinterpretation as well.</p>
+
+<p>So far we have given the model the whole chapter for classification. But
+we may ask, how many words (or pages) does the model need to accurately
+classify the chapter?</p>
+
+<p>The following code takes <em>n words</em> (<code class="highlighter-rouge">stepSize</code>), creates an LDA model
+and subsequently classifies the sub-chapter. This is done for all
+chapters across the book.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Paragraph2Topic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">lda_obj</span><span class="o">=</span><span class="n">chapters_lda</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">df</span><span class="p">,</span><span class="w"> </span><span class="n">doc</span><span class="o">=</span><span class="s2">"Storyline-1_Chapter-1"</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="o">=</span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1600</span><span class="p">){</span><span class="w">
+  </span><span class="n">df2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="w"> </span><span class="n">document</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">doc</span><span class="p">)</span><span class="c1">#paste0("Storyline-",storyline,"_Chapter-",chapter)</span><span class="w">
+  </span><span class="n">df2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df2</span><span class="p">[</span><span class="n">start</span><span class="o">:</span><span class="n">end</span><span class="p">,]</span><span class="w">
+  
+  </span><span class="n">word_counts2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df2</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">anti_join</span><span class="p">(</span><span class="n">stop_words</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">count</span><span class="p">(</span><span class="n">document</span><span class="p">,</span><span class="w"> </span><span class="n">word</span><span class="p">,</span><span class="w"> </span><span class="n">sort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> 
+  
+  
+  </span><span class="n">chapters_dtm2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">word_counts2</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+    </span><span class="n">cast_dtm</span><span class="p">(</span><span class="n">document</span><span class="p">,</span><span class="w"> </span><span class="n">word</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> 
+  
+  </span><span class="n">lda_inf</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">posterior</span><span class="p">(</span><span class="n">lda_obj</span><span class="p">,</span><span class="w"> </span><span class="n">chapters_dtm2</span><span class="p">)</span><span class="w"> 
+  </span><span class="nf">return</span><span class="p">(</span><span class="n">lda_inf</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">all_chapters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">seed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">123</span><span class="p">,</span><span class="w"> </span><span class="n">stepSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1000</span><span class="p">){</span><span class="w">
+  
+  </span><span class="n">set.seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span><span class="w"> </span><span class="c1"># Set Seed</span><span class="w">
+  
+  </span><span class="n">docs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unique</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">document</span><span class="p">)</span><span class="w"> </span><span class="c1"># List of 22 Chapters</span><span class="w">
+  </span><span class="n">chapter_lengths</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">table</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">document</span><span class="p">)</span><span class="w"> </span><span class="c1"># Lengths of Chapters</span><span class="w">
+  </span><span class="n">chapter_lengths</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">chapter_lengths</span><span class="p">,</span><span class="w"> </span><span class="m">-3</span><span class="p">)</span><span class="m">-1000</span><span class="w"> </span><span class="c1"># Rounds the chapters_lengths down, so the last iteration does not overshoot the length</span><span class="w">
+  </span><span class="n">nmbrRows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">chapter_lengths</span><span class="o">/</span><span class="n">stepSize</span><span class="p">)</span><span class="w"> </span><span class="c1"># To pre-allocate the space, the number of rows must be known</span><span class="w">
+  </span><span class="n">df_chapters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">matrix</span><span class="p">(</span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nmbrRows</span><span class="p">))</span><span class="w"> </span><span class="c1"># Initialize and pre-allocate the data.frame</span><span class="w">
+  </span><span class="n">df_chapters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df_chapters</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">rename</span><span class="p">(</span><span class="n">Chapter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X1</span><span class="p">,</span><span class="w"> </span><span class="n">StepSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X2</span><span class="p">,</span><span class="w"> </span><span class="n">Window</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X3</span><span class="p">,</span><span class="w"> </span><span class="n">Classified</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X4</span><span class="p">,</span><span class="w"> </span><span class="n">Correct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X5</span><span class="p">)</span><span class="w"> </span><span class="c1"># Rename the data.frame</span><span class="w">
+  </span><span class="n">iteration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="c1"># Counter</span><span class="w">
+  
+  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">chapter_lengths</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1"># Outer loop: Loops over the Chapters </span><span class="w">
+    </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">docs</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="c1"># Define the doc</span><span class="w">
+    </span><span class="n">sequ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="n">chapter_lengths</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="w"> </span><span class="n">stepSize</span><span class="p">)</span><span class="w"> </span><span class="c1"># Creates a sequence, given the length of the respective chapter</span><span class="w">
+    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">sequ</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1"># Inner loop: Loop through the single chapers</span><span class="w">
+      </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sequ</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="c1"># Takes the given starting point</span><span class="w">
+      </span><span class="n">lda_inf</span><span class="o">=</span><span class="n">suppressMessages</span><span class="p">(</span><span class="n">Paragraph2Topic</span><span class="p">(</span><span class="n">chapters_lda</span><span class="w"> </span><span class="p">,</span><span class="n">df</span><span class="p">,</span><span class="n">doc</span><span class="o">=</span><span class="n">d</span><span class="p">,</span><span class="n">start</span><span class="o">=</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="o">+</span><span class="n">stepSize</span><span class="p">))</span><span class="w"> </span><span class="c1"># Suppresses the "Join by = " message</span><span class="w">
+  
+      </span><span class="n">df_chapters</span><span class="o">$</span><span class="n">Chapter</span><span class="p">[</span><span class="n">iteration</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="c1"># Assign the chapter name</span><span class="w">
+      </span><span class="n">df_chapters</span><span class="o">$</span><span class="n">StepSize</span><span class="p">[</span><span class="n">iteration</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stepSize</span><span class="w"> </span><span class="c1"># Assign the step size</span><span class="w">
+      </span><span class="n">df_chapters</span><span class="o">$</span><span class="n">Window</span><span class="p">[</span><span class="n">iteration</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="c1"># Assign the window number</span><span class="w">
+      </span><span class="n">df_chapters</span><span class="o">$</span><span class="n">Classified</span><span class="p">[</span><span class="n">iteration</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">which.max</span><span class="p">(</span><span class="n">lda_inf</span><span class="o">$</span><span class="n">topics</span><span class="p">)</span><span class="w"> </span><span class="c1"># Classifications </span><span class="w">
+      </span><span class="n">df_chapters</span><span class="o">$</span><span class="n">Correct</span><span class="p">[</span><span class="n">iteration</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">book_topics</span><span class="o">$</span><span class="n">topic</span><span class="p">[</span><span class="nf">as.integer</span><span class="p">(</span><span class="n">substr</span><span class="p">(</span><span class="n">docs</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="m">11</span><span class="p">))]</span><span class="w"> </span><span class="c1"># Corrects</span><span class="w">
+      
+      </span><span class="n">iteration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iteration</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="c1"># Increase the counter</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="nf">return</span><span class="p">(</span><span class="n">df_chapters</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>We may call the function using a <code class="highlighter-rouge">stepSize</code> of 100. That is, we only
+provide the model with <em>100 words</em> and challenge it to correctly
+classify it. The second line gives us the Accuracy, the correctly
+classified chapters, divided by all.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df_chapters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">all_chapters</span><span class="p">(</span><span class="n">stepSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">)</span><span class="w">
+</span><span class="nf">sum</span><span class="p">(</span><span class="n">df_chapters</span><span class="o">$</span><span class="n">Classified</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">df_chapters</span><span class="o">$</span><span class="n">Correct</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">df_chapters</span><span class="o">$</span><span class="n">Classified</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## [1] 0.746988
+</code></pre></div></div>
+
+<p>In order to create the confusion matrix, we need to adjust the
+<code class="highlighter-rouge">data.frame</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Adapt the data.frame to make it compatible with the Confusion Matrix code</span><span class="w">
+</span><span class="n">df_chapters_CM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df_chapters</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">separate</span><span class="p">(</span><span class="n">Chapter</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Title"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Chapter"</span><span class="p">),</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"_"</span><span class="p">,</span><span class="w"> </span><span class="n">convert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">inner_join</span><span class="p">(</span><span class="n">book_topics</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Classified"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"topic"</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Now we can take the slightly adjusted code from above, to create a
+confusion matrix.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Confusion Matrix</span><span class="w">
+</span><span class="n">df_chapters_CM</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">count</span><span class="p">(</span><span class="n">Title</span><span class="p">,</span><span class="w"> </span><span class="n">consensus</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">group_by</span><span class="p">(</span><span class="n">Title</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">percent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">n</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">ggplot</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">consensus</span><span class="p">,</span><span class="w"> </span><span class="n">Title</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">percent</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_tile</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">scale_fill_gradient2</span><span class="p">(</span><span class="n">high</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">percent_format</span><span class="p">())</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">theme_minimal</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">theme</span><span class="p">(</span><span class="n">axis.text.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element_text</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">90</span><span class="p">,</span><span class="w"> </span><span class="n">hjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">),</span><span class="w">
+        </span><span class="n">panel.grid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element_blank</span><span class="p">())</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Correct Chapters"</span><span class="p">,</span><span class="w">
+       </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Assigned Chapters"</span><span class="p">,</span><span class="w">
+       </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"% of assignments"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="/assets/unnamed-chunk-34-1.png" alt="" /></p>
+
+<p>We can see that all chapters that came from Storyline-2 and Storyline-3
+were correctly classified to their storyline. Chapters from Storyline-1
+and Storyline-4 were mainly correctly classified, but carried some
+minsinterpretation as well. Thus, we may ask what these
+misinterpretations were.</p>
 
 <h2 id="mistaken-words">Mistaken words</h2>
 
-<p>We only expect to see misinterpretations in Storyline-1 and Storyline-4.
-By comparing the title (true chapter) with the consensus (classified
+<p>By comparing the title (true chapter) with the consensus (classified
 chapter) we can spot differences.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mistakes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">assignments</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
