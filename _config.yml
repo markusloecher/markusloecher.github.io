@@ -61,4 +61,3 @@ plugins:
  - jekyll-feed
  #- jekyll-seo-tag
 
-exclude: [Rmd-File]
