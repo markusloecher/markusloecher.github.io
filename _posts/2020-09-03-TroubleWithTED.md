@@ -123,7 +123,7 @@ main results, with testis size highlighted:
 ![](https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image6.png)
 
 Notice the low sample size in the „>50" category (76 men) and the wide
-confidence interval for $\beta$ ([-2.5; -0.1]) which almost includes
+confidence interval for $$\beta$$ ([-2.5; -0.1]) which almost includes
 zero[^1].
 
 To give the reader a feel for the magnitude of the effect: The lower end
