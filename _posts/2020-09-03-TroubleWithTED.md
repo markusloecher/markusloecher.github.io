@@ -6,10 +6,13 @@ layout: post
 
 ## The Trouble with dishonest TED Talks
 
-**The opener to Matthew Walker's TED Talk is not exactly what you'd
-expect to hear in a lecture about sleep.**
+The opener to Matthew Walker's TED Talk is not exactly what you'd
+expect to hear in a lecture about sleep.
 
-![](https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/man.png)
+<img src="https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/man.png" width="600"/>
+<!---
+![](https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/man.png =250x)
+-->
 
 "Men who sleep five hours a night have significantly smaller testicles
 than those who sleep seven hours or more," Walker, a UC Berkeley
@@ -25,7 +28,10 @@ The video of Walker's 19-minute "Sleep is your superpower" talk
 publication, it's up to more than 11,442,588 !)** after it was
 posted on the [TED Talks website](https://www.ted.com/talks).
 
+<img src="https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image004.png" width="550"/>
+<!---
 [![TED Stage](https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image004.png)](https://www.ted.com/talks/matt_walker_sleep_is_your_superpower#t-521579)
+-->
 
 I applaud both the outstanding delivery and the main message of his
 captivating presentation:
@@ -155,20 +161,24 @@ sample size was even lower than reported).
 What is my takeaway from this rather sobering fact finding mission after
 listening to the -at first glance- truly inspiring TED talk?
 
-1.  Do not believe outrageous sounding scientific claims, even if they
-    are put forth by academic superstars and institutions.
+<p style="color:#2B3856;"><b><ol>
+<li>Do not believe outrageous sounding scientific claims, even if they
+    are put forth by academic superstars and institutions.</li>
 
-2.  Yes, we should be grateful for the game changing TED "revolution"
+<li>Yes, we should be grateful for the game changing TED "revolution"
     which has gifted the world with high quality talks delivered in a
     uniquely professional and passionate way. At the same time, there is
     the dangerous need to entertain, impress and simplify; possibly at
-    the cost of academic integrity and caution.
+    the cost of academic integrity and caution.</li>
 
-3.  Given its global reach and immense influence and power, the TED
+<li>Given its global reach and immense influence and power, the TED
     institution needs to take responsibility for the content of talks
     delivered under its umbrella. At the very least, there should be a
     routine "fact checking" of the presentations, similar to the ones
-    journalists deploy at political debates/speeches.
+    journalists deploy at political debates/speeches.</li>
+</ol> 
+</b>
+</p>
    
     
 ---
