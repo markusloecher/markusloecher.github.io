@@ -9,7 +9,7 @@ layout: post
 **The opener to Matthew Walker's TED Talk is not exactly what you'd
 expect to hear in a lecture about sleep.**
 
-![](man.png)
+![](https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/man.png)
 
 "Men who sleep five hours a night have significantly smaller testicles
 than those who sleep seven hours or more," Walker, a UC Berkeley
@@ -25,7 +25,7 @@ The video of Walker's 19-minute "Sleep is your superpower" talk
 publication, it's up to more than 11,442,588 !)** after it was
 posted on the [TED Talks website](https://www.ted.com/talks).
 
-[![TED Stage](image004.png)](https://www.ted.com/talks/matt_walker_sleep_is_your_superpower#t-521579)
+[![TED Stage](https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image004.png)](https://www.ted.com/talks/matt_walker_sleep_is_your_superpower#t-521579)
 
 I applaud both the outstanding delivery and the main message of his
 captivating presentation:
@@ -62,7 +62,7 @@ outrageous claims from above. Luckily, it is an [open access
 article](https://openheart.bmj.com/content/1/1/e000019) in the
 *openheart Journal* from 2014. 
 
-![](openheart.png)
+![](https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/openheart.png)
 
 Imagine my grave disappointment to find out that the sample was limited
 to 3 years in the state of Michigan and had just 31 cases per day! On
@@ -70,7 +70,7 @@ page 4 you find Table 1 which contains the quoted 24% increase and 21%
 decrease expressed as relative risk (multipliers 1.24 and 0.79,
 respectively):
 
-![](image4.png)
+![](https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image4.png)
 
 Not mentioned in the talk is that the low sample size leads to rather
 wide confidence intervals of [1.05; 1.46] in the spring and [0.62;
@@ -110,7 +110,7 @@ likely and relevant paper I found on Google Scholar is a study of [the
 association between sleep disturbances and semen
 quality](https://pubmed.ncbi.nlm.nih.gov/23568594/) from 2012:
 
-![](image5.png)
+![](https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image5.png)
 
 This demographically extremely narrow study focusses mainly on semen
 quality but also reports that. "*After control for confounders, sperm
@@ -120,7 +120,7 @@ lower among both men with higher sleep scores and men with lower sleep
 scores in comparison with the reference group*". Table 3 contains the
 main results, with testis size highlighted:
 
-![](image6.png)
+![](https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image6.png)
 
 Notice the low sample size in the „>50" category (76 men) and the wide
 confidence interval for $\beta$ ([-2.5; -0.1]) which almost includes
@@ -150,7 +150,7 @@ A scatter plot (Fig.2 in the paper) of testicular volume versus sleep
 duration shows the ambivalence of model fitting (and suggests that the
 sample size was even lower than reported).
 
-![](image7.png)
+![](https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image7.png)
 
 What is my takeaway from this rather sobering fact finding mission after
 listening to the -at first glance- truly inspiring TED talk?
