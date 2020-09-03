@@ -1,0 +1,86 @@
+I"•<script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz"></script>
+
+<div data-datacamp-exercise="" data-lang="r" data-show-run-button="">
+	<code data-type="pre-exercise-code">
+		# This will get executed each time the exercise gets initialized
+		b = 6
+	</code>
+	<code data-type="sample-code" data-show-run-button="">
+		# Create a variable a, equal to 5
+
+
+		# Print out a
+
+
+	</code>
+	<code data-type="solution" data-show-run-button="">
+		# Create a variable a, equal to 5
+		a &lt;- 5
+
+		# Print out a
+		print(a)
+	</code>
+	<code data-type="sct" data-show-run-button="">
+		test_object("a")
+		test_function("print")
+		success_msg("Great job!")
+	</code>
+	<div data-type="hint">Use the assignment operator (<code>&lt;-</code>) to create the variable <code>a</code>.</div>
+</div>
+
+<div data-datacamp-exercise="" data-lang="r" data-show-run-button="">
+	<code data-type="pre-exercise-code">
+		# This will get executed each time the exercise gets initialized
+		b = 6
+	</code>
+	<code data-type="sample-code" data-show-run-button="">
+		# Create a variable a, equal to 5
+
+
+		# Print out a
+
+
+	</code>
+	<code data-type="solution" data-show-run-button="">
+		# Create a variable a, equal to 5
+		a &lt;- 5
+
+		# Print out a
+		print(a)
+	</code>
+	<code data-type="sct" data-show-run-button="">
+		test_object("a")
+		test_function("print")
+		success_msg("Great job!")
+	</code>
+	<div data-type="hint">Use the assignment operator (<code>&lt;-</code>) to create the variable <code>a</code>.</div>
+</div>
+
+<div data-datacamp-exercise="" data-lang="r" data-show-run-button="">
+	<code data-type="pre-exercise-code">
+		# This will get executed each time the exercise gets initialized
+		b = 6
+	</code>
+	<code data-type="sample-code" data-show-run-button="">
+		# Create a variable a, equal to 5
+
+
+		# Print out a
+
+
+	</code>
+	<code data-type="solution" data-show-run-button="">
+		# Create a variable a, equal to 5
+		a &lt;- 5
+
+		# Print out a
+		print(a)
+	</code>
+	<code data-type="sct" data-show-run-button="">
+		test_object("a")
+		test_function("print")
+		success_msg("Great job!")
+	</code>
+	<div data-type="hint">Use the assignment operator (<code>&lt;-</code>) to create the variable <code>a</code>.</div>
+</div>
+:ET

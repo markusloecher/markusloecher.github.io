@@ -1,4 +1,200 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-02T09:20:15+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Code and Stats</title><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><entry><title type="html">R Classes: Markdown</title><link href="http://localhost:4000/DCL/" rel="alternate" type="text/html" title="R Classes: Markdown" /><published>2020-08-24T00:00:00+02:00</published><updated>2020-08-24T00:00:00+02:00</updated><id>http://localhost:4000/DCL</id><content type="html" xml:base="http://localhost:4000/DCL/">&lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.datacamp.com/dcl-react.js.gz&quot;&gt;&lt;/script&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-03T13:53:48+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Code and Stats</title><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><entry><title type="html">Trouble with TED</title><link href="http://localhost:4000/TroubleWithTED/" rel="alternate" type="text/html" title="Trouble with TED" /><published>2020-09-03T00:00:00+02:00</published><updated>2020-09-03T00:00:00+02:00</updated><id>http://localhost:4000/TroubleWithTED</id><content type="html" xml:base="http://localhost:4000/TroubleWithTED/">&lt;h2 id=&quot;the-trouble-with-dishonest-ted-talks&quot;&gt;The Trouble with dishonest TED Talks&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;The opener to Matthew Walker’s TED Talk is not exactly what you’d
+expect to hear in a lecture about sleep.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;man.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;“Men who sleep five hours a night have significantly smaller testicles
+than those who sleep seven hours or more,” Walker, a UC Berkeley
+professor of psychology and neuroscience, told the audience in 2019 at
+the popular media organization’s &lt;a href=&quot;https://ted2019.ted.com/&quot;&gt;April 15-19
+conference&lt;/a&gt; in Vancouver, Canada.&lt;/p&gt;
+
+&lt;p&gt;That got everyone’s attention. (Source:
+&lt;a href=&quot;https://www.universityofcalifornia.edu/news/lack-sleep-shrinks-mens-testicles&quot;&gt;https://www.universityofcalifornia.edu/news/lack-sleep-shrinks-mens-testicles&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;The video of Walker’s 19-minute “Sleep is your superpower” talk
+&lt;strong&gt;received more than 1 million views in the first 72 hours (as of
+publication, it’s up to more than 11,442,588 !)&lt;/strong&gt; after it was
+posted on the &lt;a href=&quot;https://www.ted.com/talks&quot;&gt;TED Talks website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.ted.com/talks/matt_walker_sleep_is_your_superpower#t-521579&quot;&gt;&lt;img src=&quot;image004.png&quot; alt=&quot;TED Stage&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I applaud both the outstanding delivery and the main message of his
+captivating presentation:&lt;/p&gt;
+
+&lt;p&gt;“In 1942, more than 90 percent of Americans were sleeping more than six
+hours a night. Today, almost 50 percent of Americans are surviving on a
+nightly six hours or less,” he told Berkeley News. “We need to reclaim
+our right to a full night of sleep, without embarrassment or the stigma
+of laziness.”&lt;/p&gt;
+
+&lt;p&gt;However, at about 8:45 into the talk, Matthew walks (no pun intended) on
+very thin ice:&lt;/p&gt;
+
+&lt;p&gt;“*I could tell you about sleep loss and your cardiovascular system, and
+that &lt;strong&gt;all it takes is one hour&lt;/strong&gt;. Because there is a global experiment
+performed on 1.6 billion people across 70 countries twice a year, and
+it's called daylight saving time. &lt;span style=&quot;color:red&quot;&gt;&lt;strong&gt;Now, in the spring, when we lose
+one hour of sleep, we see a subsequent 24-percent increase in heart
+attacks that following day&lt;/strong&gt;&lt;/span&gt;. In the autumn, when we gain an hour of
+sleep, &lt;span style=&quot;color:red&quot;&gt;&lt;strong&gt;we see a 21-percent reduction in heart attacks&lt;/strong&gt;&lt;/span&gt;. Isn’t that
+incredible? And you see &lt;strong&gt;exactly the same profile for car crashes, road
+traffic accidents, even suicide rates&lt;/strong&gt;.”&lt;/p&gt;
+
+&lt;p&gt;Now I tend to be sensitive to gross exaggerations disguised as
+“scientific findings” and upon hearing of such a ridiculously large
+effect of a one-day-one-hour sleep disturbance, all of my alarm bells
+went up!&lt;/p&gt;
+
+&lt;p&gt;Initially I was super excited about the suggested sample size of 1.6
+billion people and wanted to find out how exactly such an incredible
+data set could possibly have been gathered. Upon my inquiry, Matthew was
+kind enough to point me to the paper, which was the basis for the rather
+outrageous claims from above. Luckily, it is an &lt;a href=&quot;https://openheart.bmj.com/content/1/1/e000019&quot;&gt;open access
+article&lt;/a&gt; in the
+&lt;em&gt;openheart Journal&lt;/em&gt; from 2014.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;openheart.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Imagine my grave disappointment to find out that the sample was limited
+to 3 years in the state of Michigan and had just 31 cases per day! On
+page 4 you find Table 1 which contains the quoted 24% increase and 21%
+decrease expressed as relative risk (multipliers 1.24 and 0.79,
+respectively):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;image4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Not mentioned in the talk is that the low sample size leads to rather
+wide confidence intervals of [1.05; 1.46] in the spring and [0.62;
+0.99] in the fall, which makes for a lot less dramatic possible effects
+of 5% upwards and 1% downwards.&lt;/p&gt;
+
+&lt;p&gt;More importantly, these changes were not observed on the “following day”
+after DST but instead on a Monday and Tuesday, respectively. Why did
+Matthew Walker choose these somewhat random days? My guess would be,
+because they were the only ones significant at the 5% level, which would
+be a classic case of “&lt;a href=&quot;https://insights.principa.co.za/p-hacking-are-you-guilty-data-fishing&quot;&gt;p-value
+fishing&lt;/a&gt;”.
+If one adjusted for the multiple comparisons (7 days of the week were
+tested), the significance disappears altogether. In that light it is no
+surprise that the authors “looked for the same signal in more recent
+data and it is markedly attenuated and no &lt;strong&gt;longer significant&lt;/strong&gt;”
+(private communications with Dr. Gurm).&lt;/p&gt;
+
+&lt;p&gt;I would claim that our intuition does not expect a measurable/large
+effect of DST on one particular day. In a similar context, Gelman and
+Weakliem have pointed out &lt;a href=&quot;https://www.jstor.org/stable/27859361&quot;&gt;the statistical challenges in estimating
+small effects&lt;/a&gt;: “… &lt;em&gt;systematic
+errors such as overestimation of the magnitudes of small effects can
+mislead scientists and, through them, the general public&lt;/em&gt;”.&lt;/p&gt;
+
+&lt;p&gt;The brash and reckless overstatement of these modest/insignificant heart
+attack numbers really worries me, since they do not come from a tabloid
+journalist, YouTuber or casual blogger but from a renowned scientist at
+the esteemed University of Berkeley. BTW, I was unable to find any
+backing of the statement on “&lt;em&gt;exactly the same profile for car crashes,
+road traffic accidents, even suicide rates&lt;/em&gt;” in the literature.&lt;/p&gt;
+
+&lt;p&gt;What about the click-bait-type opening line of those “significantly
+smaller testicles of men who sleep only five hours”? Unfortunately,
+Prof. Walker did not reveal the corresponding academic sources. The most
+likely and relevant paper I found on Google Scholar is a study of &lt;a href=&quot;https://pubmed.ncbi.nlm.nih.gov/23568594/&quot;&gt;the
+association between sleep disturbances and semen
+quality&lt;/a&gt; from 2012:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;image5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This demographically extremely narrow study focusses mainly on semen
+quality but also reports that. “&lt;em&gt;After control for confounders, sperm
+concentration, total sperm count, percent motile spermatozoa, percent
+morphologically normal spermatozoa, and testis size were signiﬁcantly
+lower among both men with higher sleep scores and men with lower sleep
+scores in comparison with the reference group&lt;/em&gt;”. Table 3 contains the
+main results, with testis size highlighted:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;image6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Notice the low sample size in the „&amp;gt;50” category (76 men) and the wide
+confidence interval for $\beta$ ([-2.5; -0.1]) which almost includes
+zero&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;To give the reader a feel for the magnitude of the effect: The lower end
+of the CI should be compared with the median/mean of about 21ml, so
+“significant” really means . It is further noteworthy that an even more
+significant reduction of testis size was observed for the extremely good
+sleep score of zero&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;br /&gt;
+The authors of this paper did not see how the sleep score &amp;gt;50 could
+possibly be translated into “Men who sleep five hours a night”.&lt;/p&gt;
+
+&lt;p&gt;Maybe the answer can be found in this article on &lt;a href=&quot;https://jcsm.aasm.org/doi/10.5664/jcsm.7390&quot;&gt;sleep duration and
+tesis size&lt;/a&gt; in the &lt;em&gt;Journal
+of Clinical Sleep Medicine&lt;/em&gt;? The main result seems to be a barely
+significant observational association based on either 66 or 97
+participants, which disappears under resampling. The sample size is too
+low to control for other factors (e.g. race/ethnicity, lifestyle,
+smoking, alcohol consumption ) than BMI and age and no causality can be
+inferred. Furthermore, it is not clear how exactly the sleep duration
+was computed from the various scores derived via (i) self-reported
+duration, (ii) one-night sleep laboratory, and (iii) a 7-day wrist
+actigraphy recording. The many possibilities of creating these scores
+leaves the reader somewhat uneasy about reliability of the p-value.&lt;br /&gt;
+A scatter plot (Fig.2 in the paper) of testicular volume versus sleep
+duration shows the ambivalence of model fitting (and suggests that the
+sample size was even lower than reported).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;image7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;What is my takeaway from this rather sobering fact finding mission after
+listening to the -at first glance- truly inspiring TED talk?&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Do not believe outrageous sounding scientific claims, even if they
+are put forth by academic superstars and institutions.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Yes, we should be grateful for the game changing TED “revolution”
+which has gifted the world with high quality talks delivered in a
+uniquely professional and passionate way. At the same time, there is
+the dangerous need to entertain, impress and simplify; possibly at
+the cost of academic integrity and caution.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Given its global reach and immense influence and power, the TED
+institution needs to take responsibility for the content of talks
+delivered under its umbrella. At the very least, there should be a
+routine “fact checking” of the presentations, similar to the ones
+journalists deploy at political debates/speeches.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Sleep disturbances were assessed on the basis of a modified 4-item
+version of the Karolinska Sleep Questionnaire which includes
+questions on sleep patterns during the past 4 weeks: How often have
+you 1) “slept badly or restlessly”; 2) “found it difficult to fall
+asleep”; 3) “woken up too early in the morning and not been able to
+go back to sleep”; and 4) “woken up several times during the night
+and found it difficult to go back to sleep”? &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Sleep score was calculated as the mean of the participant’s
+replies to the 4 sleep questions:&lt;/p&gt;
+
+      &lt;p&gt;“all the time” (scoring 100%), “a large part of the time” (scoring
+67%), “rarely” (scoring 33%), or “never” (scoring&lt;/p&gt;
+
+      &lt;p&gt;0%) and was categorized as 0, 1–10, 11–20 (reference), 21–30,
+31–40, 41–50, or &amp;gt;50. The category 11–20 was used as the
+reference category because this group of men had the highest sperm
+count. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Markus Loecher</name></author><summary type="html">The Trouble with dishonest TED Talks</summary></entry><entry><title type="html">R Classes: Markdown</title><link href="http://localhost:4000/DCL/" rel="alternate" type="text/html" title="R Classes: Markdown" /><published>2020-08-24T00:00:00+02:00</published><updated>2020-08-24T00:00:00+02:00</updated><id>http://localhost:4000/DCL</id><content type="html" xml:base="http://localhost:4000/DCL/">&lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.datacamp.com/dcl-react.js.gz&quot;&gt;&lt;/script&gt;
 
 &lt;div data-datacamp-exercise=&quot;&quot; data-lang=&quot;r&quot; data-show-run-button=&quot;&quot;&gt;
 	&lt;code data-type=&quot;pre-exercise-code&quot;&gt;
