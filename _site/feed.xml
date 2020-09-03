@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-03T13:53:48+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Code and Stats</title><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><entry><title type="html">Trouble with TED</title><link href="http://localhost:4000/TroubleWithTED/" rel="alternate" type="text/html" title="Trouble with TED" /><published>2020-09-03T00:00:00+02:00</published><updated>2020-09-03T00:00:00+02:00</updated><id>http://localhost:4000/TroubleWithTED</id><content type="html" xml:base="http://localhost:4000/TroubleWithTED/">&lt;h2 id=&quot;the-trouble-with-dishonest-ted-talks&quot;&gt;The Trouble with dishonest TED Talks&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-03T14:24:25+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Code and Stats</title><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><entry><title type="html">Trouble with TED</title><link href="http://localhost:4000/TroubleWithTED/" rel="alternate" type="text/html" title="Trouble with TED" /><published>2020-09-03T00:00:00+02:00</published><updated>2020-09-03T00:00:00+02:00</updated><id>http://localhost:4000/TroubleWithTED</id><content type="html" xml:base="http://localhost:4000/TroubleWithTED/">&lt;h2 id=&quot;the-trouble-with-dishonest-ted-talks&quot;&gt;The Trouble with dishonest TED Talks&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;The opener to Matthew Walker’s TED Talk is not exactly what you’d
 expect to hear in a lecture about sleep.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;man.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/man.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;“Men who sleep five hours a night have significantly smaller testicles
 than those who sleep seven hours or more,” Walker, a UC Berkeley
@@ -19,7 +19,7 @@ conference&lt;/a&gt; in Vancouver, Canada.&lt;/p&gt;
 publication, it’s up to more than 11,442,588 !)&lt;/strong&gt; after it was
 posted on the &lt;a href=&quot;https://www.ted.com/talks&quot;&gt;TED Talks website&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.ted.com/talks/matt_walker_sleep_is_your_superpower#t-521579&quot;&gt;&lt;img src=&quot;image004.png&quot; alt=&quot;TED Stage&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.ted.com/talks/matt_walker_sleep_is_your_superpower#t-521579&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image004.png&quot; alt=&quot;TED Stage&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I applaud both the outstanding delivery and the main message of his
 captivating presentation:&lt;/p&gt;
@@ -56,7 +56,7 @@ outrageous claims from above. Luckily, it is an &lt;a href=&quot;https://openhea
 article&lt;/a&gt; in the
 &lt;em&gt;openheart Journal&lt;/em&gt; from 2014.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;openheart.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/openheart.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Imagine my grave disappointment to find out that the sample was limited
 to 3 years in the state of Michigan and had just 31 cases per day! On
@@ -64,7 +64,7 @@ page 4 you find Table 1 which contains the quoted 24% increase and 21%
 decrease expressed as relative risk (multipliers 1.24 and 0.79,
 respectively):&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;image4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Not mentioned in the talk is that the low sample size leads to rather
 wide confidence intervals of [1.05; 1.46] in the spring and [0.62;
@@ -104,7 +104,7 @@ likely and relevant paper I found on Google Scholar is a study of &lt;a href=&qu
 association between sleep disturbances and semen
 quality&lt;/a&gt; from 2012:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;image5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This demographically extremely narrow study focusses mainly on semen
 quality but also reports that. “&lt;em&gt;After control for confounders, sperm
@@ -114,10 +114,10 @@ lower among both men with higher sleep scores and men with lower sleep
 scores in comparison with the reference group&lt;/em&gt;”. Table 3 contains the
 main results, with testis size highlighted:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;image6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Notice the low sample size in the „&amp;gt;50” category (76 men) and the wide
-confidence interval for $\beta$ ([-2.5; -0.1]) which almost includes
+confidence interval for \(\beta\) ([-2.5; -0.1]) which almost includes
 zero&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
 &lt;p&gt;To give the reader a feel for the magnitude of the effect: The lower end
@@ -144,7 +144,7 @@ A scatter plot (Fig.2 in the paper) of testicular volume versus sleep
 duration shows the ambivalence of model fitting (and suggests that the
 sample size was even lower than reported).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;image7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;What is my takeaway from this rather sobering fact finding mission after
 listening to the -at first glance- truly inspiring TED talk?&lt;/p&gt;
