@@ -1,9 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-03T14:24:25+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Code and Stats</title><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><entry><title type="html">Trouble with TED</title><link href="http://localhost:4000/TroubleWithTED/" rel="alternate" type="text/html" title="Trouble with TED" /><published>2020-09-03T00:00:00+02:00</published><updated>2020-09-03T00:00:00+02:00</updated><id>http://localhost:4000/TroubleWithTED</id><content type="html" xml:base="http://localhost:4000/TroubleWithTED/">&lt;h2 id=&quot;the-trouble-with-dishonest-ted-talks&quot;&gt;The Trouble with dishonest TED Talks&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-04T16:22:35+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Code and Stats</title><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><entry><title type="html">Trouble with TED</title><link href="http://localhost:4000/TroubleWithTED/" rel="alternate" type="text/html" title="Trouble with TED" /><published>2020-09-03T00:00:00+02:00</published><updated>2020-09-03T00:00:00+02:00</updated><id>http://localhost:4000/TroubleWithTED</id><content type="html" xml:base="http://localhost:4000/TroubleWithTED/">&lt;h2 id=&quot;the-trouble-with-dishonest-ted-talks&quot;&gt;The Trouble with dishonest TED Talks&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;The opener to Matthew Walker’s TED Talk is not exactly what you’d
-expect to hear in a lecture about sleep.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The opener to Matthew Walker’s TED Talk is not exactly what you’d
+expect to hear in a lecture about sleep.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/man.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/man.png&quot; width=&quot;600&quot; /&gt;
+&lt;!---
+![](https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/man.png =250x)
+--&gt;&lt;/p&gt;
 
 &lt;p&gt;“Men who sleep five hours a night have significantly smaller testicles
 than those who sleep seven hours or more,” Walker, a UC Berkeley
@@ -19,7 +22,10 @@ conference&lt;/a&gt; in Vancouver, Canada.&lt;/p&gt;
 publication, it’s up to more than 11,442,588 !)&lt;/strong&gt; after it was
 posted on the &lt;a href=&quot;https://www.ted.com/talks&quot;&gt;TED Talks website&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.ted.com/talks/matt_walker_sleep_is_your_superpower#t-521579&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image004.png&quot; alt=&quot;TED Stage&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image004.png&quot; width=&quot;550&quot; /&gt;
+&lt;!---
+[![TED Stage](https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image004.png)](https://www.ted.com/talks/matt_walker_sleep_is_your_superpower#t-521579)
+--&gt;&lt;/p&gt;
 
 &lt;p&gt;I applaud both the outstanding delivery and the main message of his
 captivating presentation:&lt;/p&gt;
@@ -149,26 +155,26 @@ sample size was even lower than reported).&lt;/p&gt;
 &lt;p&gt;What is my takeaway from this rather sobering fact finding mission after
 listening to the -at first glance- truly inspiring TED talk?&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Do not believe outrageous sounding scientific claims, even if they
-are put forth by academic superstars and institutions.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Yes, we should be grateful for the game changing TED “revolution”
-which has gifted the world with high quality talks delivered in a
-uniquely professional and passionate way. At the same time, there is
-the dangerous need to entertain, impress and simplify; possibly at
-the cost of academic integrity and caution.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Given its global reach and immense influence and power, the TED
-institution needs to take responsibility for the content of talks
-delivered under its umbrella. At the very least, there should be a
-routine “fact checking” of the presentations, similar to the ones
-journalists deploy at political debates/speeches.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;p style=&quot;color:#2B3856;&quot;&gt;&lt;b&gt;&lt;ol&gt;
+&lt;li&gt;Do not believe outrageous sounding scientific claims, even if they
+    are put forth by academic superstars and institutions.&lt;/li&gt;
+
+&lt;li&gt;Yes, we should be grateful for the game changing TED &quot;revolution&quot;
+    which has gifted the world with high quality talks delivered in a
+    uniquely professional and passionate way. At the same time, there is
+    the dangerous need to entertain, impress and simplify; possibly at
+    the cost of academic integrity and caution.&lt;/li&gt;
+
+&lt;li&gt;Given its global reach and immense influence and power, the TED
+    institution needs to take responsibility for the content of talks
+    delivered under its umbrella. At the very least, there should be a
+    routine &quot;fact checking&quot; of the presentations, similar to the ones
+    journalists deploy at political debates/speeches.&lt;/li&gt;
+&lt;/ol&gt; 
+&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
@@ -194,332 +200,7 @@ reference category because this group of men had the highest sperm
 count. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Markus Loecher</name></author><summary type="html">The Trouble with dishonest TED Talks</summary></entry><entry><title type="html">R Classes: Markdown</title><link href="http://localhost:4000/DCL/" rel="alternate" type="text/html" title="R Classes: Markdown" /><published>2020-08-24T00:00:00+02:00</published><updated>2020-08-24T00:00:00+02:00</updated><id>http://localhost:4000/DCL</id><content type="html" xml:base="http://localhost:4000/DCL/">&lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.datacamp.com/dcl-react.js.gz&quot;&gt;&lt;/script&gt;
-
-&lt;div data-datacamp-exercise=&quot;&quot; data-lang=&quot;r&quot; data-show-run-button=&quot;&quot;&gt;
-	&lt;code data-type=&quot;pre-exercise-code&quot;&gt;
-		# This will get executed each time the exercise gets initialized
-		b = 6
-	&lt;/code&gt;
-	&lt;code data-type=&quot;sample-code&quot; data-show-run-button=&quot;&quot;&gt;
-		# Create a variable a, equal to 5
-
-
-		# Print out a
-
-
-	&lt;/code&gt;
-	&lt;code data-type=&quot;solution&quot; data-show-run-button=&quot;&quot;&gt;
-		# Create a variable a, equal to 5
-		a &amp;lt;- 5
-
-		# Print out a
-		print(a)
-	&lt;/code&gt;
-	&lt;code data-type=&quot;sct&quot; data-show-run-button=&quot;&quot;&gt;
-		test_object(&quot;a&quot;)
-		test_function(&quot;print&quot;)
-		success_msg(&quot;Great job!&quot;)
-	&lt;/code&gt;
-	&lt;div data-type=&quot;hint&quot;&gt;Use the assignment operator (&lt;code&gt;&amp;lt;-&lt;/code&gt;) to create the variable &lt;code&gt;a&lt;/code&gt;.&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div data-datacamp-exercise=&quot;&quot; data-lang=&quot;r&quot; data-show-run-button=&quot;&quot;&gt;
-	&lt;code data-type=&quot;pre-exercise-code&quot;&gt;
-		# This will get executed each time the exercise gets initialized
-		b = 6
-	&lt;/code&gt;
-	&lt;code data-type=&quot;sample-code&quot; data-show-run-button=&quot;&quot;&gt;
-		# Create a variable a, equal to 5
-
-
-		# Print out a
-
-
-	&lt;/code&gt;
-	&lt;code data-type=&quot;solution&quot; data-show-run-button=&quot;&quot;&gt;
-		# Create a variable a, equal to 5
-		a &amp;lt;- 5
-
-		# Print out a
-		print(a)
-	&lt;/code&gt;
-	&lt;code data-type=&quot;sct&quot; data-show-run-button=&quot;&quot;&gt;
-		test_object(&quot;a&quot;)
-		test_function(&quot;print&quot;)
-		success_msg(&quot;Great job!&quot;)
-	&lt;/code&gt;
-	&lt;div data-type=&quot;hint&quot;&gt;Use the assignment operator (&lt;code&gt;&amp;lt;-&lt;/code&gt;) to create the variable &lt;code&gt;a&lt;/code&gt;.&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div data-datacamp-exercise=&quot;&quot; data-lang=&quot;r&quot; data-show-run-button=&quot;&quot;&gt;
-	&lt;code data-type=&quot;pre-exercise-code&quot;&gt;
-		# This will get executed each time the exercise gets initialized
-		b = 6
-	&lt;/code&gt;
-	&lt;code data-type=&quot;sample-code&quot; data-show-run-button=&quot;&quot;&gt;
-		# Create a variable a, equal to 5
-
-
-		# Print out a
-
-
-	&lt;/code&gt;
-	&lt;code data-type=&quot;solution&quot; data-show-run-button=&quot;&quot;&gt;
-		# Create a variable a, equal to 5
-		a &amp;lt;- 5
-
-		# Print out a
-		print(a)
-	&lt;/code&gt;
-	&lt;code data-type=&quot;sct&quot; data-show-run-button=&quot;&quot;&gt;
-		test_object(&quot;a&quot;)
-		test_function(&quot;print&quot;)
-		success_msg(&quot;Great job!&quot;)
-	&lt;/code&gt;
-	&lt;div data-type=&quot;hint&quot;&gt;Use the assignment operator (&lt;code&gt;&amp;lt;-&lt;/code&gt;) to create the variable &lt;code&gt;a&lt;/code&gt;.&lt;/div&gt;
-&lt;/div&gt;</content><author><name>Nikolaj Bewer, Markus Loecher</name></author><summary type="html"></summary></entry><entry><title type="html">R Classes</title><link href="http://localhost:4000/R-Classes/" rel="alternate" type="text/html" title="R Classes" /><published>2020-08-13T00:00:00+02:00</published><updated>2020-08-13T00:00:00+02:00</updated><id>http://localhost:4000/R-Classes</id><content type="html" xml:base="http://localhost:4000/R-Classes/">&lt;!DOCTYPE html&gt;
-
-&lt;html&gt;
-
-&lt;head&gt;
-
-&lt;meta charset=&quot;utf-8&quot; /&gt;
-&lt;meta name=&quot;generator&quot; content=&quot;pandoc&quot; /&gt;
-&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=EDGE&quot; /&gt;
-
-
-&lt;meta name=&quot;author&quot; content=&quot;Nikolaj Bewer, Markus Loecher&quot; /&gt;
-
-
-&lt;title&gt;R Classes: HTML&lt;/title&gt;
-
-&lt;script src=&quot;2020-08-13-R-Classes_files/jquery-1.11.3/jquery.min.js&quot;&gt;&lt;/script&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
-&lt;link href=&quot;2020-08-13-R-Classes_files/bootstrap-3.3.5/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
-&lt;script src=&quot;2020-08-13-R-Classes_files/bootstrap-3.3.5/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;2020-08-13-R-Classes_files/bootstrap-3.3.5/shim/html5shiv.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;2020-08-13-R-Classes_files/bootstrap-3.3.5/shim/respond.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;2020-08-13-R-Classes_files/navigation-1.1/tabsets.js&quot;&gt;&lt;/script&gt;
-&lt;link href=&quot;2020-08-13-R-Classes_files/highlightjs-9.12.0/default.css&quot; rel=&quot;stylesheet&quot; /&gt;
-&lt;script src=&quot;2020-08-13-R-Classes_files/highlightjs-9.12.0/highlight.js&quot;&gt;&lt;/script&gt;
-
-&lt;style type=&quot;text/css&quot;&gt;code{white-space: pre;}&lt;/style&gt;
-&lt;style type=&quot;text/css&quot;&gt;
-  pre:not([class]) {
-    background-color: white;
-  }
-&lt;/style&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState &amp;&amp; document.readyState === &quot;complete&quot;) {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-&lt;/script&gt;
-
-
-
-&lt;style type=&quot;text/css&quot;&gt;
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-&lt;/style&gt;
-
-
-
-
-&lt;style type = &quot;text/css&quot;&gt;
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-&lt;/style&gt;
-
-
-
-&lt;!-- tabsets --&gt;
-
-&lt;style type=&quot;text/css&quot;&gt;
-.tabset-dropdown &gt; .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown &gt; .nav-tabs &gt; li.active:before {
-  content: &quot;&quot;;
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown &gt; .nav-tabs.nav-tabs-open &gt; li.active:before {
-  content: &quot;&amp;#xe258;&quot;;
-  border: none;
-}
-
-.tabset-dropdown &gt; .nav-tabs.nav-tabs-open:before {
-  content: &quot;&quot;;
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown &gt; .nav-tabs &gt; li.active {
-  display: block;
-}
-
-.tabset-dropdown &gt; .nav-tabs &gt; li &gt; a,
-.tabset-dropdown &gt; .nav-tabs &gt; li &gt; a:focus,
-.tabset-dropdown &gt; .nav-tabs &gt; li &gt; a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown &gt; .nav-tabs.nav-tabs-open &gt; li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown &gt; .nav-tabs &gt; li {
-  display: none;
-}
-&lt;/style&gt;
-
-&lt;!-- code folding --&gt;
-
-
-
-
-&lt;/head&gt;
-
-&lt;body&gt;
-
-
-&lt;div class=&quot;container-fluid main-container&quot;&gt;
-
-
-
-
-&lt;div class=&quot;fluid-row&quot; id=&quot;header&quot;&gt;
-
-
-
-&lt;h1 class=&quot;title toc-ignore&quot;&gt;R Classes: HTML&lt;/h1&gt;
-&lt;h4 class=&quot;author&quot;&gt;Nikolaj Bewer, Markus Loecher&lt;/h4&gt;
-
-&lt;/div&gt;
-
-
-&lt;script src=&quot;https://cdn.datacamp.com/datacamp-light-latest.min.js&quot;&gt;&lt;/script&gt;
-&lt;p&gt;This is the R live-coding part of the &lt;em&gt;Data Analytics: Methoden und Programmierung&lt;/em&gt; first session. Below you find an R-script and a console on which you can run R commands.&lt;/p&gt;
-&lt;div id=&quot;assigning-variables&quot; class=&quot;section level1&quot;&gt;
-&lt;h1&gt;Assigning variables&lt;/h1&gt;
-Your first task is to create a variable called &lt;code&gt;a&lt;/code&gt;, equal to 5.
-&lt;div data-datacamp-exercise=&quot;&quot; data-height=&quot;300&quot; data-encoded=&quot;true&quot;&gt;
-eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6IiNsaWJyYXJ5KHRvcGljbW9kZWxzKVxubGlicmFyeShicm9vbSkiLCJzYW1wbGUiOiIjIENyZWF0ZSBhIHZhcmlhYmxlIGEsIGVxdWFsIHRvIDVcblxuXG4jIFByaW50IG91dCBhIiwic29sdXRpb24iOiIjIENyZWF0ZSBhIHZhcmlhYmxlIGEsIGVxdWFsIHRvIDVcbmEgPC0gNVxuXG4jIFByaW50IG91dCBhXG5hIiwic2N0IjoiZXgoKSAlPiUgY2hlY2tfb2JqZWN0KFwiYVwiKSAlPiUgY2hlY2tfZXF1YWwoKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJhXCIsIGluY29ycmVjdF9tc2cgPSBcIk1ha2Ugc3VyZSB0byBwcmludCBgYWAuXCIpXG5zdWNjZXNzX21zZyhcIldlbGwgZG9uZSFcIikiLCJoaW50IjoiVXNlIHRoZSBhc3NpZ25tZW50IG9wZXJhdG9yIDxjb2RlPiZsdDstPC9jb2RlPi4ifQ==
-&lt;/div&gt;
-&lt;/div&gt;
-
-
-
-
-&lt;/div&gt;
-
-&lt;script&gt;
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-&lt;/script&gt;
-
-&lt;!-- tabsets --&gt;
-
-&lt;script&gt;
-$(document).ready(function () {
-  window.buildTabsets(&quot;TOC&quot;);
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown &gt; .nav-tabs &gt; li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-&lt;/script&gt;
-
-&lt;!-- code folding --&gt;
-
-
-&lt;!-- dynamically load mathjax for compatibility with self-contained --&gt;
-&lt;script&gt;
-  (function () {
-    var script = document.createElement(&quot;script&quot;);
-    script.type = &quot;text/javascript&quot;;
-    script.src  = &quot;https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;;
-    document.getElementsByTagName(&quot;head&quot;)[0].appendChild(script);
-  })();
-&lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</content><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><summary type="html"></summary></entry><entry><title type="html">LDA: 4321</title><link href="http://localhost:4000/4321-Blog" rel="alternate" type="text/html" title="LDA: 4321" /><published>2020-08-04T00:00:00+02:00</published><updated>2020-08-04T00:00:00+02:00</updated><id>http://localhost:4000/4321-Blog</id><content type="html" xml:base="http://localhost:4000/4321-Blog">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/auster1.jpg&quot; alt=&quot;Auster4321&quot; /&gt;&lt;/p&gt;
+&lt;/div&gt;</content><author><name>Markus Loecher</name></author><summary type="html">The Trouble with dishonest TED Talks</summary></entry><entry><title type="html">LDA: 4321</title><link href="http://localhost:4000/4321-Blog" rel="alternate" type="text/html" title="LDA: 4321" /><published>2020-08-04T00:00:00+02:00</published><updated>2020-08-04T00:00:00+02:00</updated><id>http://localhost:4000/4321-Blog</id><content type="html" xml:base="http://localhost:4000/4321-Blog">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/auster1.jpg&quot; alt=&quot;Auster4321&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h1&gt;
 
