@@ -181,7 +181,7 @@ listening to the -at first glance- truly inspiring TED talk?
 </p>
 
 After posting this blog I became aware of the existing and much more substantial critiques of Matthew Walkers work and career.
-Alexey Guzey has gathered massive evidence for research misconduct, gross exaggerations, misstated facts and self-plagiarism, and the highly regarded statistics professor Andrew Gelman at Columbia University points out the insitutional failures that allow this to happen with no consequences:
+Alexey Guzey has gathered massive evidence for research misconduct, gross exaggerations, misstated facts and self-plagiarism, and the highly regarded statistics professor Andrew Gelman at Columbia University points out the institutional failures that allow this to happen with no consequences:
 
 * [“Why We Sleep” Is Riddled with Scientific and Factual Errors](https://guzey.com/books/why-we-sleep/)
 * [Why We Sleep — a tale of institutional failure](https://statmodeling.stat.columbia.edu/2020/03/24/why-we-sleep-a-tale-of-institutional-failure/)
