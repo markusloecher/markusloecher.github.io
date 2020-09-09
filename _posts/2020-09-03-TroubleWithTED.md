@@ -187,6 +187,9 @@ Alexey Guzey has gathered massive evidence for research misconduct, gross exagge
 * [Why We Sleep — a tale of institutional failure](https://statmodeling.stat.columbia.edu/2020/03/24/why-we-sleep-a-tale-of-institutional-failure/)
 * [“Why we sleep” data manipulation: A smoking gun?](https://statmodeling.stat.columbia.edu/2019/12/27/why-we-sleep-data-manipulation-a-smoking-gun/)
 
+They even published an article on the manipulation of graphs by MW:
+[Statistics as Squid Ink: How Prominent Researchers Can Get Away with Misrepresenting Data](https://doi.org/10.1080/09332480.2020.1754069) in CHANCE.
+
 So maybe, the TED talk is just the tip of a scandalous iceberg ?
     
 ---
