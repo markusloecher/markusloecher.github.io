@@ -45,7 +45,7 @@ of laziness."
 However, at about 8:45 into the talk, Matthew walks (no pun intended) on
 very thin ice:
 
-"*I could tell you about sleep loss and your cardiovascular system, and
+"I could tell you about sleep loss and your cardiovascular system, and
 that **all it takes is one hour**. Because there is a global experiment
 performed on 1.6 billion people across 70 countries twice a year, and
 it\'s called daylight saving time. <span style="color:red">**Now, in the spring, when we lose
@@ -181,7 +181,6 @@ listening to the -at first glance- truly inspiring TED talk?
 </p>
 
 After posting this blog I became aware of the existing and much more substantial critiques of Matthew Walkers work and career.
-
 The highly regarded statistics professor Andrew Gelman at Columbia University together with Alexey Guzey have gathered massive evidence for research misconduct, gross exaggerations, misstated facts and self-plagiarism:
 
 * [“Why We Sleep” Is Riddled with Scientific and Factual Errors](https://guzey.com/books/why-we-sleep/)
