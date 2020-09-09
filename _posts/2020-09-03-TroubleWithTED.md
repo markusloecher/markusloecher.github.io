@@ -179,7 +179,16 @@ listening to the -at first glance- truly inspiring TED talk?
 </ol> 
 </b>
 </p>
-   
+
+After posting this blog I became aware of the existing and much more substantial critiques of Matthew Walkers work and career.
+
+The highly regarded statistics professor Andrew Gelman at Columbia University together with Alexey Guzey have gathered massive evidence for research misconduct, gross exaggerations, misstated facts and self-plagiarism:
+
+* [“Why We Sleep” Is Riddled with Scientific and Factual Errors](https://guzey.com/books/why-we-sleep/)
+* [Why We Sleep — a tale of institutional failure](https://statmodeling.stat.columbia.edu/2020/03/24/why-we-sleep-a-tale-of-institutional-failure/)
+* [“Why we sleep” data manipulation: A smoking gun?](https://statmodeling.stat.columbia.edu/2019/12/27/why-we-sleep-data-manipulation-a-smoking-gun/)
+
+So maybe, the TED talk is just the tip of a scandalous iceberg ?
     
 ---
 
