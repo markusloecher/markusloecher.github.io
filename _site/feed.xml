@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-04T16:57:10+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Code and Stats</title><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><entry><title type="html">Trouble with TED</title><link href="http://localhost:4000/TroubleWithTED/" rel="alternate" type="text/html" title="Trouble with TED" /><published>2020-09-03T00:00:00+02:00</published><updated>2020-09-03T00:00:00+02:00</updated><id>http://localhost:4000/TroubleWithTED</id><content type="html" xml:base="http://localhost:4000/TroubleWithTED/">&lt;h2 id=&quot;the-trouble-with-dishonest-ted-talks&quot;&gt;The Trouble with dishonest TED Talks&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-18T10:26:39+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Code and Stats</title><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><entry><title type="html">Trouble with TED</title><link href="http://localhost:4000/TroubleWithTED/" rel="alternate" type="text/html" title="Trouble with TED" /><published>2020-09-03T00:00:00+02:00</published><updated>2020-09-03T00:00:00+02:00</updated><id>http://localhost:4000/TroubleWithTED</id><content type="html" xml:base="http://localhost:4000/TroubleWithTED/">&lt;h2 id=&quot;the-trouble-with-dishonest-ted-talks&quot;&gt;The Trouble with dishonest TED Talks&lt;/h2&gt;
 
 &lt;p&gt;The opener to Matthew Walker’s TED Talk is not exactly what you’d
 expect to hear in a lecture about sleep.&lt;/p&gt;
@@ -841,9 +841,11 @@ misclassified, which does not come as a surprise, as he spans across all
 storylines. Other often wrongly classified characters are the &lt;em&gt;mother&lt;/em&gt;
 and &lt;em&gt;father&lt;/em&gt;, as well as &lt;em&gt;amy&lt;/em&gt;.&lt;/p&gt;
 
+&lt;p&gt;Note: You may find this Blog Post on &lt;a href=&quot;r-bloggers.com&quot;&gt;R-Bloggers.com&lt;/a&gt; as well.&lt;/p&gt;
+
 &lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
 
 &lt;p&gt;David M. Blei. Probabilistic topic models. &lt;em&gt;Communications of the ACM&lt;/em&gt;,
 Vol. 55 No. 4, Pages 77-84, 2012.&lt;/p&gt;
 
-&lt;p&gt;Julia Silge and David Robinson. Text Mining with R, &lt;em&gt;O’Reilly&lt;/em&gt;, 2020.&lt;/p&gt;</content><author><name>Nikolaj Bewer, Markus Loecher</name></author><summary type="html"></summary></entry></feed>
+&lt;p&gt;Julia Silge and David Robinson. Text Mining with R, &lt;em&gt;O’Reilly&lt;/em&gt;, 2020.&lt;/p&gt;</content><author><name>Nikolaj Bewer, Markus Loecher</name></author><category term="R-bloggers" /><summary type="html"></summary></entry></feed>
