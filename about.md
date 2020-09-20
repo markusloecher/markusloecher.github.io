@@ -10,6 +10,8 @@ permalink: /about/
 
 He holds 8 patents in machine learning and sensor analytics and is the author of the popular R packages [RgoogleMaps](https://cran.r-project.org/web/packages/RgoogleMaps/) and [bandit](https://cran.r-project.org/web/packages/bandit/). Markus has published a [book](https://www.worldscientific.com/worldscibooks/10.1142/4747) as well as 20 refereed articles in international journals.
 
+This Blog is about Code, Statistics and R. The blog posts related to R can also be read on [R-Bloggers](https://www.r-bloggers.com).
+
 <!---
 *https://www.linkedin.com/in/loecher/*
 *www.researchgate.net/profile/Markus Loecher*
