@@ -12,7 +12,7 @@ He holds 8 patents in machine learning and sensor analytics and is the author of
 
 This Blog is about Code, Statistics and R. 
 Blog posts related to R can also be read on [R-Bloggers](https://www.r-bloggers.com).
-Blog posts related to python can also be read on [R-Bloggers](https://www.python-bloggers.com).
+Blog posts related to python can also be read on [python-Bloggers](https://www.python-bloggers.com).
 
 <!---
 *https://www.linkedin.com/in/loecher/*
