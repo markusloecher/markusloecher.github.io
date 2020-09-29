@@ -28,7 +28,7 @@ The video of Walker's 19-minute "Sleep is your superpower" talk
 publication, it's up to more than 11,442,588 !)** after it was
 posted on the [TED Talks website](https://www.ted.com/talks).
 
-<img src="https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image004.png" width="550"/>
+<img src="/assets/ted/image004.png" width="550"/>
 <!---
 [![TED Stage](https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image004.png)](https://www.ted.com/talks/matt_walker_sleep_is_your_superpower#t-521579)
 -->
