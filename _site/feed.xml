@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-29T09:27:50+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Code and Stats</title><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><entry><title type="html">ConvNet Filter Visualization</title><link href="http://localhost:4000/ConvNet" rel="alternate" type="text/html" title="ConvNet Filter Visualization" /><published>2020-09-18T00:00:00+02:00</published><updated>2020-09-18T00:00:00+02:00</updated><id>http://localhost:4000/ConvNet-Filter-Visualization</id><content type="html" xml:base="http://localhost:4000/ConvNet">&lt;p&gt;&lt;strong&gt;Table of Content:&lt;/strong&gt;&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-29T10:58:02+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Code and Stats</title><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><entry><title type="html">ConvNet Filter Visualization</title><link href="http://localhost:4000/ConvNet" rel="alternate" type="text/html" title="ConvNet Filter Visualization" /><published>2020-09-18T00:00:00+02:00</published><updated>2020-09-18T00:00:00+02:00</updated><id>http://localhost:4000/ConvNet-Filter-Visualization</id><content type="html" xml:base="http://localhost:4000/ConvNet">&lt;p&gt;&lt;strong&gt;Table of Content:&lt;/strong&gt;&lt;br /&gt;
 &lt;a href=&quot;#intro&quot;&gt;Intro&lt;/a&gt; &lt;br /&gt;
 &lt;a href=&quot;#download&quot;&gt;Downloading the Data&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;#first_network&quot;&gt;First Network&lt;/a&gt; cats_and_dogs_small_1.h5 &lt;br /&gt;
@@ -524,9 +524,9 @@ Epoch 30/30
 &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/output_40_0.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/convnet/output_40_0.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/output_40_1.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/convnet/output_40_1.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;These plots are characteristic of overfitting. Our training accuracy increases linearly over time, until it reaches nearly 100%, while our 
 validation accuracy stalls at 70-72%. Our validation loss reaches its minimum after only five epochs then stalls, while the training loss 
@@ -618,13 +618,13 @@ asymmetry (e.g. real-world pictures).&lt;/li&gt;
 &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/output_50_0.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/convnet/output_50_0.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/output_50_1.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/convnet/output_50_1.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/output_50_2.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/convnet/output_50_2.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/output_50_3.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/convnet/output_50_3.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;If we train a new network using this data augmentation configuration, our network will never see twice the same input. However, the inputs 
 that it sees are still heavily intercorrelated, since they come from a small number of original images – we cannot produce new information, 
@@ -1385,7 +1385,7 @@ The accuracy is: 0.687
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;plot_dimensions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;activation_model_small&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;top_dimensions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;top_dimensions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/output_104_0.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/convnet/output_104_0.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;images-eigth-layer&quot;&gt;Images: Eigth Layer&lt;/h3&gt;
 
@@ -1415,7 +1415,7 @@ The accuracy is: 0.809
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;plot_dimensions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;activation_model_small&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;top_dimensions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;top_dimensions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/output_108_0.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/convnet/output_108_0.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;images-first-layer-run_all&quot;&gt;Images: First Layer &lt;code class=&quot;highlighter-rouge&quot;&gt;run_all&lt;/code&gt;&lt;/h3&gt;
 
@@ -1622,7 +1622,7 @@ The accuracy is: 0.896
 The name of the Layer is: block1_conv1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/output_124_1.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/convnet/output_124_1.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;--- 3.4397711753845215 seconds ---
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -1635,7 +1635,7 @@ The name of the Layer is: block1_conv1
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;--- &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s seconds ---&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start_time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/output_126_0.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/convnet/output_126_0.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;--- 210.06499481201172 seconds ---
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -1761,7 +1761,7 @@ The accuracy is: 0.802
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;--- &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s seconds ---&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start_time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/output_141_0.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/convnet/output_141_0.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;--- 203.75928449630737 seconds ---
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -1840,7 +1840,7 @@ sections.&lt;/p&gt;</content><author><name>Markus Loecher, Nikolaj Bewer</name><
 &lt;p&gt;The opener to Matthew Walker’s TED Talk is not exactly what you’d
 expect to hear in a lecture about sleep.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/man.png&quot; width=&quot;600&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/ted/man.png&quot; width=&quot;600&quot; /&gt;
 &lt;!---
 ![](https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/man.png =250x)
 --&gt;&lt;/p&gt;
@@ -1899,7 +1899,7 @@ outrageous claims from above. Luckily, it is an &lt;a href=&quot;https://openhea
 article&lt;/a&gt; in the
 &lt;em&gt;openheart Journal&lt;/em&gt; from 2014.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/openheart.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/ted/openheart.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Imagine my grave disappointment to find out that the sample was limited
 to 3 years in the state of Michigan and had just 31 cases per day! On
@@ -1907,7 +1907,7 @@ page 4 you find Table 1 which contains the quoted 24% increase and 21%
 decrease expressed as relative risk (multipliers 1.24 and 0.79,
 respectively):&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/ted/image4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Not mentioned in the talk is that the low sample size leads to rather
 wide confidence intervals of [1.05; 1.46] in the spring and [0.62;
@@ -1947,7 +1947,7 @@ likely and relevant paper I found on Google Scholar is a study of &lt;a href=&qu
 association between sleep disturbances and semen
 quality&lt;/a&gt; from 2012:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/ted/image5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This demographically extremely narrow study focusses mainly on semen
 quality but also reports that. “&lt;em&gt;After control for confounders, sperm
@@ -1957,7 +1957,7 @@ lower among both men with higher sleep scores and men with lower sleep
 scores in comparison with the reference group&lt;/em&gt;”. Table 3 contains the
 main results, with testis size highlighted:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/ted/image6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Notice the low sample size in the „&amp;gt;50” category (76 men) and the wide
 confidence interval for \(\beta\) ([-2.5; -0.1]) which almost includes
@@ -1987,7 +1987,7 @@ A scatter plot (Fig.2 in the paper) of testicular volume versus sleep
 duration shows the ambivalence of model fitting (and suggests that the
 sample size was even lower than reported).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/image7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/ted/image7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;What is my takeaway from this rather sobering fact finding mission after
 listening to the -at first glance- truly inspiring TED talk?&lt;/p&gt;
@@ -2037,7 +2037,7 @@ reference category because this group of men had the highest sperm
 count. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Markus Loecher</name></author><summary type="html">The Trouble with dishonest TED Talks</summary></entry><entry><title type="html">LDA: 4321</title><link href="http://localhost:4000/4321-Blog" rel="alternate" type="text/html" title="LDA: 4321" /><published>2020-08-04T00:00:00+02:00</published><updated>2020-08-04T00:00:00+02:00</updated><id>http://localhost:4000/4321-Blog</id><content type="html" xml:base="http://localhost:4000/4321-Blog">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/auster1.jpg&quot; alt=&quot;Auster4321&quot; /&gt;&lt;/p&gt;
+&lt;/div&gt;</content><author><name>Markus Loecher</name></author><summary type="html">The Trouble with dishonest TED Talks</summary></entry><entry><title type="html">LDA: 4321</title><link href="http://localhost:4000/4321-Blog" rel="alternate" type="text/html" title="LDA: 4321" /><published>2020-08-04T00:00:00+02:00</published><updated>2020-08-04T00:00:00+02:00</updated><id>http://localhost:4000/4321-Blog</id><content type="html" xml:base="http://localhost:4000/4321-Blog">&lt;p&gt;&lt;img src=&quot;/assets/4321/auster1.jpg&quot; alt=&quot;Auster4321&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h1&gt;
 
@@ -2323,7 +2323,7 @@ within each topic.&lt;/p&gt;
   &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scale_x_reordered&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/unnamed-chunk-16-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/4321/unnamed-chunk-16-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The figure shows that Ferguson is the defining character across all
 topics and the most prominent term. Further coherences can be drawn,
@@ -2374,7 +2374,7 @@ ratio of the corresponding betas. The following code programms in
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log2ratio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;topic3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;topic4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chapter_topics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/unnamed-chunk-18-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/4321/unnamed-chunk-18-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We can see clear differences between the topics. For instance, &lt;em&gt;topic2&lt;/em&gt;
 appears to have a character &lt;code class=&quot;highlighter-rouge&quot;&gt;aubrey&lt;/code&gt; that only plays a role in that
@@ -2423,7 +2423,7 @@ three others.&lt;/p&gt;
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot_avg_spreads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;beta_spread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topic&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/unnamed-chunk-20-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/4321/unnamed-chunk-20-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Using this graphic we can clearly see which terms make up a topic. For
 example, we see that Evie and Celia are characters from topic 1, while
@@ -2475,7 +2475,7 @@ chapters.&lt;/p&gt;
   &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;facet_wrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/unnamed-chunk-24-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/4321/unnamed-chunk-24-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;From the plot we can see that Storyline-2, Storyline-3 and Storyline-4
 are classified well, Storyline-1, however, is ambiguous. To get a better
@@ -2531,7 +2531,7 @@ clarification using &lt;code class=&quot;highlighter-rouge&quot;&gt;ggplot&lt;/c
        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;% of assignments&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/unnamed-chunk-29-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/4321/unnamed-chunk-29-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We can see that all words that came from Storyline-3 and Storyline-2
 were correctly classified to their storyline. Words from Storyline-1 and
@@ -2633,7 +2633,7 @@ confusion matrix.&lt;/p&gt;
        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;% of assignments&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/unnamed-chunk-34-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/4321/unnamed-chunk-34-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We can see that all chapters that came from Storyline-2 and Storyline-3
 were correctly classified to their storyline. Chapters from Storyline-1

@@ -5,14 +5,14 @@
         <description></description>
         <link>http://localhost:4000/</link>
         <atom:link href="http://localhost:4000/feed.rbloggers.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 29 Sep 2020 09:27:50 +0200</pubDate>
-        <lastBuildDate>Tue, 29 Sep 2020 09:27:50 +0200</lastBuildDate>
+        <pubDate>Tue, 29 Sep 2020 10:58:02 +0200</pubDate>
+        <lastBuildDate>Tue, 29 Sep 2020 10:58:02 +0200</lastBuildDate>
         <generator>Jekyll v4.0.0</generator>
         
             <item>
                 <title>LDA: 4321</title>
                 <author>codeandstats@hwr-berlin.de</author>
-                <description>&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/auster1.jpg&quot; alt=&quot;Auster4321&quot; /&gt;&lt;/p&gt;
+                <description>&lt;p&gt;&lt;img src=&quot;/assets/4321/auster1.jpg&quot; alt=&quot;Auster4321&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h1&gt;
 
@@ -298,7 +298,7 @@ within each topic.&lt;/p&gt;
   &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scale_x_reordered&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/unnamed-chunk-16-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/4321/unnamed-chunk-16-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The figure shows that Ferguson is the defining character across all
 topics and the most prominent term. Further coherences can be drawn,
@@ -349,7 +349,7 @@ ratio of the corresponding betas. The following code programms in
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log2ratio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;topic3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;topic4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chapter_topics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/unnamed-chunk-18-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/4321/unnamed-chunk-18-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We can see clear differences between the topics. For instance, &lt;em&gt;topic2&lt;/em&gt;
 appears to have a character &lt;code class=&quot;highlighter-rouge&quot;&gt;aubrey&lt;/code&gt; that only plays a role in that
@@ -398,7 +398,7 @@ three others.&lt;/p&gt;
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot_avg_spreads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;beta_spread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topic&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/unnamed-chunk-20-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/4321/unnamed-chunk-20-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Using this graphic we can clearly see which terms make up a topic. For
 example, we see that Evie and Celia are characters from topic 1, while
@@ -450,7 +450,7 @@ chapters.&lt;/p&gt;
   &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;facet_wrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/unnamed-chunk-24-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/4321/unnamed-chunk-24-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;From the plot we can see that Storyline-2, Storyline-3 and Storyline-4
 are classified well, Storyline-1, however, is ambiguous. To get a better
@@ -506,7 +506,7 @@ clarification using &lt;code class=&quot;highlighter-rouge&quot;&gt;ggplot&lt;/c
        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;% of assignments&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/unnamed-chunk-29-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/4321/unnamed-chunk-29-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We can see that all words that came from Storyline-3 and Storyline-2
 were correctly classified to their storyline. Words from Storyline-1 and
@@ -608,7 +608,7 @@ confusion matrix.&lt;/p&gt;
        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;% of assignments&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/unnamed-chunk-34-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/4321/unnamed-chunk-34-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We can see that all chapters that came from Storyline-2 and Storyline-3
 were correctly classified to their storyline. Chapters from Storyline-1

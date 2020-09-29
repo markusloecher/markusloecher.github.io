@@ -585,11 +585,11 @@ plt.show()
 ```
 
 
-![png](/assets/output_40_0.png)
+![png](/assets/convnet/output_40_0.png)
 
 
 
-![png](/assets/output_40_1.png)
+![png](/assets/convnet/output_40_1.png)
 
 
 These plots are characteristic of overfitting. Our training accuracy increases linearly over time, until it reaches nearly 100%, while our 
@@ -687,19 +687,19 @@ plt.show()
 ```
 
 
-![png](/assets/output_50_0.png)
+![png](/assets/convnet/output_50_0.png)
 
 
 
-![png](/assets/output_50_1.png)
+![png](/assets/convnet/output_50_1.png)
 
 
 
-![png](/assets/output_50_2.png)
+![png](/assets/convnet/output_50_2.png)
 
 
 
-![png](/assets/output_50_3.png)
+![png](/assets/convnet/output_50_3.png)
 
 
 If we train a new network using this data augmentation configuration, our network will never see twice the same input. However, the inputs 
@@ -1524,7 +1524,7 @@ plot_dimensions(activation_model_small, top_dimensions = top_dimensions, index =
 ```
 
 
-![png](/assets/output_104_0.png)
+![png](/assets/convnet/output_104_0.png)
 
 
 ### Images: Eigth Layer
@@ -1562,7 +1562,7 @@ plot_dimensions(activation_model_small, top_dimensions = top_dimensions, index =
 ```
 
 
-![png](/assets/output_108_0.png)
+![png](/assets/convnet/output_108_0.png)
 
 
 ### Images: First Layer `run_all`
@@ -1795,7 +1795,7 @@ print("--- %s seconds ---" % (time.time() - start_time))
 
 
 
-![png](/assets/output_124_1.png)
+![png](/assets/convnet/output_124_1.png)
 
 
     --- 3.4397711753845215 seconds ---
@@ -1814,7 +1814,7 @@ print("--- %s seconds ---" % (time.time() - start_time))
 ```
 
 
-![png](/assets/output_126_0.png)
+![png](/assets/convnet/output_126_0.png)
 
 
     --- 210.06499481201172 seconds ---
@@ -1974,7 +1974,7 @@ print("--- %s seconds ---" % (time.time() - start_time))
 ```
 
 
-![png](/assets/output_141_0.png)
+![png](/assets/convnet/output_141_0.png)
 
 
     --- 203.75928449630737 seconds ---
