@@ -3,8 +3,6 @@ title: "ConvNet Filter Visualization"
 author: Markus Loecher, Nikolaj Bewer
 layout: post
 permalink: ConvNet
-tags: 
-- Python-bloggers
 output:
   md_document: 
     variant: markdown_github
