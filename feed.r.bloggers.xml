@@ -14,7 +14,7 @@ layout: null
         {% for post in site.tags["R-bloggers"] %}
             <item>
                 <title>{{ post.title | xml_escape }}</title>
-                <author>{{ post.author | xml_escape }}</author>
+                <author>codeandstats@hwr-berlin.de</author>
                 <description>{{ post.content | xml_escape }}</description>
                 <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
                 <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
