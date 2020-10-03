@@ -132,9 +132,9 @@ Notice the low sample size in the „>50" category (76 men) and the wide
 confidence interval for $$\beta$$ ([-2.5; -0.1]) which almost includes
 zero[^1].
 
-To give the reader a feel for the magnitude of the effect: The lower end
+To give the reader a feel for the magnitude of the effect: The upper end
 of the CI should be compared with the median/mean of about 21ml, so
-"significant" really means . It is further noteworthy that an even more
+"significant" really means a reduction of about $0.5 \%$! It is further noteworthy that an even more
 significant reduction of testis size was observed for the extremely good
 sleep score of zero[^2].\
 The authors of this paper did not see how the sleep score \>50 could
