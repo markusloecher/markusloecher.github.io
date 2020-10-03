@@ -4,7 +4,7 @@ author: Markus Loecher
 layout: post
 permalink: PruningVisualizeTrees-Blog
 tags: 
-- python-bloggers
+- Python-bloggers
 output:
   md_document: 
     variant: markdown_github
