@@ -1,3 +1,9 @@
+---
+title: "Gambler's Ruin and Sequential Testing"
+author: "M Loecher"
+
+---
+
 Random Walks
 ------------
 
@@ -38,13 +44,14 @@ Let’s figure out the probability that we gain m before losing n. To set
 things up formally, let *W* be the event we hit *T* before we hit 0,
 where *T* = *n* + *m*. Let *D*<sub>*t*</sub> be a random variable that
 denotes the number of dollars we have at time step *t*. Let
-*P*<sub>*n*</sub> = ℙ(*W*|*D*<sub>0</sub> = *n*) be the probability we
+*P*<sub>*n*</sub> = ℙ(*W*\|*D*<sub>0</sub> = *n*) be the probability we
 get *T* before we go broke, given that we start with *n* dollars. Our
 question then, is what is *P*<sub>*n*</sub> ? We’re going to use a
 recursive approach.
-*P*<sub>*n*</sub> = *p**P*<sub>*n* + 1</sub> + (1 − *p*)*P*<sub>*n* − 1</sub>,  for 0 &lt; *n* &lt; *T*
+*P*<sub>*n*</sub> = *p* ⋅ *P*<sub>*n* + 1</sub> + (1 − *p*) ⋅ *P*<sub>*n* − 1</sub>,  for 0 \< *n* \< *T*
+
 [Solving it](http://web.mit.edu/neboat/Public/6.042/randomwalks.pdf) for
-*p* &lt; 0.5 yields
+*p* \< 0.5 yields
 
 <p align="center">
 <img src="/assets/GamblersRuin/PNeq.png" alt="Prob to win" width="300"/>
@@ -66,9 +73,7 @@ think that the probability of winning 100 dollars before losing 200
 dollars is better than winning 10 before losing 10, i.e., that the ratio
 is what matters. In fact, the ratio is what matters if the game is fair,
 i.e., if *p* = 1/2. In that case, we simply have
-$$
-P\_n = \\frac{n}{n+m} = \\frac{n}{T} 
-$$
+*P*<sub>*n*</sub> = *n*/(*n* + *m*) = *n*/*T*
 In this case, if *n* = 200 and *m* = 100, we have
 *P**r*(*W**i**n*) = 200/300 = 2/3. On the other hand, if *n* = 10 and
 *m* = 10, then *P**r*(*W**i**n*) = 10/20 = 1/2. Thus, actually, now we
