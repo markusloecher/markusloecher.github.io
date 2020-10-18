@@ -77,10 +77,10 @@ dollars is better than winning 10 before losing 10, i.e., that the ratio
 is what matters. In fact, the ratio is what matters if the game is fair,
 i.e., if *p* = 1/2. In that case, we simply have
 *P*<sub>*n*</sub> = *n*/(*n* + *m*) = *n*/*T*
-In this case, if *n* = 200 and *m* = 100, we have
-*P**r*(*W**i**n*) = 200/300 = 2/3. On the other hand, if *n* = 10 and
-*m* = 10, then *P**r*(*W**i**n*) = 10/20 = 1/2. Thus, actually, now we
-are more likely to win in the first case!
+In this case, if *n* = 200 and *m* = 100, we have Pr(Win)=200/300=2/3.
+On the other hand, if *n* = 10 and *m* = 10, then Pr(Win)=10/20=1/2.
+Thus, actually, now we are more likely to win in the first case!
+
 
 So the trouble is that our intuition tells us that if the game is almost
 fair, then we expect the results to be almost the same as if the game
