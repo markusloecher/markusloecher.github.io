@@ -1,6 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-10-08T20:04:54+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Code and Stats</title><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><entry><title type="html">Shiny App</title><link href="http://localhost:4000/ShinyApps" rel="alternate" type="text/html" title="Shiny App" /><published>2020-10-08T00:00:00+02:00</published><updated>2020-10-08T00:00:00+02:00</updated><id>http://localhost:4000/ShinyApps</id><content type="html" xml:base="http://localhost:4000/ShinyApps">&lt;p&gt;This is a ShinyApp embedded into GitHub Pages that runs on &lt;a href=&quot;https://nbwr.shinyapps.io/gamblers-ruin/&quot;&gt;shinyapps.io&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-10-22T10:51:38+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Code and Stats</title><author><name>Code And Stats</name><email>codeandstats@hwr-berlin.de</email></author><entry><title type="html">Gambler’s Ruin and Sequential Testing</title><link href="http://localhost:4000/GamblersRuin/" rel="alternate" type="text/html" title="Gambler's Ruin and Sequential Testing" /><published>2020-10-10T00:00:00+02:00</published><updated>2020-10-10T00:00:00+02:00</updated><id>http://localhost:4000/GamblersRuin</id><content type="html" xml:base="http://localhost:4000/GamblersRuin/">&lt;h2 id=&quot;random-walks&quot;&gt;Random Walks&lt;/h2&gt;
 
-&lt;iframe width=&quot;1000&quot; height=&quot;900&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://nbwr.shinyapps.io/gamblers-ruin/&quot;&gt; &lt;/iframe&gt;</content><author><name>Nikolaj Bewer</name></author><summary type="html">This is a ShinyApp embedded into GitHub Pages that runs on shinyapps.io.</summary></entry><entry><title type="html">Pruning and Visualizing sklearn DecisionTreeClassifiers</title><link href="http://localhost:4000/PruningVisualizeTrees-Blog" rel="alternate" type="text/html" title="Pruning and Visualizing sklearn DecisionTreeClassifiers" /><published>2020-09-29T00:00:00+02:00</published><updated>2020-09-29T00:00:00+02:00</updated><id>http://localhost:4000/PruneAndVisualizeTree</id><content type="html" xml:base="http://localhost:4000/PruningVisualizeTrees-Blog">&lt;p&gt;This post serves two purposes:&lt;/p&gt;
+&lt;p&gt;Suppose we start with &lt;em&gt;n&lt;/em&gt; dollars, and make a sequence of bets. For each
+bet, we win 1 dollar with probability &lt;em&gt;p&lt;/em&gt;, and lose 1 dollar with
+probability 1 − &lt;em&gt;p&lt;/em&gt;. We quit if either we go broke, in which case we
+lose, or when we reach &lt;em&gt;T&lt;/em&gt; = &lt;em&gt;n&lt;/em&gt; + &lt;em&gt;m&lt;/em&gt; dollars, that is, when we win &lt;em&gt;m&lt;/em&gt;
+dollars. For example, in Roulette, &lt;em&gt;p&lt;/em&gt; = 18/38 = 9/19 ∼ 0.473. If
+&lt;em&gt;n&lt;/em&gt; = 100 dollars, and &lt;em&gt;m&lt;/em&gt; = 100 dollars, then &lt;em&gt;T&lt;/em&gt; = 200 dollars. What
+are the odds we win 100 dollars before losing 100 dollars? Most folks
+would think that since 0.473 ∼ 0.5, the odds are not so bad. In fact, as
+we will see, we win before we lose with probability at most 1/37649!&lt;/p&gt;
+
+&lt;h2 id=&quot;boundary-crossing&quot;&gt;Boundary Crossing&lt;/h2&gt;
+
+&lt;p&gt;This random walk is a special type of random walk where moves are
+independent of the past. If &lt;em&gt;p&lt;/em&gt; = 1/2, the random walk is unbiased and
+is called a .For &lt;em&gt;p&lt;/em&gt; ≠ 1/2, the random walk is biased (). If the walk
+hits a boundary (0 or &lt;em&gt;n&lt;/em&gt; + &lt;em&gt;m&lt;/em&gt;), then we stop playing.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/GamblersRuin/RandomWalks1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;unfair-coin-flipping&quot;&gt;Unfair coin flipping&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/GamblersRuin/RandomWalks2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;try-for-yourself&quot;&gt;Try for yourself&lt;/h3&gt;
+
+&lt;iframe width=&quot;1000&quot; height=&quot;900&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://nbwr.shinyapps.io/gamblers-ruin/&quot;&gt;
+&lt;/iframe&gt;
+
+&lt;h2 id=&quot;probability-to-win&quot;&gt;Probability to win&lt;/h2&gt;
+
+&lt;p&gt;Let’s figure out the probability that we gain m before losing n. To set
+things up formally, let &lt;em&gt;W&lt;/em&gt; be the event we hit &lt;em&gt;T&lt;/em&gt; before we hit 0,
+where &lt;em&gt;T&lt;/em&gt; = &lt;em&gt;n&lt;/em&gt; + &lt;em&gt;m&lt;/em&gt;. Let &lt;em&gt;D&lt;/em&gt;&lt;sub&gt;&lt;em&gt;t&lt;/em&gt;&lt;/sub&gt; be a random variable that
+denotes the number of dollars we have at time step &lt;em&gt;t&lt;/em&gt;. Let
+&lt;em&gt;P&lt;/em&gt;&lt;sub&gt;&lt;em&gt;n&lt;/em&gt;&lt;/sub&gt; = ℙ(&lt;em&gt;W&lt;/em&gt;|&lt;em&gt;D&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; = &lt;em&gt;n&lt;/em&gt;) be the probability we
+get &lt;em&gt;T&lt;/em&gt; before we go broke, given that we start with &lt;em&gt;n&lt;/em&gt; dollars. Our
+question then, is what is &lt;em&gt;P&lt;/em&gt;&lt;sub&gt;&lt;em&gt;n&lt;/em&gt;&lt;/sub&gt; ? We’re going to use a
+recursive approach.
+&lt;em&gt;P&lt;/em&gt;&lt;sub&gt;&lt;em&gt;n&lt;/em&gt;&lt;/sub&gt; = &lt;em&gt;p&lt;/em&gt; ⋅ &lt;em&gt;P&lt;/em&gt;&lt;sub&gt;&lt;em&gt;n&lt;/em&gt; + 1&lt;/sub&gt; + (1 − &lt;em&gt;p&lt;/em&gt;) ⋅ &lt;em&gt;P&lt;/em&gt;&lt;sub&gt;&lt;em&gt;n&lt;/em&gt; − 1&lt;/sub&gt;,  for 0 &amp;lt; &lt;em&gt;n&lt;/em&gt; &amp;lt; &lt;em&gt;T&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://web.mit.edu/neboat/Public/6.042/randomwalks.pdf&quot;&gt;Solving it&lt;/a&gt; for
+&lt;em&gt;p&lt;/em&gt; &amp;lt; 0.5 yields&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/assets/GamblersRuin/PNeq.png&quot; alt=&quot;Prob to win&quot; width=&quot;300&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;This last expression is even independent of n, and exponentially small
+in m.&lt;/p&gt;
+
+&lt;h2 id=&quot;probability-to-win-1&quot;&gt;Probability to win&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/GamblersRuin/PN.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;intuition-off-&quot;&gt;Intuition off ?&lt;/h2&gt;
+
+&lt;p&gt;Why does this seem to run against our intuition ? Normally we would
+think that the probability of winning 100 dollars before losing 200
+dollars is better than winning 10 before losing 10, i.e., that the ratio
+is what matters. In fact, the ratio is what matters if the game is fair,
+i.e., if &lt;em&gt;p&lt;/em&gt; = 1/2. In that case, we simply have
+&lt;em&gt;P&lt;/em&gt;&lt;sub&gt;&lt;em&gt;n&lt;/em&gt;&lt;/sub&gt; = &lt;em&gt;n&lt;/em&gt;/(&lt;em&gt;n&lt;/em&gt; + &lt;em&gt;m&lt;/em&gt;) = &lt;em&gt;n&lt;/em&gt;/&lt;em&gt;T&lt;/em&gt;
+In this case, if &lt;em&gt;n&lt;/em&gt; = 200 and &lt;em&gt;m&lt;/em&gt; = 100, we have Pr(Win)=200/300=2/3.
+On the other hand, if &lt;em&gt;n&lt;/em&gt; = 10 and &lt;em&gt;m&lt;/em&gt; = 10, then Pr(Win)=10/20=1/2.
+Thus, actually, now we are more likely to win in the first case!&lt;/p&gt;
+
+&lt;p&gt;So the trouble is that our intuition tells us that if the game is almost
+fair, then we expect the results to be almost the same as if the game
+were fair. It turns out this is not the case!&lt;/p&gt;</content><author><name>M Loecher</name></author><summary type="html">Random Walks</summary></entry><entry><title type="html">Pruning and Visualizing sklearn DecisionTreeClassifiers</title><link href="http://localhost:4000/PruningVisualizeTrees-Blog" rel="alternate" type="text/html" title="Pruning and Visualizing sklearn DecisionTreeClassifiers" /><published>2020-09-29T00:00:00+02:00</published><updated>2020-09-29T00:00:00+02:00</updated><id>http://localhost:4000/PruneAndVisualizeTree</id><content type="html" xml:base="http://localhost:4000/PruningVisualizeTrees-Blog">&lt;p&gt;This post serves two purposes:&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;It illustrates and compares three different methods of visualizing &lt;code class=&quot;highlighter-rouge&quot;&gt;DecisionTreeClassifiers&lt;/code&gt; from sklearn.&lt;/li&gt;
   &lt;li&gt;It shows a simple quick way of manually pruning selected nodes from the tree.&lt;/li&gt;
@@ -2146,7 +2214,7 @@ reference category because this group of men had the highest sperm
 count. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Markus Loecher</name></author><summary type="html">The Trouble with dishonest TED Talks</summary></entry><entry><title type="html">LDA: 4321</title><link href="http://localhost:4000/4321-Blog" rel="alternate" type="text/html" title="LDA: 4321" /><published>2020-08-04T00:00:00+02:00</published><updated>2020-08-04T00:00:00+02:00</updated><id>http://localhost:4000/4321-Blog</id><content type="html" xml:base="http://localhost:4000/4321-Blog">&lt;p&gt;&lt;img src=&quot;/assets/4321/auster1.jpg&quot; alt=&quot;Auster4321&quot; /&gt;&lt;/p&gt;
+&lt;/div&gt;</content><author><name>Markus Loecher</name></author><summary type="html">The Trouble with dishonest TED Talks</summary></entry><entry><title type="html">LDA: 4321</title><link href="http://localhost:4000/4321-Blog" rel="alternate" type="text/html" title="LDA: 4321" /><published>2020-08-04T00:00:00+02:00</published><updated>2020-08-04T00:00:00+02:00</updated><id>http://localhost:4000/4321-Blog</id><content type="html" xml:base="http://localhost:4000/4321-Blog">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/4321/auster1.jpg&quot; alt=&quot;Auster4321&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h1&gt;
 
@@ -2432,7 +2500,7 @@ within each topic.&lt;/p&gt;
   &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scale_x_reordered&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/4321/unnamed-chunk-16-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/4321/unnamed-chunk-16-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The figure shows that Ferguson is the defining character across all
 topics and the most prominent term. Further coherences can be drawn,
@@ -2483,7 +2551,7 @@ ratio of the corresponding betas. The following code programms in
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log2ratio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;topic3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;topic4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chapter_topics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/4321/unnamed-chunk-18-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/markusloecher/markusloecher.github.io/blob/master/assets/4321/unnamed-chunk-18-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We can see clear differences between the topics. For instance, &lt;em&gt;topic2&lt;/em&gt;
 appears to have a character &lt;code class=&quot;highlighter-rouge&quot;&gt;aubrey&lt;/code&gt; that only plays a role in that
@@ -2532,7 +2600,7 @@ three others.&lt;/p&gt;
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot_avg_spreads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;beta_spread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topic&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/4321/unnamed-chunk-20-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/4321/unnamed-chunk-20-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Using this graphic we can clearly see which terms make up a topic. For
 example, we see that Evie and Celia are characters from topic 1, while
@@ -2584,7 +2652,7 @@ chapters.&lt;/p&gt;
   &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;facet_wrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/4321/unnamed-chunk-24-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/4321/unnamed-chunk-24-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;From the plot we can see that Storyline-2, Storyline-3 and Storyline-4
 are classified well, Storyline-1, however, is ambiguous. To get a better
@@ -2640,7 +2708,7 @@ clarification using &lt;code class=&quot;highlighter-rouge&quot;&gt;ggplot&lt;/c
        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;% of assignments&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/4321/unnamed-chunk-29-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/4321/unnamed-chunk-29-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We can see that all words that came from Storyline-3 and Storyline-2
 were correctly classified to their storyline. Words from Storyline-1 and
@@ -2742,7 +2810,7 @@ confusion matrix.&lt;/p&gt;
        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;% of assignments&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/4321/unnamed-chunk-34-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/markusloecher/markusloecher.github.io/master/assets/4321/unnamed-chunk-34-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We can see that all chapters that came from Storyline-2 and Storyline-3
 were correctly classified to their storyline. Chapters from Storyline-1
