@@ -20,13 +20,13 @@ Despite a lengthy search, I was unable to find more information than the followi
 I wished I could find data on the 2x2 table.
 "**At least 90%**" efficacy suggests to me that this is a lower bound on a confidence interval. For rare diseases, the relative risk is approximately equal to the  [odds ratio](https://en.wikipedia.org/wiki/Odds_ratio). Starting from a contingency table 
 
-:<math>\begin{array}{c|cc}
+\begin{align}{c|cc}
 & Y = \text{infected} & Y = \text{not infected} \\
 \hline
 X = vaccinated & n_{11} & n_{10} \\
 X = unvaccinated & n_{01} & n_{00}
-\end{array}
-</math>
+\end{align}
+
 a confidence interval for the log odds
 is approximately equal to
 
@@ -45,13 +45,13 @@ $$
 which would lead to a lower bound of the vaccine efficiency of 90% ($=1-0.1$).
 So I am concluding that the 2x2 table looked like this
 
-:<math>\begin{array}{c|cc}
+\begin{align}{c|cc}
 & Y = \text{infected} & Y = \text{not infected} \\
 \hline
 X = vaccinated & 3 & 21766 \\
 X = unvaccinated & 91 & 21678
-\end{array}
-</math>
+\end{align}
+
 
 
 
