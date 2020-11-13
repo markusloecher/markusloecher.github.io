@@ -1,0 +1,110 @@
+I":-<p>This post serves two purposes:</p>
+<ol>
+  <li>It illustrates and compares three different methods of visualizing <code class="highlighter-rouge">DecisionTreeClassifiers</code> from sklearn.</li>
+  <li>It shows a simple quick way of manually pruning selected nodes from the tree.</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">dtreeviz.trees</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">SVG</span>  
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>  
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+
+<span class="c1">#for plotting
+</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
+
+<span class="kn">import</span> <span class="nn">graphviz</span> 
+
+</code></pre></div></div>
+
+<h3 id="dtreeviz">dtreeviz</h3>
+<p>We are using the wonderful tree visualization library <code class="highlighter-rouge">dtreeviz</code> :
+https://github.com/parrt/dtreeviz</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">ViewSVG</span><span class="p">(</span><span class="n">viz</span><span class="p">):</span>
+    <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">SVG</span>  
+    <span class="n">fname</span><span class="o">=</span> <span class="n">viz</span><span class="o">.</span><span class="n">save_svg</span><span class="p">()</span> 
+    <span class="k">return</span> <span class="n">SVG</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">clf1</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># limit depth of tree
+</span><span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+<span class="n">clf1</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
+
+<span class="n">viz1</span> <span class="o">=</span> <span class="n">dtreeviz</span><span class="p">(</span><span class="n">clf1</span><span class="p">,</span> 
+               <span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> 
+               <span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">,</span>
+               <span class="n">target_name</span><span class="o">=</span><span class="s">'variety'</span><span class="p">,</span>
+              <span class="n">feature_names</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">,</span> 
+               <span class="n">class_names</span><span class="o">=</span><span class="p">[</span><span class="s">"setosa"</span><span class="p">,</span> <span class="s">"versicolor"</span><span class="p">,</span> <span class="s">"virginica"</span><span class="p">]</span>  <span class="c1"># need class_names for classifier
+</span>              <span class="p">)</span>  
+<span class="n">ViewSVG</span><span class="p">(</span><span class="n">viz1</span><span class="p">)</span>            
+
+</code></pre></div></div>
+
+<p><img src="/assets/PruneAndVisualizeTree/output_4_0.svg" alt="svg" /></p>
+
+<p>We now selectively prune the last two children which belong to parent node #6:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">clf2</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">clf1</span><span class="p">)</span>
+<span class="c1">#prune the tree
+</span><span class="n">clf2</span><span class="o">.</span><span class="n">tree_</span><span class="o">.</span><span class="n">children_left</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">clf2</span><span class="o">.</span><span class="n">tree_</span><span class="o">.</span><span class="n">children_right</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>  <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="n">viz2</span> <span class="o">=</span> <span class="n">dtreeviz</span><span class="p">(</span><span class="n">clf2</span><span class="p">,</span> 
+               <span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> 
+               <span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">,</span>
+               <span class="n">target_name</span><span class="o">=</span><span class="s">'variety'</span><span class="p">,</span>
+              <span class="n">feature_names</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">,</span> 
+               <span class="n">class_names</span><span class="o">=</span><span class="p">[</span><span class="s">"setosa"</span><span class="p">,</span> <span class="s">"versicolor"</span><span class="p">,</span> <span class="s">"virginica"</span><span class="p">]</span>  <span class="c1"># need class_names for classifier
+</span>              <span class="p">)</span>  
+<span class="n">ViewSVG</span><span class="p">(</span><span class="n">viz2</span><span class="p">)</span>            
+
+</code></pre></div></div>
+
+<p><img src="/assets/PruneAndVisualizeTree/output_6_0.svg" alt="svg" /></p>
+
+<h3 id="using-plot_tree-also-works">Using <code class="highlighter-rouge">plot_tree</code> also works:</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">"figure.figsize"</span><span class="p">]</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span>
+
+<span class="n">tmp</span><span class="o">=</span><span class="n">tree</span><span class="o">.</span><span class="n">plot_tree</span><span class="p">(</span><span class="n">clf1</span><span class="p">)</span> 
+</code></pre></div></div>
+
+<p><img src="/assets/PruneAndVisualizeTree/output_8_0.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">"figure.figsize"</span><span class="p">]</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span>
+
+<span class="n">tmp</span><span class="o">=</span><span class="n">tree</span><span class="o">.</span><span class="n">plot_tree</span><span class="p">(</span><span class="n">clf2</span><span class="p">)</span> 
+</code></pre></div></div>
+
+<p><img src="/assets/PruneAndVisualizeTree/output_9_0.png" alt="png" /></p>
+
+<h3 id="graphviz">Graphviz</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">"figure.figsize"</span><span class="p">]</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span>
+<span class="n">dot_data</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">export_graphviz</span><span class="p">(</span><span class="n">clf1</span><span class="p">,</span> <span class="n">out_file</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> 
+                    <span class="n">feature_names</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">,</span>  
+                    <span class="n">class_names</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">,</span>  
+                    <span class="n">filled</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">rounded</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  
+                    <span class="n">special_characters</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Source</span><span class="p">(</span><span class="n">dot_data</span><span class="p">)</span> 
+<span class="n">graph</span>
+</code></pre></div></div>
+
+<p><img src="/assets/PruneAndVisualizeTree/output_11_0.svg" alt="svg" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dot_data</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">export_graphviz</span><span class="p">(</span><span class="n">clf2</span><span class="p">,</span> <span class="n">out_file</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> 
+                    <span class="n">feature_names</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">,</span>  
+                    <span class="n">class_names</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">,</span>  
+                    <span class="n">filled</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">rounded</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  
+                    <span class="n">special_characters</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Source</span><span class="p">(</span><span class="n">dot_data</span><span class="p">)</span> 
+<span class="n">graph</span>
+</code></pre></div></div>
+
+<p><img src="/assets/PruneAndVisualizeTree/output_12_0.svg" alt="svg" /></p>
+
+:ET

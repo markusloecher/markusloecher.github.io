@@ -1,0 +1,72 @@
+I"�<h2 id="random-walks">Random Walks</h2>
+
+<p>Suppose we start with <em>n</em> dollars, and make a sequence of bets. For each
+bet, we win 1 dollar with probability <em>p</em>, and lose 1 dollar with
+probability 1 − <em>p</em>. We quit if either we go broke, in which case we
+lose, or when we reach <em>T</em> = <em>n</em> + <em>m</em> dollars, that is, when we win <em>m</em>
+dollars. For example, in Roulette, <em>p</em> = 18/38 = 9/19 ∼ 0.473. If
+<em>n</em> = 100 dollars, and <em>m</em> = 100 dollars, then <em>T</em> = 200 dollars. What
+are the odds we win 100 dollars before losing 100 dollars? Most folks
+would think that since 0.473 ∼ 0.5, the odds are not so bad. In fact, as
+we will see, we win before we lose with probability at most 1/37649!</p>
+
+<h2 id="boundary-crossing">Boundary Crossing</h2>
+
+<p>This random walk is a special type of random walk where moves are
+independent of the past. If <em>p</em> = 1/2, the random walk is unbiased and
+is called a .For <em>p</em> ≠ 1/2, the random walk is biased (). If the walk
+hits a boundary (0 or <em>n</em> + <em>m</em>), then we stop playing.</p>
+
+<p><img src="/assets/GamblersRuin/RandomWalks1.png" alt="" /></p>
+
+<h2 id="unfair-coin-flipping">Unfair coin flipping</h2>
+
+<p><img src="/assets/GamblersRuin/RandomWalks2.png" alt="" /></p>
+
+<h3 id="try-for-yourself">Try for yourself</h3>
+
+<iframe width="1000" height="900" scrolling="no" frameborder="no" src="https://nbwr.shinyapps.io/gamblers-ruin/">
+</iframe>
+
+<h2 id="probability-to-win">Probability to win</h2>
+
+<p>Let’s figure out the probability that we gain m before losing n. To set
+things up formally, let <em>W</em> be the event we hit <em>T</em> before we hit 0,
+where <em>T</em> = <em>n</em> + <em>m</em>. Let <em>D</em><sub><em>t</em></sub> be a random variable that
+denotes the number of dollars we have at time step <em>t</em>. Let
+<em>P</em><sub><em>n</em></sub> = ℙ(<em>W</em>|<em>D</em><sub>0</sub> = <em>n</em>) be the probability we
+get <em>T</em> before we go broke, given that we start with <em>n</em> dollars. Our
+question then, is what is <em>P</em><sub><em>n</em></sub> ? We’re going to use a
+recursive approach.
+<em>P</em><sub><em>n</em></sub> = <em>p</em> ⋅ <em>P</em><sub><em>n</em> + 1</sub> + (1 − <em>p</em>) ⋅ <em>P</em><sub><em>n</em> − 1</sub>,  for 0 &lt; <em>n</em> &lt; <em>T</em></p>
+
+<p><a href="http://web.mit.edu/neboat/Public/6.042/randomwalks.pdf">Solving it</a> for
+<em>p</em> &lt; 0.5 yields</p>
+
+<p align="center">
+<img src="/assets/GamblersRuin/PNeq.png" alt="Prob to win" width="300" />
+</p>
+
+<p>This last expression is even independent of n, and exponentially small
+in m.</p>
+
+<h2 id="probability-to-win-1">Probability to win</h2>
+
+<p><img src="/assets/GamblersRuin/PN.png" alt="" /></p>
+
+<h2 id="intuition-off-">Intuition off ?</h2>
+
+<p>Why does this seem to run against our intuition ? Normally we would
+think that the probability of winning 100 dollars before losing 200
+dollars is better than winning 10 before losing 10, i.e., that the ratio
+is what matters. In fact, the ratio is what matters if the game is fair,
+i.e., if <em>p</em> = 1/2. In that case, we simply have
+<em>P</em><sub><em>n</em></sub> = <em>n</em>/(<em>n</em> + <em>m</em>) = <em>n</em>/<em>T</em>
+In this case, if <em>n</em> = 200 and <em>m</em> = 100, we have Pr(Win)=200/300=2/3.
+On the other hand, if <em>n</em> = 10 and <em>m</em> = 10, then Pr(Win)=10/20=1/2.
+Thus, actually, now we are more likely to win in the first case!</p>
+
+<p>So the trouble is that our intuition tells us that if the game is almost
+fair, then we expect the results to be almost the same as if the game
+were fair. It turns out this is not the case!</p>
+:ET

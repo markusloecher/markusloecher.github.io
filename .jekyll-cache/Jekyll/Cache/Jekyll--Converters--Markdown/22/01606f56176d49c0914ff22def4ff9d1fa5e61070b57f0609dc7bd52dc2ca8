@@ -1,0 +1,6 @@
+I"%<p>This post serves two purposes:</p>
+<ol>
+  <li>It illustrates and compares three different methods of visualizing <code class="highlighter-rouge">DecisionTreeClassifiers</code> from sklearn.</li>
+  <li>It shows a simple quick way of manually pruning selected nodes from the tree.</li>
+</ol>
+:ET
