@@ -31,13 +31,13 @@ $$
 
 
 
-So for an even split of placebo/vaccination among the 43,538 enrolled, the upper bound of the CI (for the odds ratio) for e.g. $3$ of $94$ infected people having been vaccinated is (yes, we could omit the last two fractions):
+So for an even split of placebo/vaccination among the 43,538 enrolled, the upper bound of the CI (for the odds ratio) for e.g. 3 of 94 infected people having been vaccinated is (yes, we could omit the last two fractions):
 
 $$
 \exp{\left(\log(3/91) + 1.96 \sqrt{\dfrac{1}{3} + \dfrac{1}{91} + \dfrac{1}{21678} + \dfrac{1}{21766}} \right)} \approx 0.1
 $$
 
-which would lead to a lower bound of the vaccine efficiency of 90% ($=1-0.1$).
+which would lead to a lower bound of the vaccine efficiency of 90% (=1-0.1).
 So I am concluding that the 2x2 table looked like this
 
 ![png](../assets/CoronaVaccine/Table2x2_b.png)
