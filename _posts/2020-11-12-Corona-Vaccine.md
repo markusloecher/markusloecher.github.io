@@ -109,7 +109,8 @@ np.round(np.quantile(1-RR,0.025),3)
 ```
 
 
-![png](../assets/CoronaVaccine/bs_efficacy.png)
+![png](../assets/CoronaVaccine/bs_efficacy_91_3.png)
+
 
 
 
@@ -122,13 +123,79 @@ np.round(np.quantile(1-RR,0.025),3)
 So, the nonparametric confidence interval is more optimistic and yields a lower bound of **92.4 %** vaccine efficiency.
 
 
+### Update, Nov 18th
+
+[Incredible milestone for science.](https://www.sciencemag.org/news/2020/11/covid-19-vaccine-trial-complete-pfizer-and-biontech-update-their-promising-result
+) Pfizer and BioNTech update their promising COVID-19 vaccine result
+
+> In all, the trial had **162 confirmed cases** of symptomatic COVID-19 in the placebo group **versus eight** among those who received the two scheduled doses of the vaccine. The efficacy, which was measured 7 days after the second dose of the vaccine, was the same in different races and ethnicities, the companies say—although subgroup analyses always have more uncertainty.
+
+
+
 ```python
-np.quantile(RR,0.975)-np.quantile(RR,0.025)
+Inf = [8,162]
+
+CIupper = np.exp(np.log(Inf[0]/Inf[1]) + 1.96*np.sqrt(1/Inf[0] + 1/Inf[1] + 1/(21769-Inf[0]) + 1/(21769-Inf[1])))
+1-np.round(CIupper,3)
 ```
 
 
 
 
-    0.0759923804842079
+    0.9
+
+
+
+
+```python
+M=1000
+# Construct arrays of data: 
+Vaccinated = np.array([True] * Inf[0] + [False] * (21769 - Inf[0]))
+NotVaccinated = np.array([True] * Inf[1] + [False] * (21769 - Inf[1]))
+
+# Compute 1,000 bootstrap replicates from shifted arrays
+bs_replicates_V = draw_bs_reps(Vaccinated, np.sum, size=M)
+bs_replicates_NV = draw_bs_reps(NotVaccinated, np.sum, size=M)
+
+#relative risks:
+RR =bs_replicates_V/bs_replicates_NV
+```
+
+
+```python
+tmp=plt.hist(1-RR,density=True, facecolor='g')
+plt.xlabel('vaccine efficacy')
+plt.ylabel('Probability')
+plt.title('Bootstrapped Distribution of efficacy')
+plt.grid(True)
+plt.show()
+#LowerBoundEfficiency 
+np.round(np.quantile(1-RR,0.025),3)
+```
+
+
+![png](../assets/CoronaVaccine/bs_efficacy_162_8.png)
+
+
+
+    0.912
+
+
+
+### One-sided CI
+
+To be fair, we should probably compute a one-sided confidence interval since we really have "no problem" with uncertainties upward.
+
+
+```python
+#one-tail confidence interval:
+np.round(np.quantile(1-RR,0.05),3)
+```
+
+
+
+
+    0.92
+
 
 
