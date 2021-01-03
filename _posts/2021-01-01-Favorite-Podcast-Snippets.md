@@ -22,12 +22,12 @@ acts as a filter for not overloading this page.)
 ### Freakonomics
 
 [“Outjargoning” with Lagrange Multipliers in
-advertising](/assets/podcasts/excerpts/vlc-record-2021-01-03-11h04m45s-Does%20Advertising%20Actually%20Work_%20\(Part%202_%20Digital\)-.mp3)
-(<https://freakonomics.com/podcast/advertising-part-2/> 7:20-9:47),
+advertising](/assets/podcasts/excerpts/vlc-record-2021-01-03-11h04m45s-Does%20Advertising%20Actually%20Work_Part%202_Digital.mp3)
+  (<https://freakonomics.com/podcast/advertising-part-2/> 7:20-9:47),
 **careful, you will laugh out loud\!**
 
 [Tim Wong on AI subsidized by the advertising
-industry](/assets/podcasts/excerpts/vlc-record-2021-01-03-11h17m02s-Does%20Advertising%20Actually%20Work_%20\(Part%202_%20Digital\)-.mp3)
+industry](/assets/podcasts/excerpts/vlc-record-2021-01-03-11h17m02s-Does%20Advertising%20Actually%20Work_Part%202_Digital.mp3)
 (<https://freakonomics.com/podcast/advertising-part-2/> 35:24-39:05)
 
 ### People I (Mostly) Admire
@@ -68,18 +68,18 @@ Happiness](/assets/podcasts/excerpts/vlc-record-2021-01-02-15h20m23s-How%20Much%
 (<https://freakonomics.com/podcast/nsq-influence/> 18:58)
 
 [Sales in
-advertising](/assets/podcasts/excerpts/vlc-record-2021-01-03-10h59m55s-Does%20Advertising%20Actually%20Work_%20\(Part%202_%20Digital\)-.mp3)
+advertising](/assets/podcasts/excerpts/vlc-record-2021-01-03-10h59m55s-Does%20Advertising%20Actually%20Work_Part%202_Digital.mp3)
 (<https://freakonomics.com/podcast/advertising-part-2/> 6:15-7:20)
 
 ### Natural Experiments
 
 [Anna Tuchman on “border strategies” in analyzing advertising
-data](/assets/podcasts/excerpts/vlc-record-2021-01-03-11h31m21s-Does%20Advertising%20Actually%20Work_%20\(Part%201_%20TV\)-.mp3)
+data](/assets/podcasts/excerpts/vlc-record-2021-01-03-11h31m21s-Does%20Advertising%20Actually%20Work_Part%201_TV.mp3)
 (<https://freakonomics.com/podcast/advertising-part-1/> 12:45-15:38)
 Transcript available\!
 
 [“Border strategies” in analyzing e-cigarette
-data](/assets/podcasts/excerpts/vlc-record-2021-01-03-11h41m47s-Does%20Advertising%20Actually%20Work_%20\(Part%201_%20TV\)-.mp3)
+data](/assets/podcasts/excerpts/vlc-record-2021-01-03-11h41m47s-Does%20Advertising%20Actually%20Work_Part%201_TV.mp3)
 (<https://freakonomics.com/podcast/advertising-part-1/> 15:30-18:40) I
 strongly encourage listening to the remaining parts of the podcast\!
 
