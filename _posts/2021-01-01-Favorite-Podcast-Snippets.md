@@ -1,5 +1,3 @@
-Favorite Podcast Snippets
-================
 M Loecher
 
   - [Freakonomics Radio](#freakonomics-radio)
