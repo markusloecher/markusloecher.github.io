@@ -37,7 +37,8 @@ Note:
 
   - [On Public
     Speaking](/assets/podcasts/excerpts/vlc-record-2021-01-02-15h08m18s-Kerwin%20Charles_%20“One%20Does%20Not%20Know%20Where%20an%20Insight%20Will%20Come%20From”-.mp3)  
-    (<https://freakonomics.com/podcast/pima-kerwin-charles/> 05:45-)
+    (<https://freakonomics.com/podcast/pima-kerwin-charles/>
+    05:45-07:27)
 
 The following semi serious quotes are from a bonus episode introducing
 the new podcast [People I (Mostly)
@@ -53,16 +54,20 @@ instead of just listened to.
       - [the folly of getting a PhD or writing
         books](/assets/podcasts/excerpts/vlc-record-Steve%20Levitt_I'm%20Not%20as%20Childlike%20as%20I'd%20Like%20to%20Be-0338-0520.mp3)  
         (<https://freakonomics.com/podcast/pima-bonus-steve-levitt/>
-        03:38 - 05:20)
+        03:38 - 05:20)  
+        I actually do not agree with this extremely oversimplified view
+        whose main purpose seems to want to support Levitt’s
+        “iconoclastic” status;but I like it as a thought provoking
+        exercise.
 
 ### No Stupid Questions
 
   - [Procrastination](/assets/podcasts/excerpts/vlc-record-2021-01-02-14h51m20s-How%20Much%20of%20Your%20Life%20Do%20You%20Actually%20Control_-.mp3)  
-    (<https://freakonomics.com/podcast/nsq-influence/> 28:50-)
+    (<https://freakonomics.com/podcast/nsq-influence/> 28:50-33:19)
 
   - [Friendship is like physical
     therapy](/assets/podcasts/excerpts/vlc-record-2021-01-02-14h41m26s-How%20Do%20You%20Raise%20a%20“Likable”%20Kid_-.mp3)  
-    (<https://freakonomics.com/podcast/nsq-likable-kids/> 25:35-)
+    (<https://freakonomics.com/podcast/nsq-likable-kids/> 25:35-26:28)
 
 ### Correlation/Causation
 
@@ -76,19 +81,19 @@ instead of just listened to.
 
   - [Children and
     Happiness](/assets/podcasts/excerpts/vlc-record-2021-01-02-14h36m39s-How%20Do%20You%20Raise%20a%20“Likable”%20Kid_-.mp3)  
-    (<https://freakonomics.com/podcast/nsq-likable-kids/> 18:35-)
+    (<https://freakonomics.com/podcast/nsq-likable-kids/> 18:35-19:40)
 
   - [Friendship and
     Happiness](/assets/podcasts/excerpts/vlc-record-2021-01-02-15h01m01s-How%20Much%20Do%20Your%20Friends%20Affect%20Your%20Future_-.mp3)  
-    (<https://freakonomics.com/podcast/nsq-influence/> 00:40-)
+    (<https://freakonomics.com/podcast/nsq-influence/> 00:40-01:23)
 
   - [Jobs and
     Happiness](/assets/podcasts/excerpts/vlc-record-2021-01-02-15h20m23s-How%20Much%20Do%20Your%20Friends%20Affect%20Your%20Future_-.mp3)  
-    (<https://freakonomics.com/podcast/nsq-influence/> 18:58-)
+    (<https://freakonomics.com/podcast/nsq-influence/> 18:58-20:20)
 
   - [Sales in
     advertising](/assets/podcasts/excerpts/vlc-record-2021-01-03-10h59m55s-Does%20Advertising%20Actually%20Work_Part%202_Digital.mp3)  
-    (<https://freakonomics.com/podcast/advertising-part-2/> 6:15-7:20)
+    (<https://freakonomics.com/podcast/advertising-part-2/> 06:15-07:20)
 
 ### Natural Experiments
 
