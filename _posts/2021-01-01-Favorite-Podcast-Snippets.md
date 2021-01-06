@@ -33,6 +33,10 @@ Note:
     industry](/assets/podcasts/excerpts/vlc-record-2021-01-03-11h17m02s-Does%20Advertising%20Actually%20Work_Part%202_Digital.mp3)  
     (<https://freakonomics.com/podcast/advertising-part-2/> 35:24-39:05)
 
+  - [Darrick Hamilton on the wealth gap and risk
+    taking](/assets/podcasts/excerpts/vlc-record-freak-Should%20America%20\(and%20FIFA\)%20Pay%20Reparations-2821-2942.mp3)  
+    (<https://freakonomics.com/podcast/reparations-part-1/> 28:21-29:42)
+
 ### People I (Mostly) Admire
 
   - [On Public
@@ -55,10 +59,10 @@ instead of just listened to.
         books](/assets/podcasts/excerpts/vlc-record-Steve%20Levitt_I'm%20Not%20as%20Childlike%20as%20I'd%20Like%20to%20Be-0338-0520.mp3)  
         (<https://freakonomics.com/podcast/pima-bonus-steve-levitt/>
         03:38 - 05:20)  
-        I actually do not agree with this extremely oversimplified view
-        whose main purpose seems to want to support Levitt’s
-        “iconoclastic” status;but I like it as a thought provoking
-        exercise.
+        I actually do not agree with this extremely oversimplified
+        -borderline pretentious- view whose main purpose seems to want
+        to support Levitt’s “iconoclastic” status; but I like it as a
+        thought provoking exercise.
 
 ### No Stupid Questions
 
@@ -95,6 +99,10 @@ instead of just listened to.
     advertising](/assets/podcasts/excerpts/vlc-record-2021-01-03-10h59m55s-Does%20Advertising%20Actually%20Work_Part%202_Digital.mp3)  
     (<https://freakonomics.com/podcast/advertising-part-2/> 06:15-07:20)
 
+  - [The benefits of
+    optimism](/assets/podcasts/excerpts/vlc-record-nsq-Is%20Optimism%20a%20Luxury%20Good-0121-0428.mp3)  
+    (<https://freakonomics.com/podcast/nsq-optimism/> 01:21-04:28)
+
 ### Natural Experiments
 
   - [Anna Tuchman on “border strategies” in analyzing advertising
@@ -105,7 +113,7 @@ instead of just listened to.
   - [“Border strategies” in analyzing e-cigarette
     data](/assets/podcasts/excerpts/vlc-record-2021-01-03-11h41m47s-Does%20Advertising%20Actually%20Work_Part%201_TV.mp3)  
     (<https://freakonomics.com/podcast/advertising-part-1/> 15:30-18:40)
-    You shuold listen to the remaining parts of the podcast.
+    You should listen to the remaining parts of the podcast.
 
 ### Humor
 
