@@ -34,7 +34,7 @@ Note:
     (<https://freakonomics.com/podcast/advertising-part-2/> 35:24-39:05)
 
   - [Darrick Hamilton on the wealth gap and risk
-    taking](/assets/podcasts/excerpts/vlc-record-freak-Should%20America%20\(and%20FIFA\)%20Pay%20Reparations-2821-2942.mp3)  
+    taking](/assets/podcasts/excerpts/vlc-record-freak-Should-America-and-FIFA-Pay-Reparations-2821-2942.mp3)  
     (<https://freakonomics.com/podcast/reparations-part-1/> 28:21-29:42)
 
 ### People I (Mostly) Admire
