@@ -37,9 +37,13 @@ Note:
     taking](/assets/podcasts/excerpts/vlc-record-freak-Should-America-and-FIFA-Pay-Reparations-2821-2942.mp3)  
     (<https://freakonomics.com/podcast/reparations-part-1/> 28:21-29:42)
 
+  - [America’s outdated math
+    curriculum](/assets/podcasts/excerpts/vlc-record-freak-America’s%20Math%20Curriculum%20Doesn’t%20Add%20Up-2501-2732.mp3)  
+    (<https://freakonomics.com/podcast/math-curriculum/> 25:01-27:32)
+
 ### People I (Mostly) Admire
 
-  - [On Public
+  - [Kerwin Charles on Public
     Speaking](/assets/podcasts/excerpts/vlc-record-2021-01-02-15h08m18s-Kerwin%20Charles_%20“One%20Does%20Not%20Know%20Where%20an%20Insight%20Will%20Come%20From”-.mp3)  
     (<https://freakonomics.com/podcast/pima-kerwin-charles/>
     05:45-07:27)
