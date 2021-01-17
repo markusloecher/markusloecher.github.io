@@ -70,6 +70,14 @@ instead of just listened to.
 
 ### No Stupid Questions
 
+  - [Aspirational
+    Comsumerism](/assets/podcasts/excerpts/vlc-record-nsq-Why%20Do%20We%20Buy%20Things%20We-will%20Never%20Use_0730-1018.mp3)  
+    (<https://freakonomics.com/podcast/nsq-quinoa/> 07:30-10:18)
+
+  - [Wasted Intellect at Facebook, Google,
+    …](/assets/podcasts/excerpts/vlc-record-nsq-Are%20Humans%20Smarter%20or%20Stupider%20Than%20We%20Used%20to%20Be_0641-0847.mp3)  
+    (<https://freakonomics.com/podcast/nsq-smarter-humans/> 06:41-08:47)
+
   - [Procrastination](/assets/podcasts/excerpts/vlc-record-2021-01-02-14h51m20s-How%20Much%20of%20Your%20Life%20Do%20You%20Actually%20Control_-.mp3)  
     (<https://freakonomics.com/podcast/nsq-influence/> 28:50-33:19)
 
