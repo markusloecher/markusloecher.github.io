@@ -71,7 +71,7 @@ instead of just listened to.
 ### No Stupid Questions
 
   - [Aspirational
-    Comsumerism](/assets/podcasts/excerpts/vlc-record-nsq-Why%20Do%20We%20Buy%20Things%20We-will%20Never%20Use_0730-1018.mp3)  
+    Consumerism](/assets/podcasts/excerpts/vlc-record-nsq-Why%20Do%20We%20Buy%20Things%20We-will%20Never%20Use_0730-1018.mp3)  
     (<https://freakonomics.com/podcast/nsq-quinoa/> 07:30-10:18)
 
   - [Wasted Intellect at Facebook, Google,
