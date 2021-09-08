@@ -43,7 +43,16 @@ Note:
 
 ### People I (Mostly) Admire
 
-  - [Kerwin Charles on Public
+- [Sendhil Mullainathan on reading being inferior to experiential learning](/assets/podcasts/excerpts/pima-Sendhil Mullainathan-reading-vs-experiential.mp3)  
+    (<https://freakonomics.com/podcast/pima-sendhil-mullainathan/>
+    10:40-12:19)
+    
+- [Sendhil Mullainathan on the $20 game](/assets/podcasts/excerpts/pima-Sendhil Mullainathan-20dollar-game.mp3)  
+    (<https://freakonomics.com/podcast/pima-sendhil-mullainathan/>
+    12:20-15:27)
+    
+    
+- [Kerwin Charles on Public
     Speaking](/assets/podcasts/excerpts/vlc-record-2021-01-02-15h08m18s-Kerwin%20Charles_%20“One%20Does%20Not%20Know%20Where%20an%20Insight%20Will%20Come%20From”-.mp3)  
     (<https://freakonomics.com/podcast/pima-kerwin-charles/>
     05:45-07:27)
