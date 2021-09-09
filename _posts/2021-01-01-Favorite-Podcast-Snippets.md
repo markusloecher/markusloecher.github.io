@@ -47,7 +47,7 @@ Note:
     (<https://freakonomics.com/podcast/pima-sendhil-mullainathan/>
     10:40-12:19)
     
-- [Sendhil Mullainathan on the $20 game](/assets/podcasts/excerpts/pima-Sendhil Mullainathan-20dollar-game.mp3)  
+- [Sendhil Mullainathan on the $20 game to teach the sunk cost fallacy](/assets/podcasts/excerpts/pima-Sendhil Mullainathan-20dollar-game.mp3)  
     (<https://freakonomics.com/podcast/pima-sendhil-mullainathan/>
     12:20-15:27)
     
