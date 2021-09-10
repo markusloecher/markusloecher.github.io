@@ -105,17 +105,12 @@ gives indeed identical predictions.
         min_samples_leaf =10,max_features = p)
     rf.fit(xtrain, ytrain)
 
-    ## RandomForestRegressor(max_features=13, min_samples_leaf=10, n_estimators=1)
-
     tree=rf.estimators_[0]
     sampled_indices = _generate_sample_indices(tree.random_state, n_samples, n_samples)
 
     rf0 = RandomForestRegressor(n_estimators=1, 
         min_samples_leaf =10,max_features = p, bootstrap=False)
     rf0.fit(xtrain[sampled_indices,:], ytrain[sampled_indices])
-
-    ## RandomForestRegressor(bootstrap=False, max_features=13, min_samples_leaf=10,
-    ##                       n_estimators=1)
 
     p  =  rf.predict(xtrain)
     p0 = rf0.predict(xtrain)
