@@ -24,22 +24,26 @@ Note:
 
 ### Freakonomics
 
-  - [“Outjargoning” with Lagrange Multipliers in
-    advertising](/assets/podcasts/excerpts/vlc-record-2021-01-03-11h04m45s-Does%20Advertising%20Actually%20Work_Part%202_Digital.mp3)  
-    (<https://freakonomics.com/podcast/advertising-part-2/>
-    07:20-09:47), **careful, you will laugh out loud\!**
+- [Nathan Myhrvold on the absurd view that there ever was a golden age ](/assets/podcasts/excerpts/freak-Two-Totally-Opposite-Ways-to-Save-the-Planet.mp3)  
+  (<https://freakonomics.com/podcast/save-the-planet-rebroadcast/>
+  33:23-35:00)
 
-  - [Tim Wong on AI subsidized by the advertising
-    industry](/assets/podcasts/excerpts/vlc-record-2021-01-03-11h17m02s-Does%20Advertising%20Actually%20Work_Part%202_Digital.mp3)  
-    (<https://freakonomics.com/podcast/advertising-part-2/> 35:24-39:05)
+- [“Outjargoning” with Lagrange Multipliers in
+  advertising](/assets/podcasts/excerpts/vlc-record-2021-01-03-11h04m45s-Does%20Advertising%20Actually%20Work_Part%202_Digital.mp3)  
+  (<https://freakonomics.com/podcast/advertising-part-2/>
+  07:20-09:47), **careful, you will laugh out loud\!**
 
-  - [Darrick Hamilton on the wealth gap and risk
-    taking](/assets/podcasts/excerpts/vlc-record-freak-Should-America-and-FIFA-Pay-Reparations-2821-2942.mp3)  
-    (<https://freakonomics.com/podcast/reparations-part-1/> 28:21-29:42)
+- [Tim Wong on AI subsidized by the advertising
+  industry](/assets/podcasts/excerpts/vlc-record-2021-01-03-11h17m02s-Does%20Advertising%20Actually%20Work_Part%202_Digital.mp3)  
+  (<https://freakonomics.com/podcast/advertising-part-2/> 35:24-39:05)
 
-  - [America’s outdated math
-    curriculum](/assets/podcasts/excerpts/vlc-record-freak-America’s%20Math%20Curriculum%20Doesn’t%20Add%20Up-2501-2732.mp3)  
-    (<https://freakonomics.com/podcast/math-curriculum/> 25:01-27:32)
+- [Darrick Hamilton on the wealth gap and risk
+  taking](/assets/podcasts/excerpts/vlc-record-freak-Should-America-and-FIFA-Pay-Reparations-2821-2942.mp3)  
+  (<https://freakonomics.com/podcast/reparations-part-1/> 28:21-29:42)
+
+- [America’s outdated math
+  curriculum](/assets/podcasts/excerpts/vlc-record-freak-America’s%20Math%20Curriculum%20Doesn’t%20Add%20Up-2501-2732.mp3)  
+  (<https://freakonomics.com/podcast/math-curriculum/> 25:01-27:32)
 
 ### People I (Mostly) Admire
 
