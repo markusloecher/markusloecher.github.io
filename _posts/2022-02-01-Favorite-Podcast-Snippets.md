@@ -9,6 +9,7 @@ M Loecher
     -   [Humor](#humor)
 -   [IQ Magazin](#iq-magazin)
 -   [Jordan Peterson](#jordan-peterson)
+-   [Statistical Literacy](#statistical-literacy)
 
 Note:
 
@@ -69,6 +70,25 @@ instead of just listened to.
         -borderline pretentious- view whose main purpose seems to want
         to support Levitt’s “iconoclastic” status; but I like it as a
         thought provoking exercise.
+
+#### Life Advice
+
+-   Dan Gilbert on
+    -   [putting your entire self into things turns it into
+        joy](/assets/podcasts/excerpts/pima-Gilbert-Turning-Work-into-Play-1816-2035.mp3)  
+        (<https://freakonomics.com/podcast/turning-work-into-play/>
+        18:16 - 20:35)
+    -   [Say No more often, publish
+        less](/assets/podcasts/excerpts/pima-Gilbert-Turning-Work-into-Play-2015-2333.mp3)  
+        (<https://freakonomics.com/podcast/turning-work-into-play/>
+        20:15 - 23:33)
+    -   [If Money Doesn’t Make You Happy Then You Probably Aren’t
+        Spending It
+        Right.](/assets/podcasts/excerpts/pima-Gilbert-Turning-Work-into-Play-2015-2333.mp3)  
+        (<https://freakonomics.com/podcast/turning-work-into-play/>
+        23:41 - 26:02) I only buy this advice 10%, it is just too
+        simplistic. “…use this money to have a weekly party for my
+        friends.” is a bit too close to *The Great Gatsby*.
 
 ### No Stupid Questions
 
@@ -150,3 +170,7 @@ instead of just listened to.
 -   [Sam Harris on troubling claims of
     religion](https://youtu.be/prt9D90BvFI?t=5700)  
     (<https://www.jordanbpeterson.com/podcast/s4e81/> 1:35:00-1:41:00)
+
+------------------------------------------------------------------------
+
+## Statistical Literacy
