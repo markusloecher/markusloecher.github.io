@@ -1,3 +1,5 @@
+## Patents
+
 -   *Event Identification In Sensor Analytics*, M. Loecher and Tony
     Jebara, US patent 8620624, Dec 31, 2013.
 -   *A System and Method of Comparing Spatial-Temporal Trails in
