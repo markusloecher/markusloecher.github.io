@@ -1,6 +1,6 @@
 ## Selected Publications
 
-### books
+### Books
 
 -   *Rapid Spatial Aggregation*, M. Loecher, M. Kumar, Communications in
     Computer and Information Science 499:192-206, July 2015.
@@ -11,11 +11,12 @@
 ### Refereed Articles (sel.)
 
 -   [Approximation of SHAP values for Randomized Tree
-    Ensembles](https://cd-make.net/), Loecher, Markus, Dingyi Lai and Qi
-    Wu, CD-MAKE (2022).
+    Ensembles](https://link.springer.com/chapter/10.1007/978-3-031-14463-9_2),
+    Loecher, Markus, Dingyi Lai and Qi Wu, CD-MAKE (2022).
 
 -   [Debiasing MDI Feature Importance and SHAP values in Tree
-    Ensembles](https://cd-make.net/), Loecher, Markus, CD-MAKE (2022)
+    Ensembles](https://link.springer.com/chapter/10.1007/978-3-031-14463-9_8),
+    Loecher, Markus, CD-MAKE (2022)
 
 -   [The Perils of Misspecified Priors and Optional Stopping in
     Multi-Armed
@@ -42,29 +43,29 @@
     (2015).
 
 -   *Controlling Stochastic Resonance*}\*, Luca Gammaitoni, Markus
-    L"ocher, Adi Bulsara, Peter H{"a}nggi, Joseph Neff, Kurt Wiesenfeld
-    and William Ditto, Phys. Rev. Lett. **82**, 4574 (1999).
+    Löcher, Adi Bulsara, Peter Hänggi, Joseph Neff, Kurt Wiesenfeld and
+    William Ditto, Phys. Rev. Lett. **82**, 4574 (1999).
 
 -   *Noise enhanced propagation*, J. F. Lindner, S. Chandramouli, A.R.
-    Bulsara, M. L"ocher, and W. L. Ditto, Phys. Rev. Lett. **81**, 5048
+    Bulsara, M. Löcher, and W. L. Ditto, Phys. Rev. Lett. **81**, 5048
     (1998).
 
 -   *Stochastic Resonance in coupled nonlinear dynamic elements*, M.
-    L"ocher, D. Cigna, E. R. Hunt, G. A. Johnson, F. Marchesoni, L.
+    Löcher, D. Cigna, E. R. Hunt, G. A. Johnson, F. Marchesoni, L.
     Gammaitoni, A. R. Bulsara and M. E. Inchiosa, CHAOS **8**, 604
     (1998).
 
 -   *Noise sustained propagation of a signal in coupled bistable
-    electronic elements*, M. L"ocher, D. Cigna and E. R. Hunt, Phys.
+    electronic elements*, M. Löcher, D. Cigna and E. R. Hunt, Phys.
     Rev. Lett. **80**, 5212 (1998).
 
 -   *Control of high-dimensional chaos in systems with symmetry*, M.
-    L"ocher and E. R. Hunt, Phys. Rev. Lett. **79**, 63 (1997).
+    Löcher and E. R. Hunt, Phys. Rev. Lett. **79**, 63 (1997).
 
 -   *Spatiotemporal Stochastic Resonance in a System of Coupled Diode
-    Resonators*, M. L"ocher, G. A. Johnson and E. R. Hunt, Phys.
+    Resonators*, M. Löcher, G. A. Johnson and E. R. Hunt, Phys.
     Rev. Lett. **77**, 4698 (1996).
 
 -   *Parametric feedback resonance in chaotic systems*, H. G.
-    Schuster, E. Niebur, E.R. Hunt, G. A. Johnson, M. L"ocher, Phys.
+    Schuster, E. Niebur, E.R. Hunt, G. A. Johnson, M. Löcher, Phys.
     Rev. Lett. **76**, 400 (1996).
