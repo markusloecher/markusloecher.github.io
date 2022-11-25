@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<img src="/assets/about/Loecher.png" alt="drawing" width="25%"/>
+<img src="/assets/about/Loecher.png" alt="drawing" width="17%"/>
 
 
 **Prof. Dr. Markus Loecher** has been a professor of mathematics and statistics at the Berlin School of Economics and Law (HWR Berlin) since 2011. His research interests include machine learning, spatial statistics, data visualization and sequential learning. Prior to joining HWR Berlin he worked as principal and lead scientist at various data analytics companies in the United States. He holds a PhD in physics (Ohio University) and a master degree in statistics from Rutgers University.
