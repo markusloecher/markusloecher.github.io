@@ -10,6 +10,11 @@
 
 ### Refereed Articles (sel.)
 
+-   [Are SHAP values biased towards high-entropy
+    features?](https://kdd.isti.cnr.it/xkdd2022/papers/XKDD_2022_paper_1418.pdf)
+    Raphael Baudeu, Marvin Wright and Markus Loecher, ECML PKDD Workshop
+    on XKDD, Grenoble (2022).
+
 -   [Approximation of SHAP values for Randomized Tree
     Ensembles](https://link.springer.com/chapter/10.1007/978-3-031-14463-9_2),
     Loecher, Markus, Dingyi Lai and Qi Wu, CD-MAKE (2022).
