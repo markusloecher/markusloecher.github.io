@@ -169,6 +169,11 @@ boredom](/assets/podcasts/excerpts/vlc-record-nsq-Why%20Do%20We%20Buy%20Things%2
 - [The placebo effect](/assets/podcasts/excerpts/)
   (<https://freakonomics.com/podcast/nsq-thinking/> )
 
+- [Wordplay on Hadron Collider](https://youtu.be/9hDDwBEobtk?t=630)
+  (<https://talksat.withgoogle.com/talk/the-magic-of-reality>) Richard
+  Dawkins’ amusing anecdote on the “Hardon Collider” despite half the
+  audience being children!
+
 ------------------------------------------------------------------------
 
 ## IQ Magazin
