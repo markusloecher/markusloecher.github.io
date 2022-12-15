@@ -11,7 +11,7 @@ M Loecher
     id="toc-correlationcausation">Correlation/Causation</a>
   - <a href="#natural-experiments" id="toc-natural-experiments">Natural
     Experiments</a>
-  - <a href="#humor" id="toc-humor">Humor</a>
+- <a href="#humor" id="toc-humor">Humor</a>
 - <a href="#iq-magazin" id="toc-iq-magazin">IQ Magazin</a>
 - <a href="#jordan-peterson" id="toc-jordan-peterson">Jordan Peterson</a>
 - <a href="#statistical-literacy"
@@ -101,11 +101,10 @@ instead of just listened to.
 
 ### No Stupid Questions
 
-<https://stitcher.simplecastaudio.com/fab071f4-583a-498c-a495-58f7d4c71242/episodes/74cb1c85-2447-4b58-9511-72e0d7b46a1b/audio/128/default.mp3?awCollectionId=fab071f4-583a-498c-a495-58f7d4c71242&awEpisodeId=74cb1c85-2447-4b58-9511-72e0d7b46a1b>
-\* [The deeper reasons for
-boredom](/assets/podcasts/excerpts/vlc-record-nsq-Why%20Do%20We%20Buy%20Things%20We-will%20Never%20Use_0730-1018.mp3)  
-(<https://freakonomics.com/podcast/how-can-you-avoid-boredom/>
-04:00-04:55) [Transcript](/assets/podcasts/tanscripts/.html)
+- [The deeper reasons for
+  boredom](https://stitcher-injected.simplecastaudio.com/fab071f4-583a-498c-a495-58f7d4c71242/episodes/74cb1c85-2447-4b58-9511-72e0d7b46a1b/audio/128/default.mp3/default.mp3_ywr3ahjkcgo_d208963988d3e504176555c052e14c9c_36667196.mp3?awCollectionId=fab071f4-583a-498c-a495-58f7d4c71242&awEpisodeId=74cb1c85-2447-4b58-9511-72e0d7b46a1b&hash_redirect=1&x-total-bytes=36667196&x-ais-classified=unclassified&listeningSessionID=0CD_382_348__d7c91a9df0722ff64865717a2d08974bc2e7d23f)  
+  (<https://freakonomics.com/podcast/how-can-you-avoid-boredom/>
+  04:00-04:55) [Transcript](/assets/podcasts/tanscripts/.html)
 
 - [Aspirational
   Consumerism](/assets/podcasts/excerpts/vlc-record-nsq-Why%20Do%20We%20Buy%20Things%20We-will%20Never%20Use_0730-1018.mp3)  
@@ -164,7 +163,7 @@ boredom](/assets/podcasts/excerpts/vlc-record-nsq-Why%20Do%20We%20Buy%20Things%2
   (<https://freakonomics.com/podcast/advertising-part-1/> 15:30-18:40)
   You should listen to the remaining parts of the podcast.
 
-### Humor
+## Humor
 
 - [The placebo effect](/assets/podcasts/excerpts/)
   (<https://freakonomics.com/podcast/nsq-thinking/> )
