@@ -165,13 +165,18 @@ instead of just listened to.
 
 ## Humor
 
-- [The placebo effect](/assets/podcasts/excerpts/)
-  (<https://freakonomics.com/podcast/nsq-thinking/> )
+- [“Das Adam Smith
+  Problem”](/assets/podcasts/excerpts/nsq-was-adam-smith-really-a-right-winger-5145-5245.mp3)
+  (<https://freakonomics.com/podcast/was-adam-smith-really-a-right-winger/>
+  ) 51:45-52:45 “German scholars are weird” :)
 
 - [Wordplay on Hadron Collider](https://youtu.be/9hDDwBEobtk?t=630)
   (<https://talksat.withgoogle.com/talk/the-magic-of-reality>) Richard
   Dawkins’ amusing anecdote on the “Hardon Collider” despite half the
   audience being children!
+
+- [The placebo effect](/assets/podcasts/excerpts/)
+  (<https://freakonomics.com/podcast/nsq-thinking/> )
 
 ------------------------------------------------------------------------
 
