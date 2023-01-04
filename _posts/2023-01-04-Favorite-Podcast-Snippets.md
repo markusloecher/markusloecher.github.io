@@ -37,7 +37,8 @@ Note:
 
 - [Larry Summers on “cost disease”](/assets/podcasts/excerpts/.mp3)  
   (<https://freakonomics.com/podcast/why-larry-summers-is-the-economist-everyone-hates-to-love/>
-  35:10-38:03) [Transcript](/assets/podcasts/tanscripts/.html)
+  35:10-38:03)
+  [Transcript](/assets/podcasts/tanscripts/why-larry-summers-is-the-economist-everyone-hates-to-love.html)
 
 - [“Outjargoning” with Lagrange Multipliers in
   advertising](/assets/podcasts/excerpts/vlc-record-2021-01-03-11h04m45s-Does%20Advertising%20Actually%20Work_Part%202_Digital.mp3)  
@@ -106,7 +107,8 @@ instead of just listened to.
 - [The deeper reasons for
   boredom](https://stitcher-injected.simplecastaudio.com/fab071f4-583a-498c-a495-58f7d4c71242/episodes/74cb1c85-2447-4b58-9511-72e0d7b46a1b/audio/128/default.mp3/default.mp3_ywr3ahjkcgo_d208963988d3e504176555c052e14c9c_36667196.mp3?awCollectionId=fab071f4-583a-498c-a495-58f7d4c71242&awEpisodeId=74cb1c85-2447-4b58-9511-72e0d7b46a1b&hash_redirect=1&x-total-bytes=36667196&x-ais-classified=unclassified&listeningSessionID=0CD_382_348__d7c91a9df0722ff64865717a2d08974bc2e7d23f)  
   (<https://freakonomics.com/podcast/how-can-you-avoid-boredom/>
-  04:00-04:55) [Transcript](/assets/podcasts/tanscripts/.html)
+  04:00-04:55)
+  [Transcript](/assets/podcasts/tanscripts/how-can-you-avoid-boredom.html)
 
 - [Aspirational
   Consumerism](/assets/podcasts/excerpts/vlc-record-nsq-Why%20Do%20We%20Buy%20Things%20We-will%20Never%20Use_0730-1018.mp3)  
@@ -212,5 +214,6 @@ instead of just listened to.
 - [Michael Kearns on the “equalization of harm” notion in the fairness
   debate](/assets/podcasts/excerpts/TWIML_AI_MichaelKearns_19-45_23-38.mp4)  
   (<https://youtu.be/XaErOGD0OL8?t=1185> 19:45-23:38)
+  [Transcript](/assets/podcasts/tanscripts/KearnsInterview.txt)
 
 ## Statistical Literacy
