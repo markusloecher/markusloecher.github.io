@@ -1,5 +1,6 @@
 ### Diversity, Equity and Inclusion in Data Science, Overcoming Toxic
-Pythonicity with R
+
+#### Pythonicity with R
 
 Data Science has become one of the most important and sought-after
 fields in recent years, with more and more organizations recognizing
@@ -72,7 +73,7 @@ critical for ensuring that data analysis is transparent and
 verifiable. This can help to reduce biases and ensure that all team
 members have an equal opportunity to contribute.
 
-Conclusion
+#### Conclusion
 
 In conclusion, diversity, equity, and inclusion are critical for the
 success of data science teams. However, the toxic culture that can be
