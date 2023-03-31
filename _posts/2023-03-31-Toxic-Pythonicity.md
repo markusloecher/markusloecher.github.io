@@ -1,6 +1,4 @@
-### Diversity, Equity and Inclusion in Data Science, Overcoming Toxic
-
-#### Pythonicity with R
+### Diversity, Equity and Inclusion in Data Science, Overcoming Toxic Pythonicity with R
 
 Data Science has become one of the most important and sought-after
 fields in recent years, with more and more organizations recognizing
