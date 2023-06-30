@@ -1,23 +1,19 @@
 M Loecher
 
-- <a href="#freakonomics-radio" id="toc-freakonomics-radio">Freakonomics
-  Radio</a>
-  - <a href="#freakonomics" id="toc-freakonomics">Freakonomics</a>
-  - <a href="#people-i-mostly-admire" id="toc-people-i-mostly-admire">People
-    I (Mostly) Admire</a>
-  - <a href="#no-stupid-questions" id="toc-no-stupid-questions">No Stupid
-    Questions</a>
-  - <a href="#correlationcausation"
-    id="toc-correlationcausation">Correlation/Causation</a>
-  - <a href="#natural-experiments" id="toc-natural-experiments">Natural
-    Experiments</a>
-- <a href="#humor" id="toc-humor">Humor</a>
-- <a href="#iq-magazin" id="toc-iq-magazin">IQ Magazin</a>
-- <a href="#jordan-peterson" id="toc-jordan-peterson">Jordan Peterson</a>
-- <a href="#machine-learning-podcasts"
-  id="toc-machine-learning-podcasts">Machine Learning Podcasts</a>
-- <a href="#statistical-literacy"
-  id="toc-statistical-literacy">Statistical Literacy</a>
+- [Freakonomics Radio](#freakonomics-radio)
+  - [Freakonomics](#freakonomics)
+  - [People I (Mostly) Admire](#people-i-mostly-admire)
+  - [No Stupid Questions](#no-stupid-questions)
+  - [Correlation/Causation](#correlationcausation)
+  - [Natural Experiments](#natural-experiments)
+- [Humor](#humor)
+- [IQ Magazin](#iq-magazin)
+- [Die Sogenannte Gegenwart](#die-sogenannte-gegenwart)
+- [Jordan Peterson](#jordan-peterson)
+- [Machine Learning Podcasts](#machine-learning-podcasts)
+  - [“Fairness” debate running out of
+    control](#fairness-debate-running-out-of-control)
+- [Statistical Literacy](#statistical-literacy)
 
 Note:
 
@@ -191,6 +187,15 @@ instead of just listened to.
   (<https://www.ardaudiothek.de/episode/iq-magazin/weltklima-bericht-impfskepsis-akademische-querdenker/bayern-2/96855206/>
   18:30-24:28)
 
+## Die Sogenannte Gegenwart
+
+- [Wie Können Wir Unsere Köpfe
+  Dekolonisieren?](/assets/podcasts/excerpts/DieSogenannteGegenwart/WieKoennenWirUnsereKoepfeDekolonisieren.m4a)
+  - [spotify](https://open.spotify.com/episode/5l5GE8FbhSLZd15cxCY2U9?si=ycoCr7R7TmOKO6gsqhOItw&t=2838)
+  - [Die
+    Zeit](https://www.zeit.de/kultur/2023-03/der-vermessene-mensch-namibia-kolonialismus-feuilleton-podcast)
+  - [Transcript](/assets/podcasts/transcripts/WieKoennenWirUnsereKoepfeDekolonisieren.txt)
+
 ------------------------------------------------------------------------
 
 ## Jordan Peterson
@@ -215,5 +220,28 @@ instead of just listened to.
   debate](/assets/podcasts/excerpts/TWIML_AI_MichaelKearns_19-45_23-38.mp4)  
   (<https://youtu.be/XaErOGD0OL8?t=1185> 19:45-23:38)
   [Transcript](/assets/podcasts/transcripts/KearnsInterview.txt)
+
+### “Fairness” debate running out of control
+
+Man, these increasingly extreme definitions of “racism” are so absurd; I
+find it dangerous that they are being disseminated by established
+academics who also communicate well, appear convincing/smart and are
+convinced/inspired by their ideas.
+
+Listen in for 5 minutes (although it’s worth listening to the whole
+podcast because you’ll lose faith):
+<https://open.spotify.com/episode/1QxvMbmP9JZ274jge4Er6V?si=RfH3VnLjQRqKRHU-_lHGuA&t=821>
+
+<https://twimlai.com/podcast/twimlai/facebook-abandons-facial-recognition-should-everyone-else-follow-suit-luke-stark/>
+
+Absolute highlights: “all facial recognition is fundamentally racist”
+“Does that extend to like face unlock for your phone? Is that
+fundamentally racist?” “I think it is. Because just by the act of decide
+deciding to put numbers to your face, right? … these facial unlock
+systems are making a kind of judgement about what a face is?”
+
+“textbook definition of racism: using kind of external physical
+quantification, physical physical features and making judgments about an
+individual based on those features”
 
 ## Statistical Literacy
