@@ -14600,12 +14600,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <h3 id="Efficient-Partial-Dependence-Plots-with-decision-trees">Efficient Partial Dependence Plots with decision trees<a class="anchor-link" href="#Efficient-Partial-Dependence-Plots-with-decision-trees">&#182;</a></h3><p>Both on <a href="https://nicolas-hug.com/blog/pdps">Nicolas Hug's post</a> as well as on this <a href="https://stats.stackexchange.com/questions/236223/computing-partial-dependence-plots-for-trees">stackexchange discussion</a> the instructions for computing PDP measures for trees efficiently follow Friedman's original instructions:</p>
 <blockquote>
 <p>For regression trees based on single-variable splits, however, the partial dependence of $f(X)$ on a specified target variable subset $X_S$  is straightforward to evaluate given only the tree, <em>without</em> reference to the data itself. For a specific set of values for the variables $X_S$, a weighted traversal of the tree is performed. At the root of the tree, a weight value of $1$ is assigned. For each nonterminal node visited, if its split variable is in the target subset $X_S$, the appropriate left or right daughter node is visited and the weight is not modified. If the node’s split variable is a member of the complement subset $X_C$, then both daughters are visited and the current weight is multiplied by the fraction of training observations that went left or right, respectively, at that node.</p>
-<p>Each terminal node visited during the traversal is assigned the</p>
+<p>Each terminal node visited during the traversal is assigned the current value of the weight. When the tree traversal is complete, the value of $f_S(X_S)$ is the corresponding weighted average of the $f(X)$ values over those terminal nodes visited during the tree traversal.</p>
 </blockquote>
-<p>current value of the weight. When the tree traversal is complete, the
-value of $f_S(X_S)$ is the corresponding weighted average of the
-$f(X)$ values over those terminal nodes visited during the tree
-traversal.</p>
 
 </div>
 </div>
@@ -14619,21 +14615,10 @@ traversal.</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>In sklearn this is translated as follows:</p>
 <blockquote>
-<p>For each row in <code>X</code> a tree traversal is performed.</p>
+<p>For each row in <code>X</code> a tree traversal is performed. Each traversal starts from the root with weight 1.0.</p>
+<p>At each non-terminal node that splits on a target variable either the left child or the right child is visited based on the feature value of the current sample and the weight is not modified. At each non-terminal node that splits on a complementary feature both children are visited and the weight is multiplied by the fraction of training samples which went to each child.</p>
+<p>At each terminal node the value of the node is multiplied by the current weight (weights sum to 1 for all visited terminal nodes).</p>
 </blockquote>
-<p>Each traversal starts from the root with weight 1.0.</p>
-<blockquote>
-<p>At each non-terminal node that splits on a target variable either</p>
-</blockquote>
-<p>the left child or the right child is visited based on the feature
-value of the current sample and the weight is not modified.
-At each non-terminal node that splits on a complementary feature
-both children are visited and the weight is multiplied by the fraction
-of training samples which went to each child.</p>
-<blockquote>
-<p>At each terminal node the value of the node is multiplied by the</p>
-</blockquote>
-<p>current weight (weights sum to 1 for all visited terminal nodes).</p>
 
 </div>
 </div>
