@@ -14645,7 +14645,7 @@ of training samples which went to each child.</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Conditional-versus-Interventional">Conditional versus Interventional<a class="anchor-link" href="#Conditional-versus-Interventional">&#182;</a></h2><p>Both in his <a href="https://jerryfriedman.su.domains/ftp/trebst.pdf">paper</a> and in the ESLII book, Friedman elaborates on how the <strong>conditional</strong> $E[f(x_S,X_C)|X_S=x_s]$ is different from the <strong>interventional</strong> $E[f(x_S,X_C)| \text{\bf{do}}(X_S=x_s)]$.</p>
+<h2 id="Conditional-versus-Interventional">Conditional versus Interventional<a class="anchor-link" href="#Conditional-versus-Interventional">&#182;</a></h2><p>Both in his <a href="https://jerryfriedman.su.domains/ftp/trebst.pdf">paper</a> and in the ESLII book, Friedman elaborates on how the <strong>conditional</strong> $E[f(x_S,X_C)|X_S=x_s]$ is different from the <strong>interventional</strong> $E[f(x_S,X_C)| \mathbf{do}(X_S=x_s)]$.</p>
 <h3 id="Incorrect-sklearn-implementation?">Incorrect sklearn implementation?<a class="anchor-link" href="#Incorrect-sklearn-implementation?">&#182;</a></h3><p>I believe that the current sklearn implementation is in fact computing the <strong>conditional</strong> expectation $E[f(x_S,X_C)|X_S=x_s]$ !</p>
 <p>In fact in both of the above recipes we should switch the roles of $X_S$ and $X_C$, i.e. visit both chidren of $X_S$.</p>
 <p>I will use the Titanic data to illustrate the issues.
