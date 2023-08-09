@@ -14944,7 +14944,7 @@ P1 {&#39;average&#39;: array([[0.31367542, 0.59773396]]), &#39;values&#39;: [arr
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Correct-Recursion">Correct Recursion<a class="anchor-link" href="#Correct-Recursion">&#182;</a></h2><p>The following is a sketch of a recursive algorithm which would correctly compute the interventional PDP in <strong>one</strong> pass over the tree:</p>
+<h2 id="Correct-Recursion">Correct Recursion<a class="anchor-link" href="#Correct-Recursion">&#182;</a></h2><p>The following is a sketch of a recursive algorithm which I believe would correctly compute the interventional PDP in <strong>one</strong> pass over the training data (for all $X_S$):</p>
 
 </div>
 </div>
@@ -14960,6 +14960,22 @@ P1 {&#39;average&#39;: array([[0.31367542, 0.59773396]]), &#39;values&#39;: [arr
 <p>Each terminal node visited during the traversal is assigned the
 current value of the weight divived by the total number of observations. When the tree traversal is complete, the value of $f_S(X_S)$ is the corresponding weighted average of the $f(X)$ values over those terminal nodes visited during the tree
 traversal.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>While this scheme does need to pass the entire training data, that cost is mitigated by two factors:</p>
+<ul>
+<li>Constant cost for all X_S</li>
+<li>One could implement it into the fit function where the training data are passed through the tree while building it, instead of a post-hoc approach.</li>
+</ul>
 
 </div>
 </div>
