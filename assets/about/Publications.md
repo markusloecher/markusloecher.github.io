@@ -11,11 +11,11 @@
 ### Refereed Articles (sel.)
 
 -   [Debiasing SHAP scores in random
-    forests](https://link.springer.com/article/10.1007/s10182-023-00479-7)
+    forests](https://link.springer.com/article/10.1007/s10182-023-00479-7);
     Loecher, Markus, AStA Adv Stat Anal (2023).
 
 -   [Are SHAP values biased towards high-entropy
-    features?](https://kdd.isti.cnr.it/xkdd2022/papers/XKDD_2022_paper_1418.pdf)
+    features?](https://kdd.isti.cnr.it/xkdd2022/papers/XKDD_2022_paper_1418.pdf);
     Raphael Baudeu, Marvin Wright and Markus Loecher, ECML PKDD Workshop
     on XKDD, Grenoble (2022).
 
@@ -30,7 +30,7 @@
 -   [The Perils of Misspecified Priors and Optional Stopping in
     Multi-Armed
     Bandits](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8299077/),
-    Loecher, Markus, Frontiers in Artificial Intelligence 4 (2021).}
+    Loecher, Markus, Frontiers in Artificial Intelligence 4 (2021).
 
 -   [Unbiased variable importance for random
     forests](https://www.tandfonline.com/doi/full/10.1080/03610926.2020.1764042),
@@ -51,9 +51,9 @@
     Markus, and Karl Ropkins. Journal of Statistical Software **63**.4
     (2015).
 
--   *Controlling Stochastic Resonance*}\*, Luca Gammaitoni, Markus
-    Löcher, Adi Bulsara, Peter Hänggi, Joseph Neff, Kurt Wiesenfeld and
-    William Ditto, Phys. Rev. Lett. **82**, 4574 (1999).
+-   *Controlling Stochastic Resonance*, Luca Gammaitoni, Markus Löcher,
+    Adi Bulsara, Peter Hänggi, Joseph Neff, Kurt Wiesenfeld and William
+    Ditto, Phys. Rev. Lett. **82**, 4574 (1999).
 
 -   *Noise enhanced propagation*, J. F. Lindner, S. Chandramouli, A.R.
     Bulsara, M. Löcher, and W. L. Ditto, Phys. Rev. Lett. **81**, 5048
