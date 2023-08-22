@@ -10,6 +10,10 @@
 
 ### Refereed Articles (sel.)
 
+-   [Debiasing SHAP scores in random
+    forests](https://link.springer.com/article/10.1007/s10182-023-00479-7)
+    Loecher, Markus, AStA Adv Stat Anal (2023).
+
 -   [Are SHAP values biased towards high-entropy
     features?](https://kdd.isti.cnr.it/xkdd2022/papers/XKDD_2022_paper_1418.pdf)
     Raphael Baudeu, Marvin Wright and Markus Loecher, ECML PKDD Workshop
