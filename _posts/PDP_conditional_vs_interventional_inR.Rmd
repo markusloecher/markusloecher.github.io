@@ -1,0 +1,105 @@
+---
+title: "Efficient Partial Dependence Plots with decision trees"
+author: "Loecher"
+date: "2023-08-23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#library(reticulate)
+library(pdp)
+library(gbm)
+```
+
+### pdp/gbm packages in R
+
+The generalized boosting package [gbm](https://cran.r-project.org/web/packages/gbm/index.html) in R offers the  `plot.gbm` function which 
+> "selects a grid of points and uses the weighted tree traversal method described in Friedman (2001) to do the integration"
+
+The partial dependence package [pdp](https://cran.r-project.org/web/packages/pdp/index.html) in R offers the  `partial` function with the Boolean `recursive` argument which 
+> "indicating whether or not to use the weighted tree traversal method described in Friedman (2001). This only applies to objects that inherit from class `gbm`. Default is TRUE which is much faster than the exact brute force approach used for all other models."
+
+I believe that the original description of the algorithm in the Friedman paper is incorrect.
+By following only one child of splits on $X_0$ one computes conditional PDPs and not interventional PDPs.
+I do not believe it possible to compute the latter with just one pass through the tree, it requires a full pass of the entire training data. 
+The only speedup that my proposed algorithm offers is that one full pass is sufficient for all values of $X_0$!
+And to achieve that, one has to follow both children of $X_0$.
+
+Why do we need to pass all data? Because the splits on $X_C$ can be very different depending on the $X_0$ condition due to **correlations among the features**.
+The following shows a simple extreme example to illustrate this point.
+
+## Conditional versus Interventional
+
+Both in his [paper](https://jerryfriedman.su.domains/ftp/trebst.pdf) and in the ESLII book, Friedman elaborates on how the **conditional** $E[f(x_S,X_C)|X_S=x_s]$ is different from the **interventional** $E[f(x_S,X_C)| \mathbf{do}(X_S=x_s)]$.
+
+### Correlated Features
+
+I will use a data set with just two binary features $X_{0,1}$ but strong correlations to illustrate the issues:
+
+$$
+P( X_1 = 1 | X_0 = 0) = 0.2, P( X_1 = 1 | X_0 = 1) = 0.8
+$$ 
+
+```{r}
+N = 400; p0 = 0.5; p11 = 0.8; M=2
+X = matrix(0, nrow=N,ncol=M, dimnames=list(NULL, c("X1","X2"))) # a matrix (N * M)
+N1 = floor(p0*N)
+X[1:N1,1] = 1
+X[1:floor(p11*N1),2] = 1
+X[(N1+1):(N1+floor((1-p11)*(N-N1))+1),2] = 1
+table(X[,1],X[,2])
+```
+For $Y$ we somewhat randomly choose the following:
+$$
+E(Y | X_1 = 0, X_0 = 0) = 0.3, E(Y | X_1 = 1, X_0 = 0) = 0.7
+$$
+$$
+E(Y | X_1 = 0, X_0 = 1) = 0.9, E(Y | X_1 = 1, X_0 = 1) = 0.1
+$$
+
+```{r}
+y <- rep(0, N)
+# E(Y | X_1 = 0, X_0 = 0) = 0.3
+y[X[,1] == 0 & X[,2] == 0] <- 0.3
+# E(Y | X_1 = 1, X_0 = 0) = 0.7
+y[X[,1] == 0 & X[,2] == 1] <- 0.7
+# E(Y | X_1 = 0, X_0 = 1) = 0.9 
+y[X[,1] == 1 & X[,2] == 0] <- 0.9
+# E(Y | X_1 = 1, X_0 = 1) = 0.1
+y[X[,1] == 1 & X[,2] == 1] <- 0.1
+
+```
+
+```{r}
+df = cbind.data.frame(X,y)
+```
+
+Let us build one tree in gbm:
+
+```{r}
+library(gbm)
+fit = gbm(y ~ X1 + X2, data = df, n.trees=1, interaction.depth = 3, shrinkage = 1, bag.fraction = 1)
+```
+
+```{r, echo=F}
+#print(pretty.gbm.tree(fit, i.tree = 1))
+```
+
+Do we have the correct leaf predictions? Yes:
+```{r}
+table(predict.gbm(fit, n.trees = 1) )
+```
+
+
+Since the tree split on $X_2$ first, the partial dependence values computed by `partial` will be different for $X_2$ if we shoose brute search versus `recursive=TRUE"`:
+
+```{r}
+#X1 brute (interventional): [[0.6 0.4]]
+#X1 recursion (conditional): [[0.42 0.22]]
+pdp::partial(fit,pred.var = "X2", n.trees = 1, recursive=TRUE)
+pdp::partial(fit,pred.var = "X2", n.trees = 1, recursive=FALSE)
+```
+
+
+The source for this notebook can be found [here](https://github.com/markusloecher/markusloecher.github.io/blob/master/_posts/PDP_conditional_vs_interventional_inR.Rmd)
