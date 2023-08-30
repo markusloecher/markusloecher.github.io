@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PDP_regression_trees</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>2023-08-08-Partial-Dependence-Trees</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14598,14 +14598,19 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Efficient-Partial-Dependence-Plots-with-decision-trees">Efficient Partial Dependence Plots with decision trees<a class="anchor-link" href="#Efficient-Partial-Dependence-Plots-with-decision-trees">&#182;</a></h3><ol>
-<li>[Conditional versus Interventional</li>
+<li><p><a href="#Conditional-versus-Interventional">Conditional versus Interventional</a></p>
+<ul>
+<li><a href="#Incorrect-sklearn-implementation?">Incorrect sklearn implementation?</a></li>
+<li><a href="#Titanic-example">Titanic example</a></li>
+</ul>
+</li>
+<li><p><a href="#Correct-Recursion">Correct Recursion</a></p>
+</li>
+<li><p><a href="#Correlated-Predictors">Correlated Predictors</a></p>
+</li>
+<li><p><a href="#pdp/gbm-packages-in-R">pdp/gbm packages in R</a></p>
+</li>
 </ol>
-<p>](#Conditional-versus-Interventional)
-    * <a href="#Incorrect-sklearn-implementation?">Incorrect sklearn implementation?</a>
-    * <a href="#Titanic-example">Titanic example</a>
-2. <a href="#Correct-Recursion">Correct Recursion</a>
-3. <a href="#Correlated-Predictors">Correlated Predictors</a>
-4. <a href="#pdp/gbm-packages-in-R">pdp/gbm packages in R</a></p>
 <p>Both on <a href="https://nicolas-hug.com/blog/pdps">Nicolas Hug's post</a> as well as on this <a href="https://stats.stackexchange.com/questions/236223/computing-partial-dependence-plots-for-trees">stackexchange discussion</a> the instructions for computing PDP measures for trees efficiently follow Friedman's original instructions:</p>
 <blockquote>
 <p>For regression trees based on single-variable splits, however, the partial dependence of $f(X)$ on a specified target variable subset $X_S$  is straightforward to evaluate given only the tree, <em>without</em> reference to the data itself. For a specific set of values for the variables $X_S$, a weighted traversal of the tree is performed. At the root of the tree, a weight value of $1$ is assigned. For each nonterminal node visited, if its split variable is in the target subset $X_S$, the appropriate left or right daughter node is visited and the weight is not modified. If the node’s split variable is a member of the complement subset $X_C$, then both daughters are visited and the current weight is multiplied by the fraction of training observations that went left or right, respectively, at that node.</p>
@@ -15032,7 +15037,7 @@ $T(X_S)$ can be computed by following both children of nodes that split on varia
 <blockquote>
 <p>&quot;indicating whether or not to use the weighted tree traversal method described in Friedman (2001). This only applies to objects that inherit from class <code>gbm</code>. Default is TRUE which is much faster than the exact brute force approach used for all other models.&quot;</p>
 </blockquote>
-<p>I have reproduced the example  of how correlations between features lead to real differences in the two PDP versions <a href="https://github.com/markusloecher/markusloecher.github.io/blob/master/_posts/PDP_conditional_vs_interventional_inR.html">here</a></p>
+<p>I have reproduced the example  of how correlations between features lead to real differences in the two PDP versions <a href="PDP_conditional_vs_interventional_inR.html">here</a></p>
 
 </div>
 </div>
