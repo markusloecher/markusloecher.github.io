@@ -16,5 +16,7 @@ forests](https://link.springer.com/article/10.1007/s10182-023-00479-7)
 ## Podcast Summary
 
 Thanks to the absolute magic of <https://notebooklm.google.com/> there
-is now a [podcast Version of the
+is now a [podcast version of the
 paper](/assets/podcasts/Debiasing_shap_podcast.mp3).
+
+Please take the exaggerations and excessive praise with lots of humor…
