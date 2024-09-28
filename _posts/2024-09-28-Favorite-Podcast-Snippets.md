@@ -32,7 +32,7 @@ Note:
 
 - [Finally a decent definition of
   wokeness](https://open.spotify.com/episode/0qNbpTTfxLsDUHPykVEvun?si=6HwSRx0NTwergzvzZs6W9A&t=712)
-  ([Transcript](/assets/podcasts/transcripts/DefinitionWoke.txt))
+  ([Transcript](/assets/podcasts/transcripts/DefinitionWoke.md))
 
 - [Some actual number crunching on
   wokeness](https://open.spotify.com/episode/3E7DGis3H8lAd9gWanHR3h?si=VBpxf6BpRZuUT08dcQLOnw)
