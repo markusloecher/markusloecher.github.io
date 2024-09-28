@@ -1,5 +1,6 @@
 M Loecher
 
+- [The Economist](#the-economist)
 - [Freakonomics Radio](#freakonomics-radio)
   - [Freakonomics](#freakonomics)
   - [People I (Mostly) Admire](#people-i-mostly-admire)
@@ -26,6 +27,15 @@ Note:
   filter for not overloading this page.
 
 ------------------------------------------------------------------------
+
+## The Economist
+
+- [Finally a decent definition of
+  wokeness](https://open.spotify.com/episode/0qNbpTTfxLsDUHPykVEvun?si=6HwSRx0NTwergzvzZs6W9A&t=712)
+  ([Transcript](/assets/podcasts/transcripts/DefinitionWoke.txt))
+
+- [Some actual number crunching on
+  wokeness](https://open.spotify.com/episode/3E7DGis3H8lAd9gWanHR3h?si=VBpxf6BpRZuUT08dcQLOnw)
 
 ## Freakonomics Radio
 
