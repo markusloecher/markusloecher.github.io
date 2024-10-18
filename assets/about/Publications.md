@@ -10,6 +10,9 @@
 
 ### Refereed Articles (sel.)
 
+-   [Tree Smoothing: Post-hoc Regularization of Tree Ensembles for Interpretable Machine Learning](https://doi.org/10.1016/j.ins.2024.121564);
+    Bastian Pfeifer, Arne Gevaert, Markus Loecher, Andreas Holzinger, Information Sciences, Vol. 690, 121564, ISSN 0020-0255 (2025).
+    
 -   [Debiasing SHAP scores in random
     forests](https://link.springer.com/article/10.1007/s10182-023-00479-7);
     Loecher, Markus, AStA Adv Stat Anal (2023).
