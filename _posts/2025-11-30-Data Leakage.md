@@ -1,6 +1,11 @@
 StandardScaler cannot leak target information
 ================
 
+- [StandardScaler is safe](#standardscaler-is-safe)
+- [Pipelines](#pipelines)
+- [One-Hot Encoding and Leakage](#one-hot-encoding-and-leakage)
+- [Final verdict](#final-verdict)
+
 
 I keep encountering the advice that *no preprocessing whatsoever* should happen before a train/test split—not even something as harmless-seeming as standardizing the features. 
 According to this view, every transformation, including `StandardScaler`, must be fitted **after** partitioning the data to avoid leakage.
@@ -8,6 +13,8 @@ But is that really necessary? After all, standardization doesn’t look at the t
 So should we truly worry about scaling before the split?
 
 ---
+
+## StandardScaler is safe
 
 ### 1. Not all preprocessing can cause leakage
 
@@ -75,7 +82,7 @@ There is **no mechanism** by which scaling the full dataset reveals *anything* a
 
 It might change the numerical values, but it **cannot reduce test error by leaking y**.
 
----
+## Pipelines
 
 ###  4. Then why do tutorials insist on pipelines?
 
@@ -164,7 +171,9 @@ they are simply misusing the term.
 
 Still not a reason to forbid scaling before splitting — but *pipelines ensure reproducibility and fairness*.
 
----
+## One-Hot Encoding and Leakage
+
+One-hot encoding is often portrayed as something that must be done after the train/test split to prevent data leakage, but this is an oversimplification. OHE itself does not use the target variable and therefore does not introduce leakage in the classic sense. The real danger only appears when OHE is combined with y-aware methods like target encoding—or when category-level decisions, such as grouping rare categories or creating columns for categories that occur only in the test set, are influenced by information outside the training set. These are subtle issues of test-set contamination, not target leakage. In practice the effects are usually small, but using a pipeline keeps everything technically correct and reproducible.
 
 ##  Final verdict
 
