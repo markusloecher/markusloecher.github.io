@@ -9,7 +9,7 @@ So should we truly worry about scaling before the split?
 
 ---
 
-# 1. Not all preprocessing can cause leakage
+### 1. Not all preprocessing can cause leakage
 
 Only preprocessing steps that use **information derived from the target variable `y`** or from **relationships between X and y** can leak information.
 
@@ -25,15 +25,15 @@ These *must* be learned **only from the training set**.
 
 ---
 
-# 2. It is wrong to claim that *any* preprocessing must be after splitting
+### 2. It is wrong to claim that *any* preprocessing must be after splitting
 
 There are two broad categories of preprocessing:
 
-### A. Transformations that depend on `y`: MUST avoid using test data.
+#### A. Transformations that depend on `y`: MUST avoid using test data.
 
 These can leak. Agreed.
 
-### B. Transformations that depend *only on X* and do not encode structure tied to y:
+#### B. Transformations that depend *only on X* and do not encode structure tied to y:
 
 No leakage whatsoever. Period.
 
@@ -58,7 +58,7 @@ Scaling the entire dataset **before splitting** does *not* help the model peek a
 
 ---
 
-# 3. The StandardScaler uses no information on y
+### 3. The StandardScaler uses no information on y
 
 
 Standard scaler does:
@@ -71,17 +71,17 @@ where $\mu$ and $\sigma$ are statistics of **X only**, not y.
 
 There is **no mechanism** by which scaling the full dataset reveals *anything* about the target.
 
-### Scaling before splitting cannot cause overfitting
+#### Scaling before splitting cannot cause overfitting
 
 It might change the numerical values, but it **cannot reduce test error by leaking y**.
 
 ---
 
-#  4. Then why do tutorials insist on pipelines?
+###  4. Then why do tutorials insist on pipelines?
 
 Because:
 
-### 1. In practice, you are rarely *just scaling*.
+#### 1. In practice, you are rarely *just scaling*.
 
 One day you add:
 
@@ -95,7 +95,7 @@ Suddenly leakage *is possible*.
 
 Pipelines protect you from *future mistakes*.
 
-### 2. Cross-validation is the real reason.
+#### 2. Cross-validation is the real reason.
 
 If you scale the full dataset before CV:
 
@@ -111,7 +111,7 @@ Even if StandardScaler itself is harmless, CV logic requires consistent handling
 
 ---
 
-# 5. Why some instructors overstate the rule
+### 5. Why some instructors overstate the rule
 
 Because they want students to adopt a **simple, universal rule** that prevents them from making accidental mistakes later.
 
@@ -125,14 +125,14 @@ It’s safe pedagogy, not accurate theory.
 
 ---
 
-#  6. test-set-specific outliers
+###  6. test-set-specific outliers
 
 One counter argument often made is that 
 > "test-set outliers can artificially improve test performance"
 
 Let’s clarify:
 
-### ✔️ What is *not* true:
+#### ✔️ What is *not* true:
 
 * Scaling with test outliers does **NOT** help the model “cheat” on predicting y
 * Scaling with test outliers does **NOT** reveal target information
@@ -140,7 +140,7 @@ Let’s clarify:
 
 So there is **no leakage in the causal sense** (no y is being smuggled in).
 
-### ✔️ What *is* true (but subtle):
+#### ✔️ What *is* true (but subtle):
 
 When test-set outliers influence the global mean/variance,
 the model will see a slightly rescaled test set.
@@ -154,7 +154,7 @@ This changes the *numerical* MSE slightly, but:
 
 It is **NOT data leakage** by any accepted definition.
 
-###  It’s best described as:
+####  It’s best described as:
 
 > A tiny, harmless shift in the coordinate system,
 > not a source of improper generalization.
@@ -166,7 +166,7 @@ Still not a reason to forbid scaling before splitting — but *pipelines ensure 
 
 ---
 
-#  Final verdict
+##  Final verdict
 
 
 1. Scaling the whole dataset before splitting does **not** leak information about y and does **not** cause overfitting.
