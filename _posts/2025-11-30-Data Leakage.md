@@ -11,7 +11,7 @@ I keep encountering the advice that *no preprocessing whatsoever* should happen 
 According to this view, every transformation, including `StandardScaler`, must be fitted **after** partitioning the data to avoid leakage.
 For example, Yuriy Guts argues for exactly this point in his [nice talk at ODSC](https://youtu.be/UOxf2P9WnK8?si=gAYrsBhILGE-PDTj&t=886)
 
-<img src="/assets/figures/StandardScaler_Before_Partitioning.png" width="550"/>
+<img src="/assets/figures/StandardScaler_Before_Partitioning.png" width="750"/>
 
 But is that really necessary? After all, standardization doesn’t look at the target variable at all. 
 So should we truly worry about scaling before the split?
