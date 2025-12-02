@@ -9,6 +9,10 @@ StandardScaler cannot leak target information
 
 I keep encountering the advice that *no preprocessing whatsoever* should happen before a train/test split—not even something as harmless-seeming as standardizing the features. 
 According to this view, every transformation, including `StandardScaler`, must be fitted **after** partitioning the data to avoid leakage.
+For example, Yuriy Guts argues for exactly this point in his [nice talk at ODSC](https://youtu.be/UOxf2P9WnK8?si=gAYrsBhILGE-PDTj&t=886)
+
+(/assets/figures/StandardScaler_Before_Partitioning.png)
+
 But is that really necessary? After all, standardization doesn’t look at the target variable at all. 
 So should we truly worry about scaling before the split?
 
