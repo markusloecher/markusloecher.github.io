@@ -1,14 +1,6 @@
 # Stacked regressions and structured variance partitioning
 
 
-Here is a **clean, neutral, but pointed introduction** you can use for a blog post.
-It sets the stage, explains why Figure 4 matters, and naturally leads into the deeper technical discussion you’ll paste afterward.
-
-You can adjust tone slightly depending on whether the blog is personal, departmental, or public-facing.
-
----
-
-### Introduction
 
 In a recent paper on [stacked regressions and structured variance decomposition](https://doi.org/10.1016/j.neuroimage.2024.120772), the authors argue that stacking substantially outperforms more traditional approaches such as concatenated regression models, particularly when it comes to feature attribution and variance explanation in high-dimensional settings.
 
