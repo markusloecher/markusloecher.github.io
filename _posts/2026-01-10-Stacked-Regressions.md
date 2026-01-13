@@ -1,7 +1,6 @@
 # Stacked regressions and structured variance partitioning
 
 
-
 In a recent paper on [stacked regressions and structured variance decomposition](https://doi.org/10.1016/j.neuroimage.2024.120772), the authors argue that stacking substantially outperforms more traditional approaches such as concatenated regression models, particularly when it comes to feature attribution and variance explanation in high-dimensional settings.
 
 A central piece of evidence for this claim is **Figure 4** of the paper. The figure is striking: across a wide range of simulated scenarios, stacking appears to outperform concatenation *most of the time*, often by a large margin. Visually, it suggests that stacking not only improves predictive performance but also delivers markedly superior estimates of the *unique* contribution of feature blocks—a claim with important methodological implications for applied work.
@@ -173,17 +172,15 @@ This is still an **internal inconsistency between figure, estimand, and narrativ
 
 ---
 
-## 5. Clean summary argument
+## 5. Summary
 
-Here is a very sharp way to state it:
 
 > Even if marginal and partial R² coincide at zero correlation, Figure 4 remains problematic because it is a knife-edge special case that is used to support broad claims about feature attribution in structured, high-dimensional settings. The figure is therefore either misleading in scope or irrelevant to the main contribution.
 
 ---
 
-## 6. Logical structure (important)
+## 6. Logical structure
 
-Notice what this achieves:
 
 | Assumption                  | Conclusion           |
 | --------------------------- | -------------------- |
@@ -193,9 +190,4 @@ Notice what this achieves:
 
 So **in every logically possible case**, Fig. 4 cannot stand as-is.
 
-That’s a very strong position — and it does **not** rely on subtle technicalities.
 
-If you want, I can next help you compress this into:
-
-* a **single paragraph rebuttal**, or
-* a **one-sentence “fork argument”** that’s extremely hard to argue against.
