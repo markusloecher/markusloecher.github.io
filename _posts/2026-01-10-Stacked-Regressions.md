@@ -1,7 +1,8 @@
-# Stacked regressions and structured variance partitioning
+# Reproducible Research
 
 
-In a recent paper on [stacked regressions and structured variance decomposition](https://doi.org/10.1016/j.neuroimage.2024.120772), the authors argue that stacking substantially outperforms more traditional approaches such as concatenated regression models, particularly when it comes to feature attribution and variance explanation in high-dimensional settings.
+In a recent paper on [Stacked regressions and structured variance partitioning for interpretable
+brain maps](https://doi.org/10.1016/j.neuroimage.2024.120772), the authors argue that stacking frequently (and substantially) outperforms more traditional approaches such as concatenated regression models, particularly when it comes to feature attribution and variance explanation in high-dimensional settings.
 
 A central piece of evidence for this claim is **Figure 4** of the paper. The figure is striking: across a wide range of simulated scenarios, stacking appears to outperform concatenation *most of the time*, often by a large margin. Visually, it suggests that stacking not only improves predictive performance but also delivers markedly superior estimates of the *unique* contribution of feature blocks—a claim with important methodological implications for applied work.
 ![Fig4](/assets/figures/Fig4_NeuroImage.png)
