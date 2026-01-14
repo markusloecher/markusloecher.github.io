@@ -9,10 +9,13 @@ A central piece of evidence for this claim is **Figure 4** of the paper. The fig
 
 Because of its prominence and apparent robustness, Figure 4 strongly shapes the reader’s takeaway from the paper. It effectively serves as a flagship result supporting the narrative that stacking is the preferred method for feature attribution in complex, high-dimensional problems.
 
-However, as I discovered while carefully examining the accompanying code, the quantity plotted in Figure 4 is not the partial (or unique) R² it is interpreted as, but rather a marginal R². This distinction is not cosmetic: it changes the scientific question the figure answers. Over the subsequent months, I communicated this issue to the authors, who acknowledged the formula error, but maintained that Figure 4 does not need to be replaced.
+However, as I discovered while carefully examining the accompanying code, the quantity plotted in Figure 4 is not the partial (or unique) R² it is interpreted as, but rather a marginal R². This distinction is not cosmetic: it changes the scientific question the figure answers. Over the subsequent months, I communicated this issue to the authors, who acknowledged the formula error, but are less convinced that Figure 4 does not need to be replaced.
 
 In what follows, I explain why this position is untenable. I will argue that Figure 4, as currently presented, does not support the claims it is used to justify—regardless of whether the simulated feature blocks are correlated or not. The problem is not subtle, and it goes to the heart of what the figure is supposed to demonstrate.
 
+For completeness, I have recreated Fig. 4 using the by now hopefully correct partial R², and its message is dramatically different:
+
+![Fig4new](/assets/figures/Fig4_new_corr_0.2.png)
 
 
 
