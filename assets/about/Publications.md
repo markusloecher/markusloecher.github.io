@@ -16,6 +16,7 @@
     
 - [Mood and the malleability of moral reasoning: the impact of irrelevant factors on judicial decisions.](https://doi.org/10.1016/j.socec.2025.102364); 
 Chen, Daniel L. and Markus Loecher, *Journal of Behavioral and Experimental Economics* (2025): 102364.
+Cited in <img src="/assets/figures/NoiseBookCover.png" width="60"> (chap1, p.19).
 
 -   [Tree Smoothing: Post-hoc Regularization of Tree Ensembles for Interpretable Machine Learning](https://doi.org/10.1016/j.ins.2024.121564);
     Bastian Pfeifer, Arne Gevaert, Markus Loecher, Andreas Holzinger, Information Sciences, Vol. 690, 121564, ISSN 0020-0255 (2025).
