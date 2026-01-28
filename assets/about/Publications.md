@@ -15,7 +15,7 @@
     *Proceedings of the AAAI Conference on Artificial Intelligence*, 39(15), 15596-15604. (2025).
     
 - [Mood and the malleability of moral reasoning: the impact of irrelevant factors on judicial decisions.](https://doi.org/10.1016/j.socec.2025.102364); 
-Chen, Daniel L. and Markus Loecher, *Journal of Behavioral and Experimental Economics* (2025): 102364.
+Chen, Daniel L. and Markus Loecher, *Journal of Behavioral and Experimental Economics* (2025): 102364.<br>
        Cited in <a href="https://en.wikipedia.org/wiki/Noise:_A_Flaw_in_Human_Judgment"><img src="/assets/figures/NoiseBookCover.png" width="65"></a> (chap1, p.19).
 
 -   [Tree Smoothing: Post-hoc Regularization of Tree Ensembles for Interpretable Machine Learning](https://doi.org/10.1016/j.ins.2024.121564);
