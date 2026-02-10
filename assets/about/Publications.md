@@ -26,7 +26,7 @@ Chen, Daniel L. and Markus Loecher, *Journal of Behavioral and Experimental Econ
     Loecher, Markus, AStA Adv Stat Anal (2023).
 
 -   [Are SHAP values biased towards high-entropy
-    features?](https://kdd.isti.cnr.it/xkdd2022/papers/XKDD_2022_paper_1418.pdf);
+    features?](https://link.springer.com/chapter/10.1007/978-3-031-23618-1_28);
     Raphael Baudeu, Marvin Wright and Markus Loecher, ECML PKDD Workshop
     on XKDD, Grenoble (2022).
 
