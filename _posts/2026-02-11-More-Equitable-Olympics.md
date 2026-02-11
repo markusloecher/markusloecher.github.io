@@ -39,7 +39,9 @@ The principle is straightforward: the greater a country’s natural access to wi
 
 A simplified adjustment could be expressed as:
 
-$\text{Adjusted Time} = \text{Raw Time} + \alpha \sqrt{\text{National Snowfall}} + \beta (\text{Mountain Access})$
+$$
+\text{Adjusted Time} = \text{Raw Time} + \alpha \sqrt{\text{National Snowfall}} + \beta (\text{Mountain Access})
+$$
 
 The square root ensures that minor snowfall is not unduly punished, while still addressing excessive precipitation.
 
