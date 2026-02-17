@@ -7,7 +7,9 @@ tags: [sauna, epidemiology, huberman, rhonda-patrick, science-communication]
 description: "A close reading of the evidence behind Rhonda Patrick's sweeping health claims on the Huberman Lab podcast."
 ---
 
-If you have spent any time in the wellness and longevity corner of the internet, you have almost certainly encountered the sauna claims. On the Huberman Lab podcast — one of the most-listened-to science programs in the world — Dr. Rhonda Patrick delivered a set of statistics so striking that they have since been repeated across hundreds of YouTube videos, Reddit threads, and biohacking forums: a 60% reduction in Alzheimer's risk. A 50% drop in cardiovascular mortality. A 60% lower rate of sudden cardiac death. A precise duration threshold of more than 19 minutes required to see any real benefit.
+If you have spent any time in the wellness and longevity corner of the internet, you have almost certainly encountered the sauna claims. On the [Huberman Lab podcast](https://open.spotify.com/episode/0IH4lP6NeCM7PVVdDyxKdo?si=TMXiCGfkQ_aigb4MXFwN1Q&t=2009&pi=gu7ABJShQd-MA) — one of the most-listened-to science programs in the world — Dr. Rhonda Patrick delivered a set of statistics so striking that they have since been repeated across hundreds of YouTube videos, Reddit threads, and biohacking forums: a **60% reduction in Alzheimer's risk**. A **50% drop in cardiovascular mortality**. A **60% lower rate of sudden cardiac death**. **A precise duration threshold of more than 19 minutes** required to see any real benefit.
+
+![](/assets/podcasts/Huberman_Patrick.png)
 
 The numbers are real, in the sense that they appear in published papers. But the impression those numbers create — that we have strong, reliable, causal, and actionable evidence for enormous health benefits from sauna use — is not supported by what the research actually shows. The gap between what was said and what the evidence warrants is wide enough to matter.
 
@@ -118,3 +120,7 @@ That is worth noticing.
 ---
 
 *Based on: Laukkanen et al., "Association Between Sauna Bathing and Fatal Cardiovascular and All-Cause Mortality Events," JAMA Internal Medicine, 2015; and Laukkanen et al., "Sauna bathing is inversely associated with dementia and Alzheimer's disease in middle-aged Finnish men," Age and Ageing, 2017. This analysis concerns the public communication of scientific findings and does not impugn the integrity of the researchers involved.*
+
+[Direct link to Dementia paper pdf](/assets/papers/Laukkanen et al. - 2017 - Sauna bathing is inversely associated with dementia and Alzheimer's disease in middle-aged Finnish m.pdf)
+
+[Direct link to Cardio paper pdf](/assets/papers/Laukkanen et al. - 2015 - Association Between Sauna Bathing and Fatal Cardiovascular and All-Cause Mortality Events.pdf)
