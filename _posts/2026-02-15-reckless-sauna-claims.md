@@ -33,7 +33,7 @@ The entire claim rests on these tiny numbers. The 95% confidence interval for th
 
 ### Claim 2: "50% reduction in cardiovascular mortality"
 
-The cardiac paper reports a hazard ratio of 0.50 for fatal CVD, with a confidence interval of 0.33–0.77. The 50% figure is arithmetically correct. What Patrick does not mention: the comparison group is men who sauna **once per week** — not non-sauna users. The effect of going from zero to some sauna use may be much smaller, larger, or impossible to estimate from this data. Framing the comparison as "sauna vs. no sauna" — as popular summaries invariably do — misrepresents the study design.
+The cardiac paper reports a hazard ratio of 0.50 for fatal CVD, with a confidence interval of 0.33–0.77. The 50% figure is arithmetically correct. The comparison group is men who sauna **once per week** — not non-sauna users. The effect of going from zero to some sauna use may be much smaller, larger, or impossible to estimate from this data. Framing the comparison as "sauna vs. no sauna" — as popular summaries invariably do — misrepresents the study design.
 
 ### Claim 3: "Sudden cardiac death is 60% lower"
 
@@ -41,7 +41,8 @@ The paper reports a hazard ratio of 0.37, with a confidence interval of **0.18�
 
 ### Claim 4: "Duration had to be greater than 19 minutes — men who spend only 11 minutes don't benefit half as much"
 
-This is perhaps the most misleading specific claim. In the cardiac paper (Table 3), the multivariable-adjusted hazard ratio for sudden cardiac death in the 11–19 minute group is **0.93 (95% CI: 0.67–1.28, p = 0.66)**. That is statistically indistinguishable from no effect whatsoever — a non-result. The claim that the 11–19 minute group benefits "half as much" invents a dose-response gradient that the data simply do not show. The only duration group with a statistically significant finding is the >19-minute group. Presenting "19 minutes" as a precisely calibrated biological threshold — rather than the point at which a noisy dataset happened to cross a significance line — is a misrepresentation of how such thresholds emerge from observational data.
+In the cardiac paper (Table 3), the multivariable-adjusted hazard ratio for sudden cardiac death in the 11–19 minute group is **0.93 (95% CI: 0.67–1.28, p = 0.66)**. That is statistically indistinguishable from no effect whatsoever — a non-result.
+The only duration group with a statistically significant finding is the >19-minute group. Presenting "19 minutes" as a precisely calibrated biological threshold — rather than the point at which a noisy dataset happened to cross a significance line — is a misrepresentation of how such thresholds emerge from observational data.
 
 ### Claim 5: The authors "control for everything under the sun"
 
