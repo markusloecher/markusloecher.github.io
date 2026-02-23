@@ -92,6 +92,14 @@ Or put more simply:
 
 A central illustration in Hestermann’s analysis compares two car attacks that occurred within a few weeks of each other: one committed by an Islamist extremist, the other by a German offender described as mentally unstable. Because the attacks appear superficially similar, the difference in media coverage is attributed to nationality. However, this is not a valid inference. Media attention is highly non-linear and sensitive to symbolic and ideological context. An attack framed as ideologically motivated signals broader risks — future attacks, organized networks, political consequences — and therefore almost automatically generates sustained coverage. A single carefully chosen pair of events, no matter how vivid, cannot establish a general pattern. At best, it illustrates that differences in coverage can occur; it does not show that they systematically occur because of nationality rather than narrative relevance.
 
+## A note on scientific standards
+
+There is a further issue that should not be ignored. The analyses cited in support of these claims have not undergone peer review in established academic journals, and the underlying data are not publicly available. This means that independent researchers cannot replicate the results, test alternative specifications, or verify the coding decisions that are crucial in content analysis.
+
+In empirical social science, transparency and reproducibility are not optional luxuries; they are basic safeguards against error and overinterpretation. When data and methods are not openly accessible, strong conclusions about systemic bias should be treated with appropriate caution.
+
+This does not imply bad faith. But it does mean that the findings have not been subjected to the level of scrutiny normally expected before drawing far-reaching claims about media behavior.
+
 ## When Uncritical Reporting Becomes Part of the Problem
 
 When a publicly funded broadcaster presents contested research as settled fact, scrutiny is not optional. Yet this is precisely what happened when [Deutsche Welle uncritically amplified claims that German media systematically overreport crimes committed by foreigners](https://learngerman.dw.com/de/verzerrtes-bild-von-kriminalit%C3%A4t-und-herkunft/l-74523438). Framed with authoritative phrases such as “Expertinnen und Experten warnen: So entsteht ein verzerrtes Bild,” the piece leaves little room for methodological doubt. More troubling still, the message appears in DW’s Learn German program — an educational format aimed at language learners who are unlikely to question the statistical foundations of what they are being taught. Before accepting such claims as established truth, it is worth examining whether the underlying evidence can actually support them.
