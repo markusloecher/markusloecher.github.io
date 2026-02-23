@@ -100,6 +100,7 @@ Ein weiterer Punkt darf nicht übersehen werden: Die herangezogenen Analysen wur
 In der empirischen Sozialforschung sind Transparenz und Reproduzierbarkeit keine Nebensache, sondern grundlegende Qualitätskriterien. Wenn Daten und Methoden nicht offenliegen, sollten weitreichende Aussagen über systematische Verzerrungen mit entsprechender Zurückhaltung bewertet werden.
 
 Dies unterstellt keine unlauteren Motive. Es bedeutet jedoch, dass die Ergebnisse nicht dem Prüfmaßstab unterzogen wurden, der für belastbare Aussagen über strukturelle Medienmuster üblich ist.
+
 ---
 
 ## Wenn unkritische Berichterstattung selbst Teil des Problems wird
