@@ -10,6 +10,10 @@
 
 ### Refereed Articles (sel.)
 
+
+-   [Clustering longitudinal multivariate trajectories using an ensemble of principal component trees](https://doi.org/10.1186/s12874-026-02903-3);
+    Pfeifer, B., Grabner, S., Berghold, A. and Loecher, M., BMC Med Res Methodology, Vol. , , ISSN  (2026).
+
 -   [Conditional Feature Importance with Generative Modeling Using Adversarial Random Forests](https://doi.org/10.1609/aaai.v39i15.33712);
     Blesch, K., Koenen, N., Kapar, J., Golchian, P., Burk, L., Loecher, M., & Wright, M. N.; 
     *Proceedings of the AAAI Conference on Artificial Intelligence*, 39(15), 15596-15604. (2025).
