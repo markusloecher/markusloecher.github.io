@@ -26,7 +26,7 @@ Vielleicht liegt die Antwort gerade in der Spannung zwischen beiden.
 
 Viele gesellschaftliche Veränderungen begannen nicht mit Datensätzen, sondern mit konkreten Geschichten. Die #MeToo-Bewegung wurde durch individuelle Erfahrungen sichtbar gemacht. Die Debatte über Polizeigewalt in den USA erhielt durch den Tod von George Floyd eine Wucht, die keine Statistik allein hätte erzeugen können. Einzelne Fälle können Aufmerksamkeit erzeugen und die Frage aufwerfen, ob hinter ihnen ein größeres Muster steckt.
 
-In diesem Zusammenhang fand ich Ninas Einwand besonders überzeugend. Ihre Überlegungen zur französischen Vergewaltigungsaffäre zeigen, dass die Unterscheidung zwischen „Einzelfall“ und „systematischem Problem“ oft selbst Gegenstand von Interpretation und Bewertung ist. Menschen sind sich häufig nicht über die Fakten uneinig, sondern darüber, welche Schlussfolgerungen aus denselben Fakten gezogen werden sollten.
+In diesem Zusammenhang fand ich Ninas Einwand besonders überzeugend. Ihre Überlegungen zur französischen Vergewaltigungsaffäre (Gisèle Pelicot) zeigen, dass die Unterscheidung zwischen „Einzelfall“ und „systematischem Problem“ oft selbst Gegenstand von Interpretation und Bewertung ist. Menschen sind sich häufig nicht über die Fakten uneinig, sondern darüber, welche Schlussfolgerungen aus denselben Fakten gezogen werden sollten.
 
 Und schließlich bleibt noch eine letzte Schwierigkeit: Selbst wenn wir perfekte Daten hätten, würden die entscheidenden politischen Fragen nicht verschwinden.
 
