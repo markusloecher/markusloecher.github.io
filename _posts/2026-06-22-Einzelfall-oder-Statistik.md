@@ -8,7 +8,7 @@ description: "Die grundsätzliche Frage, wie Menschen von Beobachtungen zu polit
 ---
 
 
-Eine der großen Stärken von „Die Sogenannte Gegenwart“ besteht für mich darin, dass Lars und Nina Themen behandeln, die auf den ersten Blick banal erscheinen, sich bei näherem Hinsehen aber als philosophisch und politisch hochkomplex erweisen.
+Eine der großen Stärken von „Die Sogenannte Gegenwart“ besteht für mich darin, dass Lars, Ijoma und Nina Themen behandeln, die auf den ersten Blick banal erscheinen, sich bei näherem Hinsehen aber als philosophisch und politisch hochkomplex erweisen.
 
 So ging es in einer der [jüngsten Folgen](https://www.zeit.de/feuilleton/2026-05/heterofatalismus-beziehung-emanzipiation-feuilleton-podcast) um die Frage, welche Rolle Einzelfälle und Statistiken für unsere politischen Urteile spielen sollten. Ich bewundere die intellektuelle Ernsthaftigkeit, mit der beide Hosts dieses Thema angehen. Gerade weil die Diskussion nicht in die üblichen Reflexe verfällt – weder in bloße Empörung noch in technokratische Zahlenverehrung –, bleibt sie lange im Kopf.
 
