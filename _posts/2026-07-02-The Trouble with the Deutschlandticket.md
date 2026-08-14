@@ -2,7 +2,7 @@
 layout: post
 title: "€10 vs. €63: The Broken Mathematics of Germany’s Favorite Ticket"
 date: 2026-07-02
-categories: [Erkenntnistheorie, Philosophie, Politik]
+categories: [societal-issues, politics]
 tags: [Deutschlandticket,Verkehrswende,PublicTransport,MobilityPolicy,Germany]
 description: "Is the Deutschlandticket actually a win-win? While daily commuters enjoy unprecedented discounts, occasional and suburban riders face skyrocketing single fares. Here is why Germany's favorite ticket is creating a new transit divide."
 ---
