@@ -1,14 +1,7 @@
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']]
-    }
-  };
-</script>
-<script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: null   # or false / none – prevents kramdown from rewriting the math
 
 **A Bayesian Look at the Jason Arday Story**
 
@@ -80,4 +73,4 @@ The Claudine Gay example is especially awkward for this purpose. Gay’s resigna
 Doing so risks a self-reinforcing loop: Black academics are unfairly targeted → here are Black academics who lost positions → therefore they were unfairly targeted → therefore Arday’s case is another example. That is not Bayesian evidence. A claim does not become evidence for itself merely by being repeated across different individuals. The strongest case is built by examining the evidence in each individual instance and asking which hypothesis best explains that evidence—not by counting the number of controversial Black academics.
 
 
-https://www.theguardian.com/education/ng-interactive/2026/aug/01/playbooks-plagiarism-pigs-head-new-claims-surrounding-cambridge-professor-jason-arday
+(Guardian story)[https://www.theguardian.com/education/ng-interactive/2026/aug/01/playbooks-plagiarism-pigs-head-new-claims-surrounding-cambridge-professor-jason-arday]
