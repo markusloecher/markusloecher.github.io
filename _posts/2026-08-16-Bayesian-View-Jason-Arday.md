@@ -1,3 +1,15 @@
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
 **A Bayesian Look at the Jason Arday Story**
 
 I have no way of knowing what is true in the Jason Arday case. I have not investigated the underlying evidence myself, and press reports alone cannot settle whether any particular allegation is accurate. Arday’s death by suicide is a profound human tragedy, whatever the facts ultimately turn out to be. His family, friends and colleagues have suffered a real and irreversible loss.
