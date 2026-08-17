@@ -1,9 +1,4 @@
-markdown: kramdown
-kramdown:
-  input: GFM
-  math_engine: null   # or false / none – prevents kramdown from rewriting the math
-
-**A Bayesian Look at the Jason Arday Story**
+## A Bayesian Look at the Jason Arday Story
 
 I have no way of knowing what is true in the Jason Arday case. I have not investigated the underlying evidence myself, and press reports alone cannot settle whether any particular allegation is accurate. Arday’s death by suicide is a profound human tragedy, whatever the facts ultimately turn out to be. His family, friends and colleagues have suffered a real and irreversible loss.
 
