@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A Bayesian Look at the Jason Arday Story"
+title: "A Bayesian Look at the Jason Arday Story I"
 tags:
   - public-discourse
   - bayesian-reasoning
