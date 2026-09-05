@@ -29,7 +29,7 @@ Diese Liste ließe sich beliebig fortsetzen. Ob Energiewende, Rente oder Soziall
 
 Warum wird das simplifizierende Slogan-Feuerwerk der Altparteien als „normaler Wahlkampf“ verbucht, während dieselbe Methode bei der AfD als „gefährlicher Populismus“ gebrandmarkt wird?
 
-Hier zeigt sich eine tiefe Unehrlichkeit im Diskurs. Anstatt den Begriff Populismus sachlich als Werkzeug der politischen Mobilisierung zu verstehen – das von *allen* genutzt wird –, wird er von Medien und Politik selektiv als Waffe eingesetzt. Wenn die SPD komplexe Probleme vereinfacht, nennt man es „Zuspitzung“. Wenn die AfD es tut, heißt es „Gefahr für die Demokratie“.
+Hier zeigt sich eine tiefe Unehrlichkeit im Diskurs. Anstatt den Begriff Populismus sachlich als Werkzeug der politischen Mobilisierung zu verstehen – das von *allen* genutzt wird –, wird er von Medien und Politik selektiv als Waffe eingesetzt. Wenn die SPD komplexe Probleme vereinfacht, nennt man es „Zuspitzung“. Wenn andere Parteien es tun, heißt es „Gefahr für die Demokratie“.
 
 ### Das Scheitern einer Entmündigungs-Strategie
 
